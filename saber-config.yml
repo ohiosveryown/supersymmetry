@@ -1,9 +1,9 @@
 siteConfig:
   title: Supersymmetry
-  # url: https://example.com
+  url: https://supersymmetry.design
   author: Matthew Pence
   email: matt@ohiosveryown.co
-  description: Write an awesome description for your new site here. You can edit this line in saber-config.yml. It will appear in your document head meta (for Google search results) site description.
+  description: Supersymmetry is a photo blog built on Vue showcasing architecture, interior design and structural engineering – basically spaces.
 
 plugins:
   - resolve: saber-plugin-query-posts
