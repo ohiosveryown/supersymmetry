@@ -27,6 +27,10 @@
   img {
     max-width: 300px;
   }
+
+  ul {
+    display: flex;
+  }
 </style>
 
 
