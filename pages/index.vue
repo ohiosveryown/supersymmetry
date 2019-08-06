@@ -18,8 +18,8 @@
   </main>
 </template>
 
-<style>
-  img { max-width: 300px; }
+<style lang='scss' scoped>
+  h1 { color: purple; }
 </style>
 
 <script>

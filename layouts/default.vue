@@ -5,7 +5,8 @@
       <saber-link to="/about.html">About</saber-link>
     </nav>
     <!-- <slot name='default'/> -->
-    <img :src='page.assets.cover'>
+    <!-- <img :src='page.assets.cover'> -->
+    <h3>tester</h3>
     <slot/>
     <ul>
       <li v-if="page.prevPost">
@@ -23,13 +24,17 @@
 </template>
 
 
-<style>
-  img {
-    max-width: 300px;
+<style lang='scss'>
+  @import '../style/grid.scss';
+  @import '../style/reset.scss';
+
+  h3 {
+    color: red;
+    @include breakpoint(md) { color: purple; }
   }
 
-  ul {
-    display: flex;
+  img {
+    max-width: 200px;
   }
 </style>
 
