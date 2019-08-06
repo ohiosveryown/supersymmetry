@@ -27,6 +27,8 @@
 <style lang='scss'>
   @import '../style/grid.scss';
   @import '../style/reset.scss';
+  @import '../style/util.scss';
+  @import '../style/type.scss';
 
   h3 {
     color: red;

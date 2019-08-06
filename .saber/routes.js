@@ -1,30 +1,6 @@
 
     export default [
       {
-              path: "/posts/hello.html",
-              meta: {
-                __relative: '_posts/hello.md',
-                __pageId: '7f8c8628'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-hello-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/hello.md?saberPage=7f8c8628")
-                
-              }
-            },
-{
-              path: "/posts/lalac.html",
-              meta: {
-                __relative: '_posts/lalac.md',
-                __pageId: 'e8f5e736'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-lalac-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/lalac.md?saberPage=e8f5e736")
-                
-              }
-            },
-{
               path: "/about.html",
               meta: {
                 __relative: 'about.md',
@@ -45,6 +21,30 @@
               component: function() {
                 
                 return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
+                
+              }
+            },
+{
+              path: "/posts/the-oculus.html",
+              meta: {
+                __relative: '_posts/the-oculus.md',
+                __pageId: '2f35a2e7'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-the-oculus-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/the-oculus.md?saberPage=2f35a2e7")
+                
+              }
+            },
+{
+              path: "/posts/mailchimp-atlanta.html",
+              meta: {
+                __relative: '_posts/mailchimp-atlanta.md',
+                __pageId: '494d49b0'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-mailchimp-atlanta-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/mailchimp-atlanta.md?saberPage=494d49b0")
                 
               }
             },

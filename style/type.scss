@@ -1,0 +1,20 @@
+@import './style/grid.scss';
+
+// @font-face {
+// 	font-family: 'Titling-Gothic-Wide';
+// 	src: url('~static/font/titling-gothic-wide.woff');
+// 	src: local('☺'), url('~static/font/titling-gothic-wide.woff') format('woff');
+// }
+
+// @font-face {
+// 	font-family: 'Akkurat-Mono';
+// 	src: url('~static/font/akkurat-mono.woff');
+// 	src: local('☺'), url('~static/font/akkurat-mono.woff') format('woff');
+// }
+
+// .f-gangster { font-family: 'Gangster-Grotesk', var(--system-ui); }
+
+.uc { text-transform: uppercase; }
+.taj { text-align: justify; }
+.tar { text-align: right; }
+.tac { text-align: center; }
