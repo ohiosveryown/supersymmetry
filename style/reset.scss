@@ -44,7 +44,7 @@ body {
   font: normal 1.6rem/1.4 var(--system-ui);
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: underline; color: inherit; }
 
 body, h1, h2, h3, h4, h5, h6, p, a, span, blockquote, caption, ul, li, img, button, section, article, figure, main, footer {
   margin: 0;

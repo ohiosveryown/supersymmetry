@@ -18,8 +18,14 @@
   </main>
 </template>
 
-<style lang='scss' scoped>
+<style lang='scss'>
   h1 { color: purple; }
+
+  .page-enter-active { transition: all 700ms ease; }
+  .page-leave-active { transition: all 700ms ease; }
+  .page-leave-active, .page-enter {
+    opacity: 0;
+  }
 </style>
 
 <script>
@@ -29,6 +35,10 @@
   }
 
   export default {
-    props: [ 'page' ]
+    props: [ 'page' ],
+    transition: {
+      name: 'page',
+      mode: 'out-in'
+    },
   }
 </script>
