@@ -29,9 +29,6 @@ layout: default
       <p>{{ page.last_paragraph }}</p>
     </article>
 
-    <slot/>
-    <!-- <h1>{{ page.title }}</h1> -->
-
     <!-- previous post (for detail views) -->
     <ul v-if="page.prevPost">
       <li>
