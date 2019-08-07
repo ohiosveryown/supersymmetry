@@ -1,38 +1,31 @@
+<!-- layout -->
 <template>
   <div>
-    <nav>
+
+    <!-- navigation -->
+    <!-- <nav>
       <saber-link to="/">Home</saber-link>
       <saber-link to="/about.html">About</saber-link>
-    </nav>
-    <!-- <slot name='default'/> -->
-    <!-- <img :src='page.assets.cover'> -->
-    <h3>tester</h3>
+    </nav> -->
+
+    <!-- app magic / my main bae -->
     <slot/>
-    <ul>
-      <li v-if="page.prevPost">
-        <router-link :to="page.prevPost.permalink">
-          Previous: {{ page.prevPost.title }}
-        </router-link>
-      </li>
-      <!-- <li v-if="page.nextPost">
-        <router-link :to="page.nextPost.permalink">
-          Next: {{ page.nextPost.title }}
-        </router-link>
-      </li> -->
-    </ul>
+
   </div>
 </template>
 
 
+<!-- style -->
 <style lang='scss'>
   @import '../style/grid.scss';
   @import '../style/reset.scss';
   @import '../style/util.scss';
   @import '../style/type.scss';
 
-  h3 {
-    color: red;
-    @include breakpoint(md) { color: purple; }
+  .page-enter-active { transition: all 700ms ease; }
+  .page-leave-active { transition: all 700ms ease; }
+  .page-leave-active, .page-enter {
+    opacity: 0;
   }
 
   img {
@@ -41,16 +34,9 @@
 </style>
 
 
+<!-- logic -->
 <script>
   export default {
-    props: [ 'page' ],
-    head() {
-      const pageTitle = this.page.title
-      return {
-        title: pageTitle ?
-          `${pageTitle} - ${this.$siteConfig.title}` :
-          this.$siteConfig.title
-      }
-    }
+    props: [ 'page' ]
   }
 </script>

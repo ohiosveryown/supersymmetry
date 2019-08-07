@@ -1,12 +1,25 @@
 ---
 title: The Oculus
 date: 2020-01-01
-layout: default
+layout: post-one
+architect: Santiago Calatrava – 2016
+
 assets:
-  cover: ./img/2020-01/01.jpg
+  first_img: ./img/2020-01/01.jpg
+  second_img: ./img/2020-01/02.jpg
+  third_img: ./img/2020-01/03.jpg
+
+first_paragraph: |
+  From inside, the Oculus is as eye-popping as its name implies, consisting of ribs of steel, interleaved with windows, that reach to an arching strip of glass, a hundred and sixty feet overhead: a spine seen in negative. Underfoot, white marble tiles offer an almost liquid sheen, like an ice rink on an unseasonably warm day just before the Zamboni is loosed upon it.
+
+large_paragraph: |
+  In Calatrava’s original conception, this lower hall was to be bathed in sunlight filtered through glass skylights set into the plaza above. The skylights were abandoned, after it was argued that they compromised the integrity of the memorial overhead. But the wide lower hall, which is roofed with undulating steel ribs, is a beguiling space, with sight lines unobscured by anything so mundane as supporting pillars.
+
+last_paragraph: |
+    From inside, the Oculus is as eye-popping as its name implies, consisting of ribs of steel, interleaved with windows, that reach to an arching strip of glass, a hundred and sixty feet overhead: a spine seen in negative. Underfoot, white marble tiles offer an almost liquid sheen, like an ice rink on an unseasonably warm day just before the Zamboni is loosed upon it.
 ---
 
-## The Oculus
+<!-- ## The Oculus
 
 This is about The Oculus...
-<!-- ![Nike Joyride](./img/joyride.jpg) -->
+![The Oculus](./img/2020-01/01.jpg) -->

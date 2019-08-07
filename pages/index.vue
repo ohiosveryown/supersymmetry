@@ -1,33 +1,30 @@
+<!-- layout -->
 <template>
   <main>
 
-    <h1 class="debug">Home</h1>
+    <h1>Home</h1>
     <p>this is the home page...</p>
 
-    <div v-if="page.posts">
-      <ul>
-        <li v-for="post in page.posts" :key="post.permalink">
-          <saber-link :to="post.permalink">{{ post.title }}</saber-link>
-          <h4>{{ post.date }}</h4>
+    <ul v-if="page.posts">
+      <li v-for="post in page.posts" :key="post.permalink">
+        <saber-link :to="post.permalink">{{ post.title }}</saber-link>
+        <h4>{{ post.date }}</h4>
 
-          <img :src='post.assets.cover'>
-        </li>
-      </ul>
-    </div>
+        <img :src='post.assets.cover'>
+      </li>
+    </ul>
 
   </main>
 </template>
 
-<style lang='scss'>
-  h1 { color: purple; }
 
-  .page-enter-active { transition: all 700ms ease; }
-  .page-leave-active { transition: all 700ms ease; }
-  .page-leave-active, .page-enter {
-    opacity: 0;
-  }
+<!-- style -->
+<style lang='scss' scoped>
+
 </style>
 
+
+<!-- logic -->
 <script>
   export const attributes = {
     layout: 'page',
