@@ -10,7 +10,7 @@
         <saber-link :to="post.permalink">{{ post.title }}</saber-link>
         <h4>{{ post.date }}</h4>
 
-        <img :src='post.assets.cover'>
+        <img :src='post.assets.first_img'>
       </li>
     </ul>
 
