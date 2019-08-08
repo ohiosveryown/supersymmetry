@@ -3,7 +3,7 @@
   <main>
 
     <h1>Home</h1>
-    <p>this is the home page...</p>
+    <p>this is the home page edited from GH...</p>
 
     <ul v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
