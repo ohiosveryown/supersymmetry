@@ -1,41 +1,72 @@
-<!-- layout -->
 <template>
-  <main>
-
-    <h1>Home</h1>
-    <p>this is the home page edited from GH...</p>
-
-    <ul v-if="page.posts">
-      <li v-for="post in page.posts" :key="post.permalink">
-        <saber-link :to="post.permalink">{{ post.title }}</saber-link>
-        <h4>{{ post.date }}</h4>
-
-        <img :src='post.assets.first_img'>
-      </li>
-    </ul>
-
-  </main>
+  <div class="container">
+    <div>
+      <logo />
+      <h1 class="title">
+        supersymmetry-2020
+      </h1>
+      <h2 class="subtitle">
+        Supersymmetry is a photo blog built on Vue/Nuxt showcasing architecture, interior design and structural engineering – basically spaces.
+      </h2>
+      <div class="links">
+        <a
+          href="https://nuxtjs.org/"
+          target="_blank"
+          class="button--green"
+        >
+          Documentation
+        </a>
+        <a
+          href="https://github.com/nuxt/nuxt.js"
+          target="_blank"
+          class="button--grey"
+        >
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 </template>
 
-
-<!-- style -->
-<style lang='scss' scoped>
-
-</style>
-
-
-<!-- logic -->
 <script>
-  export const attributes = {
-    layout: 'page',
-    injectAllPosts: true
-  }
+import Logo from '~/components/Logo.vue'
 
-  export default {
-    props: [ 'page' ],
-    transition: {
-      name: 'page',
-      mode: 'out-in'
-    },
+export default {
+  components: {
+    Logo
   }
+}
 </script>
+
+<style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+</style>

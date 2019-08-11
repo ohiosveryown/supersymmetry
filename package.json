@@ -1,21 +1,18 @@
 {
-  "name": "blog",
+  "name": "supersymmetry-2020",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "Supersymmetry is a photo blog built on Vue/Nuxt showcasing architecture, interior design and structural engineering – basically spaces.",
+  "author": "Matthew Pence",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
   "dependencies": {
-    "saber": "^0.7.0",
-    "saber-plugin-query-posts": "^0.4.0"
+    "nuxt": "^2.0.0",
+    "@nuxtjs/pwa": "^3.0.0-0"
   },
-  "devDependencies": {
-    "autoprefixer": "^9.6.1",
-    "sass": "^1.22.9",
-    "sass-loader": "^7.1.0"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {}
 }
