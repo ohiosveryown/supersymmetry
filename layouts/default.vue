@@ -27,10 +27,6 @@
   .page-leave-active, .page-enter {
     opacity: 0;
   }
-
-  img {
-    max-width: 200px;
-  }
 </style>
 
 

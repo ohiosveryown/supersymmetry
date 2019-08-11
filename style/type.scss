@@ -19,7 +19,7 @@
   font-size: 2.4rem;
   line-height: 1;
   letter-spacing: -.25px;
-  @include breakpoint(mdl) { font-size: 3.2rem; }
+  @include breakpoint(mdl) { font-size: 3.2rem; line-height: 1.3 }
 }
 
 .f-md, .f-sm {

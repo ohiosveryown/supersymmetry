@@ -38,11 +38,15 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
   background: #fff;
   color: var(--gravity);
   font: normal 1.6rem/1.4 var(--system-ui);
+  @include breakpoint(mdl) { height: 100vh; }
 }
+
 
 a { text-decoration: underline; color: inherit; }
 
