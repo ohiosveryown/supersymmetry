@@ -3,30 +3,31 @@ layout: default
 ---
 
 <template>
-  <main class="debug posting">
+  <main>
 
     <header>
-      <figure>
+      <figure class="hero">
         <div class="img-cover">
-          <img :src='page.assets.first_img'>
+          <img class="hero-img mb-2" :src='page.assets.first_img'>
         </div>
-        <figcaption>
-          <h1 class="f-px">{{ page.title }}</h1>
-          <h2>{{ page.architect }}</h2>
+        <figcaption class="stagger uc">
+          <h1 class="mb-1 f-lg f-px">{{ page.title }}</h1>
+          <h2 class="mb-4 f-sm f-la">{{ page.architect }}</h2>
         </figcaption>
       </figure>
     </header>
 
-    <article>
-      <p>{{ page.first_paragraph }}</p>
+    <article class="stagger mb-4">
+      <p class="p f-la">{{ page.first_paragraph }}</p>
 
-      <section>
-        <figure><img :src='page.assets.second_img'></figure>
-        <figure><img :src='page.assets.third_img'></figure>
+      <section class="stagger">
+        <figure class="mb-2"><img :src='page.assets.second_img'></figure>
+        <figure class="mb-4"><img :src='page.assets.third_img'></figure>
       </section>
 
-      <p>{{ page.large_paragraph }}</p>
-      <p>{{ page.last_paragraph }}</p>
+      <p class="stagger copy-lg">{{ page.large_paragraph }}</p>
+      <p class="stagger mb-8">{{ page.last_paragraph }}</p>
+      <slot/>
     </article>
 
     <!-- previous post (for detail views) -->
