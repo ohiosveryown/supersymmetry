@@ -11,7 +11,7 @@ layout: default
           <img :src='page.assets.first_img'>
         </div>
         <figcaption>
-          <h1>{{ page.title }}</h1>
+          <h1 class="f-px">{{ page.title }}</h1>
           <h2>{{ page.architect }}</h2>
         </figcaption>
       </figure>

@@ -1,18 +1,19 @@
 @import './style/grid.scss';
 
-// @font-face {
-// 	font-family: 'Titling-Gothic-Wide';
-// 	src: url('~static/font/titling-gothic-wide.woff');
-// 	src: local('☺'), url('~static/font/titling-gothic-wide.woff') format('woff');
-// }
+@font-face {
+	font-family: 'la-norde';
+	src: url('../type/la-norde.woff');
+	src: local('☺'), url('../type/la-norde.woff') format('woff');
+}
 
-// @font-face {
-// 	font-family: 'Akkurat-Mono';
-// 	src: url('~static/font/akkurat-mono.woff');
-// 	src: local('☺'), url('~static/font/akkurat-mono.woff') format('woff');
-// }
+@font-face {
+	font-family: 'px-grotesk';
+	src: url('../type/px-grotesk.woff');
+	src: local('☺'), url('../type/px-grotesk.woff') format('woff');
+}
 
-// .f-gangster { font-family: 'Gangster-Grotesk', var(--system-ui); }
+.f-la { font-family: 'la-norde', var(--system-ui); }
+.f-px { font-family: 'px-grotesk', var(--system-ui); letter-spacing: 1px; }
 
 .uc { text-transform: uppercase; }
 .taj { text-align: justify; }
