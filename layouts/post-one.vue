@@ -74,7 +74,7 @@ layout: default
     will-change: transform;
     animation:
       In var(--animbase) cubic-bezier(.8,0,.16,1) forwards,
-      coverMove calc( var(--animbase) * 2 ) cubic-bezier(.8,0,.16,1) calc(var(--animbase) + 0ms) forwards;
+      CoverMove calc( var(--animbase) * 2 ) cubic-bezier(.8,0,.16,1) calc(var(--animbase) + 0ms) forwards;
   }
 
   .hero-img {
@@ -83,7 +83,7 @@ layout: default
     will-change: opacity;
     animation:
       In 10ms cubic-bezier(.8,0,.16,1) var(--animbase) forwards,
-      scale calc(var(--animbase) * 2) cubic-bezier(.42,0,.6,1) calc(var(--animbase) * 1.1) forwards;
+      Scale calc(var(--animbase) * 2) cubic-bezier(.42,0,.6,1) calc(var(--animbase) * 1.1) forwards;
   }
 
   .stagger {
@@ -95,6 +95,19 @@ layout: default
   .copy-lg {
     padding: 0rem 0 3.2rem;
     @include breakpoint(mdl) { padding: 4rem 0 5.6rem; }
+  }
+
+  @keyframes In {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes Scale {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  @keyframes CoverMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(104%); }
   }
 
 </style>
