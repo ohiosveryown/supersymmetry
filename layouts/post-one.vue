@@ -4,8 +4,7 @@ layout: default
 
 <!-- layout -->
 <template>
-  <main>
-    <button class="trigger">Trigger Button</button>
+  <main class="width">
 
     <header>
       <figure class="hero">
@@ -33,6 +32,8 @@ layout: default
       <slot/>
     </article>
 
+    <button :click='greet'>Go to Top</button>
+
     <ul v-if="page.prevPost">
       <li>
         <router-link :to="page.prevPost.permalink">
@@ -50,13 +51,8 @@ layout: default
   @import '../style/grid.scss';
   @import '../style/type.scss';
 
-  main {
-    position: absolute;
-    top: 3.2rem; left: 0; right: 0;
-    margin: auto;
-  }
+  header, figure { overflow: hidden; }
 
-  figure { overflow: hidden; }
   .img-cover {
     position: relative;
     overflow: hidden;
@@ -79,7 +75,10 @@ layout: default
   }
 
   .hero-img {
-    // opacity: 0;
+    opacity: 0;
+    max-height: 76vh;
+    width: 100%;
+    object-fit: cover;
     transform: scale(1.1);
     will-change: opacity;
     animation:
@@ -88,7 +87,7 @@ layout: default
   }
 
   .stagger {
-    // opacity: 0;
+    opacity: 0;
     will-change: opacity;
     animation: In var(--animbase) cubic-bezier(.8,0,.16,1) calc(var(--animbase) * 2) forwards;
   }
@@ -120,17 +119,26 @@ layout: default
   // import Scrollbar from 'smooth-scrollbar'
   export default {
 
-    mounted() {
-      const trigger = document.querySelector('.trigger')
-      // scrollbar with mq
-      // const minWidthMd = window.matchMedia(' (min-width: 800px)' ).matches
-      // if (minWidthMd) {
-      //   const scrollbar = Scrollbar.init(document.querySelector('body'), {
-      //     damping: 0.05,
-      //     renderByPixels: true,
-      //   })
-      // }
+    methods: {
+      greet: function(e) {
+        alert('Hello')
+      }
     },
+
+    // mounted() {
+    //   // window.onload = function(){
+    //   //     window.scrollTo(0,0);
+    //   // }
+    //   let goTop = () => {
+    //     window.scrollTo(0,0)
+    //   }
+
+    //   let trigger = document.querySelector('.trigger')
+
+    //   trigger.addEventListener('click', () => {
+    //     goTop()
+    //   })
+    // },
 
     props: [ 'page' ],
     head() {

@@ -7,9 +7,9 @@
                 __pageId: '494d49b0'
               },
               component: function() {
-                
+
                 return import(/* webpackChunkName: "page--_posts-mailchimp-atlanta-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/mailchimp-atlanta.md?saberPage=494d49b0")
-                
+
               }
             },
 {
@@ -19,9 +19,9 @@
                 __pageId: '2f35a2e7'
               },
               component: function() {
-                
+
                 return import(/* webpackChunkName: "page--_posts-the-oculus-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/the-oculus.md?saberPage=2f35a2e7")
-                
+
               }
             },
 {
@@ -31,9 +31,9 @@
                 __pageId: '7ad1997a'
               },
               component: function() {
-                
+
                 return import(/* webpackChunkName: "page--about-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/about.md?saberPage=7ad1997a")
-                
+
               }
             },
 {
@@ -43,12 +43,12 @@
                 __pageId: '01ccd670'
               },
               component: function() {
-                
+
                 return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
-                
+
               }
             },
-      
+
       // An addtional route to catch all other requests, i.e. 404 page
       {
         path: '*',
