@@ -104,18 +104,18 @@ layout: default
 
 <!-- logic -->
 <script>
-  import Scrollbar from 'smooth-scrollbar'
+  // import Scrollbar from 'smooth-scrollbar'
   export default {
 
-    mounted() {
-      const minWidthMd = window.matchMedia(' (min-width: 800px)' ).matches
-      if (minWidthMd) {
-        const scrollbar = Scrollbar.init(document.querySelector('body'), {
-          damping: 0.05,
-          renderByPixels: true,
-        })
-      }
-    },
+    // mounted() {
+    //   const minWidthMd = window.matchMedia(' (min-width: 800px)' ).matches
+    //   if (minWidthMd) {
+    //     const scrollbar = Scrollbar.init(document.querySelector('body'), {
+    //       damping: 0.05,
+    //       renderByPixels: true,
+    //     })
+    //   }
+    // },
 
     props: [ 'page' ],
 
