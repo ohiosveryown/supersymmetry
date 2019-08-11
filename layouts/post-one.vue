@@ -18,6 +18,7 @@ layout: default
       </figure>
     </header>
 
+    <!-- article -->
     <article class="stagger mb-4">
       <p class="p f-la">{{ page.first_paragraph }}</p>
 
