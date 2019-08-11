@@ -32,7 +32,6 @@ layout: default
       <slot/>
     </article>
 
-    <!-- previous post (for detail views) -->
     <ul v-if="page.prevPost">
       <li>
         <router-link :to="page.prevPost.permalink">
