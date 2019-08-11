@@ -5,6 +5,7 @@ layout: default
 <!-- layout -->
 <template>
   <main>
+    <button class="trigger">Trigger Button</button>
 
     <header>
       <figure class="hero">
@@ -116,18 +117,19 @@ layout: default
 
 <!-- logic -->
 <script>
-  import Scrollbar from 'smooth-scrollbar'
+  // import Scrollbar from 'smooth-scrollbar'
   export default {
 
     mounted() {
+      const trigger = document.querySelector('.trigger')
       // scrollbar with mq
-      const minWidthMd = window.matchMedia(' (min-width: 800px)' ).matches
-      if (minWidthMd) {
-        const scrollbar = Scrollbar.init(document.querySelector('body'), {
-          damping: 0.05,
-          renderByPixels: true,
-        })
-      }
+      // const minWidthMd = window.matchMedia(' (min-width: 800px)' ).matches
+      // if (minWidthMd) {
+      //   const scrollbar = Scrollbar.init(document.querySelector('body'), {
+      //     damping: 0.05,
+      //     renderByPixels: true,
+      //   })
+      // }
     },
 
     props: [ 'page' ],
