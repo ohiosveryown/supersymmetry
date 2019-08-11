@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>This is home</h1>
+    <h1>This is homeee</h1>
     <nuxt-link to="/posts/the-oculus">To Oculus</nuxt-link>
   </main>
 </template>
