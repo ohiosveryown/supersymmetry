@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>This is homeee</h1>
+    <h1 v-on:click='greet'>This is home</h1>
     <nuxt-link to="/posts/the-oculus">To Oculus</nuxt-link>
   </main>
 </template>
@@ -13,6 +13,10 @@
 
 <script>
   export default {
-
+    methods: {
+      greet: () => {
+        alert('Hello 👍🏼')
+      }
+    }
   }
 </script>
