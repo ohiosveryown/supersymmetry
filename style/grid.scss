@@ -1,0 +1,36 @@
+// grid
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (min-width: 360px) { @content; }
+  }
+
+  @if $class == sm {
+    @media (min-width: 400px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 700px) { @content; }
+  }
+
+  @else if $class == mdl {
+    @media (min-width: 1000px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (min-width: 1400px) { @content; }
+  }
+}
+
+//
+
+$columns: 12;
+$gutter: 2%;
+
+@function grid-width($cols, $has-gutter:false) {
+    @if $has-gutter{ @return calc(((100% / #{$columns}) * #{$cols}) - #{$gutter}); }
+    @else { @return calc((100% / #{$columns}) * #{$cols}); }
+}
