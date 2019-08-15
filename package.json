@@ -1,28 +1,21 @@
 {
-  "name": "supersymmetry",
-  "version": "1.5.0",
-  "description": "Supersymmetry is a photo blog built on Vue showcasing architecture, interior design and structural engineering – basically spaces.",
+  "name": "blog",
+  "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/ohiosveryown/supersymmetry.git",
-  "author": "Matthew Pence <matt@ohiosveryown.co>",
   "license": "MIT",
   "dependencies": {
     "saber": "^0.7.0",
-    "saber-plugin-query-posts": "^0.4.1"
+    "saber-plugin-query-posts": "^0.4.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
     "sass": "^1.22.9",
-    "sass-loader": "^7.2.0"
+    "sass-loader": "^7.1.0"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "scripts": {
-    "dev": "saber",
-    "build": "saber build"
-  }
+  ]
 }

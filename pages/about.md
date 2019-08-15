@@ -1,9 +1,9 @@
----
+<!-- ---
 title: About
-layout: default
----
-<!-- <saber-link to="/">Home</saber-link>
-<saber-link to="/about">About</saber-link> -->
+layout: page
+--- -->
+<saber-link to="/">Home</saber-link>
+<saber-link to="/about">About</saber-link>
 ## This is about
 
 This is the Saber port of the base Jekyll theme. Check out the [GitHub project](https://github.com/egoist/saber-theme-minima) for detailed usages.

@@ -1,0 +1,21 @@
+@import './style/grid.scss';
+
+@font-face {
+	font-family: 'la-norde';
+	src: url('../type/la-norde.woff');
+	src: local('☺'), url('../type/la-norde.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'px-grotesk';
+	src: url('../type/px-grotesk.woff');
+	src: local('☺'), url('../type/px-grotesk.woff') format('woff');
+}
+
+.f-la { font-family: 'la-norde', var(--system-ui); }
+.f-px { font-family: 'px-grotesk', var(--system-ui); }
+
+.uc { text-transform: uppercase; }
+.taj { text-align: justify; }
+.tar { text-align: right; }
+.tac { text-align: center; }

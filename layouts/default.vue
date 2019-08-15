@@ -27,8 +27,17 @@
 
 
 <!-- style -->
-<style>
+<style lang='scss'>
+  @import '../style/grid.scss';
+  @import '../style/reset.scss';
+  @import '../style/util.scss';
+  @import '../style/type.scss';
 
+  // .page-enter-active { transition: all 700ms ease; }
+  // .page-leave-active { transition: all 700ms ease; }
+  // .page-leave-active, .page-enter {
+  //   opacity: 0;
+  // }
 </style>
 
 
@@ -36,6 +45,10 @@
 <script>
   export default {
     props: [ 'page' ],
+    transition: {
+      name: 'page',
+      mode: 'out-in'
+    },
     head() {
       const pageTitle = this.page.title
       return {
