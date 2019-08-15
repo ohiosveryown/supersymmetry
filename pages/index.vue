@@ -24,10 +24,7 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  img {
-    max-width: 200px;
-    // @include breakpoint(md) { max-width: 100vw; }
-  }
+  img { max-width: 20rem; }
 </style>
 
 
