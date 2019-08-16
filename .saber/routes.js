@@ -1,6 +1,18 @@
 
     export default [
       {
+              path: "/posts/delete.html",
+              meta: {
+                __relative: '_posts/delete.md',
+                __pageId: '2b4e79be'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-delete-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete.md?saberPage=2b4e79be")
+                
+              }
+            },
+{
               path: "/posts/mailchimp-atlanta.html",
               meta: {
                 __relative: '_posts/mailchimp-atlanta.md',

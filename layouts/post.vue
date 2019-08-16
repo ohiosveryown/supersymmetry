@@ -34,17 +34,36 @@
       <!-- sm /final p -->
       <p class="third-paragraph f-la fs-p taj">{{ page.last_paragraph }}</p>
       <!-- credits / byline -->
-      <a :href="page.link">—{{ page.byline }}</a>
+      <a class="byline f-px fs-sm" :href="page.link">—{{ page.byline }}</a>
     </article>
 
     <!-- previous post -->
-    <ul v-if="page.prevPost">
+    <router-link :to="page.prevPost.permalink">
+      <footer class="debug" v-if="page.prevPost">
+
+          <article>
+            <h3 class="f-px fs-md uc">{{ page.prevPost.date }}</h3>
+            <h1 class="f-px fs-lg uc">{{ page.prevPost.title }}</h1>
+            <H2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</H2>
+          </article>
+
+          <button class="f-px uc">View Entry</button>
+
+          <img class="fimg" :src='page.assets.second_img'>
+
+          <!-- prev img not working -->
+          <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
+
+      </footer>
+    </router-link>
+
+    <!-- <ul v-if="page.prevPost">
       <li>
         <router-link :to="page.prevPost.permalink">
           Previous: {{ page.prevPost.title }}
         </router-link>
       </li>
-    </ul>
+    </ul> -->
 
   </main>
 </template>
@@ -53,6 +72,62 @@
 <!-- style -->
 <style lang="scss" scoped>
   @import '../style/grid.scss';
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 24rem;
+    overflow: hidden;
+    // background: var(--primary);
+    color: var(--cloud);
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6.6rem;
+      height: 32rem;
+    }
+  }
+
+  footer:hover {
+    @include breakpoint(mdl) {
+      button {
+        background: var(--cloud);
+        color: var(--gravity);
+      }
+    }
+  }
+
+  footer h1 {
+    @include breakpoint(md) { margin: 6rem 0 1.2rem; }
+  }
+
+  footer button {
+    padding: 1.4rem 3.2rem 1.2rem;
+    background: transparent;
+    color: var(--cloud);
+    font-size: 1.4rem;
+    transition: var(--ease);
+  }
+
+  footer img {
+    position: absolute;
+    z-index: var(--z0);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  .fimg:before {
+    content: '';
+    position: absolute;
+    z-index: var(--z2);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: var(--primary);
+  }
 
   .first-paragraph {
     margin-bottom: 3.2rem;
@@ -74,6 +149,13 @@
     }
   }
 
+  .byline {
+    @include breakpoint(md) {
+      margin: 0 0 3.2rem grid-width(6);
+      width: grid-width(6);
+    }
+  }
+
   .first-img {
     margin-bottom: 2.4rem;
     object-fit: cover;
@@ -82,28 +164,33 @@
 
   .second-img {
     margin-bottom: 1.6rem;
-    @include breakpoint(mdl) { margin-bottom: 2.4rem; }
+    @include breakpoint(md) {
+      margin: 0 0 2.4rem grid-width(6);
+      width: grid-width(6);
+    }
   }
 
   .third-img {
     margin-bottom: 3.2rem;
-    @include breakpoint(mdl) { margin-bottom: 4rem; }
-  }
-
-  figcaption { margin-bottom: 2.4rem; }
-
-  section {
-    @include breakpoint(mdl) {
-      margin-left: grid-width(6);
+    @include breakpoint(md) {
+      margin: 0 0 2.4rem grid-width(6);
       width: grid-width(6);
     }
   }
+
+  main { margin-bottom: 8rem; }
+  figcaption { margin-bottom: 2.4rem; }
 
 </style>
 
 
 <!-- logic -->
 <script>
+  export const attributes = {
+    // layout: 'default',
+    injectAllPosts: true
+  }
+
   export default {
     props: [ 'page' ],
     head() {
