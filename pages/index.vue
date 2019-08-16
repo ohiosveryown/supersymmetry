@@ -11,7 +11,7 @@
         <h4>{{ post.date }}</h4>
 
         <figure>
-          <img :src='post.assets.cover'>
+          <img :src='post.assets.first_img'>
         </figure>
       </li>
     </ul>
@@ -24,6 +24,7 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  main { min-height: 300vh; }
   img { max-width: 20rem; }
 </style>
 

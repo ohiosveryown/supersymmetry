@@ -15,6 +15,18 @@
 .f-la { font-family: 'la-norde', var(--system-ui); }
 .f-px { font-family: 'px-grotesk', var(--system-ui); }
 
+.fs-lg {
+	font-size: 2.4rem;
+	@include breakpoint(md) { font-size: 3.2rem; }
+}
+
+.fs-sm { font-size: 1.6rem; }
+
+.fs-p {
+	font-size: 1.6rem;
+	@include breakpoint(mdl) { font-size: 2.2rem; }
+}
+
 .uc { text-transform: uppercase; }
 .taj { text-align: justify; }
 .tar { text-align: right; }

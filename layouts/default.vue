@@ -10,18 +10,18 @@
     <slot/>
 
     <!-- preve / next -->
-    <ul>
+    <!-- <ul>
       <li v-if="page.prevPost">
         <router-link :to="page.prevPost.permalink">
           Previous: {{ page.prevPost.title }}
         </router-link>
       </li>
-      <!-- <li v-if="page.nextPost">
+      <li v-if="page.nextPost">
         <router-link :to="page.nextPost.permalink">
           Next: {{ page.nextPost.title }}
         </router-link>
-      </li> -->
-    </ul>
+      </li>
+    </ul> -->
   </div>
 </template>
 
