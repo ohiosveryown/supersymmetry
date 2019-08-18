@@ -3,22 +3,22 @@
   <main class="width">
 
     <!-- nav -->
-    <NavigationPost/>
+    <NavigationPost class="stagger-two"/>
 
     <!-- hero / main info -->
     <header>
       <figure>
         <div class="cover">
-          <img class="first-img" :src='page.assets.first_img'>
+          <img class="stagger first-img" :src='page.assets.first_img'>
         </div>
-        <figcaption>
+        <figcaption class="stagger-three mt-3">
           <h1 class=" f-px">{{ page.title }}</h1>
           <h2 class="f-la fs-sm uc">{{ page.architect }}</h2>
         </figcaption>
       </figure>
     </header>
 
-    <article>
+    <article class="stagger-three">
       <!-- intro p -->
       <p class="first-paragraph f-la fs-p taj">{{ page.first_paragraph }}</p>
 
@@ -47,8 +47,6 @@
         </article>
 
         <button class="f-px uc">View Entry</button>
-
-        <img src='../pages/_posts/img/next.jpg'>
 
         <!-- prev img not working -->
         <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
@@ -91,7 +89,6 @@
   }
 
   .first-img {
-    margin-bottom: 2.4rem;
     object-fit: cover;
     width: 100%; max-height: 64vh;
   }
@@ -112,9 +109,39 @@
     }
   }
 
+  // const page styles
   main { margin-bottom: 8rem; }
   figcaption { margin-bottom: 2.4rem; }
 
+  // cover styles
+  .cover {
+    position: relative;
+    overflow: hidden;
+   }
+
+  .cover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: var(--z1);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    transform-origin: left;
+    background: var(--gravity);
+    // opacity: 0;
+    transform: scaleX(0);
+    will-change: transform;
+    animation:
+      CoverMove calc( var(--animbase) * 3.5 ) var(--inout) calc(var(--animbase) + 0ms) forwards;
+  }
+
+  @keyframes CoverMove {
+    0% { transform: scaleX(0); }
+    50% { transform: scaleX(1); }
+    100% { transform: translateX(104%); }
+  }
+
+  // footer styles
   footer a {
     position: relative;
     display: flex;
@@ -127,10 +154,11 @@
     background: var(--primary);
     background:
       linear-gradient(-45deg, rgb(197, 6, 29) 50%, rgb(105, 5, 5) 100%),
-      url('../pages/_posts/img/2020-01/01.jpg')no-repeat center center;
+      url('../pages/_posts/img/next.jpg')no-repeat center center;
     background-blend-mode: hard-light;
     background-size: cover;
     color: var(--cloud);
+    transition: all 500ms ease;
 
     @include breakpoint(md) {
       align-items: center;

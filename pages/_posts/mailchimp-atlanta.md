@@ -9,4 +9,4 @@ assets:
 ## Mailchimp Atlanta
 
 This is about Mailchimp Atlanta...
-![Nike Joyride](./img/2020-02/01.jpg)
+<!-- ![Nike Joyride](./img/2020-02/01.jpg) -->
