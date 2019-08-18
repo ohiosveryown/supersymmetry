@@ -38,8 +38,7 @@
     </article>
 
     <!-- previous post -->
-
-    <footer class="debug" v-if="page.prevPost">
+    <footer v-if="page.prevPost">
       <router-link :to="page.prevPost.permalink">
 
         <article>
@@ -57,14 +56,6 @@
       </router-link>
     </footer>
 
-    <!-- <ul v-if="page.prevPost">
-      <li>
-        <router-link :to="page.prevPost.permalink">
-          Previous: {{ page.prevPost.title }}
-        </router-link>
-      </li>
-    </ul> -->
-
   </main>
 </template>
 
@@ -72,62 +63,6 @@
 <!-- style -->
 <style lang="scss" scoped>
   @import '../style/grid.scss';
-
-  footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 24rem;
-    overflow: hidden;
-    // background: var(--primary);
-    color: var(--cloud);
-
-    @include breakpoint(md) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 6.6rem;
-      height: 32rem;
-    }
-  }
-
-  footer:hover {
-    @include breakpoint(mdl) {
-      button {
-        background: var(--cloud);
-        color: var(--gravity);
-      }
-    }
-  }
-
-  footer h1 {
-    @include breakpoint(md) { margin: 6rem 0 1.2rem; }
-  }
-
-  footer button {
-    padding: 1.4rem 3.2rem 1.2rem;
-    background: transparent;
-    color: var(--cloud);
-    font-size: 1.4rem;
-    transition: var(--ease);
-  }
-
-  footer img {
-    position: absolute;
-    z-index: var(--z0);
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-  }
-
-  .fimg:before {
-    content: '';
-    position: absolute;
-    z-index: var(--z2);
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: var(--primary);
-  }
 
   .first-paragraph {
     margin-bottom: 3.2rem;
@@ -180,6 +115,63 @@
 
   main { margin-bottom: 8rem; }
   figcaption { margin-bottom: 2.4rem; }
+
+  footer a {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8rem;
+    padding: 0 1.6rem;
+    height: 20rem;
+    overflow: hidden;
+    background: var(--primary);
+    background:
+      linear-gradient(-45deg, rgb(197, 6, 29) 50%, rgb(14, 36, 238) 100%),
+      url('../pages/_posts/img/2020-01/01.jpg')no-repeat center center;
+    background-blend-mode: hard-light;
+    background-size: cover;
+    color: var(--cloud);
+
+    @include breakpoint(md) {
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6.6rem;
+      height: 24rem;
+    }
+  }
+
+  footer:hover {
+    @include breakpoint(mdl) {
+      button {
+        background: var(--cloud);
+        color: var(--gravity);
+      }
+    }
+  }
+
+  footer h1 {
+    margin: 3.2rem 0 .4rem;
+    @include breakpoint(md) { margin: 4rem 0 .4rem; }
+  }
+
+  footer button {
+    display: none;
+    padding: 1.4rem 3.2rem 1.2rem;
+    background: transparent;
+    color: var(--cloud);
+    font-size: 1.4rem;
+    transition: var(--ease);
+    @include breakpoint(md) { display: inherit; }
+  }
+
+  footer img {
+    position: absolute;
+    z-index: var(--z0);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
 
 </style>
 
