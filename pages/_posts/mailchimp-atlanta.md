@@ -1,6 +1,6 @@
 ---
 title: Mailchimp Atlanta
-date: 2020-02-01
+date: February 2020
 layout: post
 assets:
   first_img: ./img/2020-02/01.jpg

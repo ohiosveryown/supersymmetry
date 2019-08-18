@@ -2,9 +2,8 @@
 <template>
   <main class="width">
 
-    <div class="delete mb-9">
-      <saber-link to="/">Home</saber-link>
-    </div>
+    <!-- nav -->
+    <NavigationPost/>
 
     <!-- hero / main info -->
     <header>
@@ -49,7 +48,7 @@
 
         <button class="f-px uc">View Entry</button>
 
-        <img class="fimg" :src='page.assets.first_img'>
+        <img src='../pages/_posts/img/next.jpg'>
 
         <!-- prev img not working -->
         <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
@@ -127,7 +126,7 @@
     overflow: hidden;
     background: var(--primary);
     background:
-      linear-gradient(-45deg, rgb(197, 6, 29) 50%, rgb(14, 36, 238) 100%),
+      linear-gradient(-45deg, rgb(197, 6, 29) 50%, rgb(105, 5, 5) 100%),
       url('../pages/_posts/img/2020-01/01.jpg')no-repeat center center;
     background-blend-mode: hard-light;
     background-size: cover;
@@ -178,12 +177,14 @@
 
 <!-- logic -->
 <script>
+  import NavigationPost from '../components/NavigationPost'
   export const attributes = {
     // layout: 'default',
     injectAllPosts: true
   }
 
   export default {
+    components: { NavigationPost },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title

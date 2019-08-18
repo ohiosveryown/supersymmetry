@@ -1,6 +1,6 @@
 ---
 title: The Oculus
-date: 2020-01-01
+date: January 2020
 layout: post
 architect: Santiago Calatrava – 2016
 byline: The New Yorker
