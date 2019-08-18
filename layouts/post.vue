@@ -38,24 +38,24 @@
     </article>
 
     <!-- previous post -->
-    <router-link :to="page.prevPost.permalink">
-      <footer class="debug" v-if="page.prevPost">
 
-          <article>
-            <h3 class="f-px fs-md uc">{{ page.prevPost.date }}</h3>
-            <h1 class="f-px fs-lg uc">{{ page.prevPost.title }}</h1>
-            <H2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</H2>
-          </article>
+    <footer class="debug" v-if="page.prevPost">
+      <router-link :to="page.prevPost.permalink">
 
-          <button class="f-px uc">View Entry</button>
+        <article>
+          <h3 class="f-px fs-md uc">{{ page.prevPost.date }}</h3>
+          <h1 class="f-px fs-lg uc">{{ page.prevPost.title }}</h1>
+          <H2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</H2>
+        </article>
 
-          <img class="fimg" :src='page.assets.second_img'>
+        <button class="f-px uc">View Entry</button>
 
-          <!-- prev img not working -->
-          <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
+        <img class="fimg" :src='page.assets.first_img'>
 
-      </footer>
-    </router-link>
+        <!-- prev img not working -->
+        <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
+      </router-link>
+    </footer>
 
     <!-- <ul v-if="page.prevPost">
       <li>
