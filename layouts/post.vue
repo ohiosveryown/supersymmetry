@@ -36,6 +36,21 @@
       <a class="byline f-px fs-sm" :href="page.link">—{{ page.byline }}</a>
     </article>
 
+    <footer class="debug" v-if='page.prevPost'>
+      <router-link :to="page.prevPost.permalink">
+
+        <NextPost
+          :date = 'page.prevPost.date'
+          :title = 'page.prevPost.title'
+          :architect = 'page.prevPost.architect'
+          :imglink = 'page.prevPost.assets'
+        />
+
+      </router-link>
+    </footer>
+
+    <!-- <img :src='page.prevPost.assets'> -->
+
     <!-- previous post -->
     <footer v-if="page.prevPost">
       <router-link :to="page.prevPost.permalink">
@@ -104,7 +119,7 @@
   .third-img {
     margin-bottom: 3.2rem;
     @include breakpoint(md) {
-      margin: 0 0 2.4rem grid-width(6);
+      margin: 0 0 4.8rem grid-width(6);
       width: grid-width(6);
     }
   }
@@ -206,13 +221,14 @@
 <!-- logic -->
 <script>
   import NavigationPost from '../components/NavigationPost'
+  import NextPost from '../components/NextPost'
   export const attributes = {
     // layout: 'default',
     injectAllPosts: true
   }
 
   export default {
-    components: { NavigationPost },
+    components: { NavigationPost, NextPost },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title

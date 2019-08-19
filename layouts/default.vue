@@ -33,8 +33,7 @@
   @import '../style/util.scss';
   @import '../style/type.scss';
 
-  .page-enter-active { transition: all 700ms ease; }
-  .page-leave-active { transition: all 700ms ease; }
+  .page-enter-active, .page-leave-active { transition: all 500ms ease; }
   .page-leave-active, .page-enter {
     opacity: 0;
   }
