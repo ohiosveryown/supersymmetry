@@ -9,7 +9,7 @@
     <header>
       <figure>
         <div class="cover">
-          <img class="stagger first-img" :src='page.assets.first_img'>
+          <img class="first-img" :src='page.assets.first_img'>
         </div>
         <figcaption class="stagger-three mt-3">
           <h1 class=" f-px">{{ page.title }}</h1>
@@ -87,6 +87,9 @@
   .first-img {
     object-fit: cover;
     width: 100%; max-height: 64vh;
+    opacity: 0;
+    animation:
+      FadeScale calc( var(--animbase) * 3.5 ) var(--inout) calc(var(--animbase) + 400ms) forwards;
   }
 
   .second-img {
@@ -124,7 +127,6 @@
     width: 100%; height: 100%;
     transform-origin: left;
     background: var(--gravity);
-    // opacity: 0;
     transform: scaleX(0);
     will-change: transform;
     animation:

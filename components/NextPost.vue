@@ -35,11 +35,8 @@
       @include breakpoint(md) {
         justify-content: space-between;
         padding: 0 6.4rem;
+        height: 24rem;
       }
-    }
-
-    section {
-      @include breakpoint(md) { flex-grow: 1; }
     }
 
     article:hover {
@@ -48,6 +45,10 @@
           background: var(--cloud);
           color: var(--gravity);
         }
+        // img {
+        //   transform: scale(1.1);
+        //   transition: transform 5600ms ease;
+        // }
       }
     }
 
@@ -66,12 +67,31 @@
       @include breakpoint(md) { display: inherit; }
     }
 
-    article img {
+    figure:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: red;
+      mix-blend-mode: multiply;
+    }
+
+    img {
       position: absolute;
       z-index: var(--z0);
       top: 0; left: 0;
       width: 100%; height: 100%;
       object-fit: cover;
+      transition: transform 600ms ease;
+      will-change: transform;
+    }
+
+    button { position: relative; z-index: var(--z1); }
+
+    section {
+      position: relative;
+      z-index: var(--z1);
+      @include breakpoint(md) { flex-grow: 1; }
     }
 
 </style>
