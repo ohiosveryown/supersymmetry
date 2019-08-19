@@ -1,10 +1,13 @@
 <!-- layout -->
 <template>
   <article>
-    <h5>{{ date }}</h5>
-    <h1>{{ title }}</h1>
-    <h2>{{ architect }}</h2>
-    <img :src='imglink'/>
+
+    <h3 class="f-px fs-md uc">{{ date }}</h3>
+    <h1 class="f-px fs-lg uc">{{ title }}</h1>
+    <h2 class="f-la fs-sm uc">{{ architect }}</h2>
+    <figure><img :src='img'/></figure>
+    <button class="f-px uc">View Entry</button>
+
   </article>
 </template>
 
@@ -20,6 +23,6 @@
 <!-- logic -->
 <script>
   export default {
-    props: [ 'date', 'title', 'architect', 'imglink' ],
+    props: [ 'date', 'title', 'architect', 'img' ],
   }
 </script>

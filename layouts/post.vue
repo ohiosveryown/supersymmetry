@@ -36,20 +36,19 @@
       <a class="byline f-px fs-sm" :href="page.link">—{{ page.byline }}</a>
     </article>
 
+    <!-- previous post -->
     <footer class="debug" v-if='page.prevPost'>
       <router-link :to="page.prevPost.permalink">
-
         <NextPost
           :date = 'page.prevPost.date'
           :title = 'page.prevPost.title'
           :architect = 'page.prevPost.architect'
-          :imglink = 'page.prevPost.assets'
+          :img = 'page.prevPost.img'
         />
-
       </router-link>
     </footer>
 
-    <!-- <img :src='page.prevPost.assets'> -->
+    <!-- <img :src='page.prevPost.img'> -->
 
     <!-- previous post -->
     <footer v-if="page.prevPost">
@@ -58,13 +57,11 @@
         <article>
           <h3 class="f-px fs-md uc">{{ page.prevPost.date }}</h3>
           <h1 class="f-px fs-lg uc">{{ page.prevPost.title }}</h1>
-          <H2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</H2>
+          <h2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</h2>
         </article>
 
         <button class="f-px uc">View Entry</button>
 
-        <!-- prev img not working -->
-        <!-- <figure><img :src='page.prevPost.assets.second_img'></figure> -->
       </router-link>
     </footer>
 

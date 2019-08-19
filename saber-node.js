@@ -12,7 +12,7 @@ exports.onCreatePages = function() {
     date: page.date,
     architect: page.architect,
     permalink: page.permalink,
-    assets: page.assets.first_img
+    img: page.assets.first_img
 
 
   })
