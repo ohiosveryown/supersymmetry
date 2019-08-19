@@ -18,6 +18,7 @@
       </figure>
     </header>
 
+    <!-- main content -->
     <article class="stagger-three">
       <!-- intro p -->
       <p class="first-paragraph f-la fs-p taj">{{ page.first_paragraph }}</p>
@@ -37,7 +38,7 @@
     </article>
 
     <!-- previous post -->
-    <footer class="debug" v-if='page.prevPost'>
+    <footer v-if='page.prevPost'>
       <router-link :to="page.prevPost.permalink">
         <NextPost
           :date = 'page.prevPost.date'
@@ -45,23 +46,6 @@
           :architect = 'page.prevPost.architect'
           :img = 'page.prevPost.img'
         />
-      </router-link>
-    </footer>
-
-    <!-- <img :src='page.prevPost.img'> -->
-
-    <!-- previous post -->
-    <footer v-if="page.prevPost">
-      <router-link :to="page.prevPost.permalink">
-
-        <article>
-          <h3 class="f-px fs-md uc">{{ page.prevPost.date }}</h3>
-          <h1 class="f-px fs-lg uc">{{ page.prevPost.title }}</h1>
-          <h2 class="f-la fs-sm uc">{{ page.prevPost.architect }}</h2>
-        </article>
-
-        <button class="f-px uc">View Entry</button>
-
       </router-link>
     </footer>
 
@@ -151,65 +135,6 @@
     0% { transform: scaleX(0); }
     50% { transform: scaleX(1); }
     100% { transform: translateX(104%); }
-  }
-
-  // footer styles
-  footer a {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 8rem;
-    padding: 0 1.6rem;
-    height: 20rem;
-    overflow: hidden;
-    background: var(--primary);
-    background:
-      linear-gradient(-45deg, rgb(197, 6, 29) 50%, rgb(105, 5, 5) 100%),
-      url('../pages/_posts/img/next.jpg')no-repeat center center;
-    background-blend-mode: hard-light;
-    background-size: cover;
-    color: var(--cloud);
-    transition: all 500ms ease;
-
-    @include breakpoint(md) {
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 6.6rem;
-      height: 24rem;
-    }
-  }
-
-  footer:hover {
-    @include breakpoint(mdl) {
-      button {
-        background: var(--cloud);
-        color: var(--gravity);
-      }
-    }
-  }
-
-  footer h1 {
-    margin: 3.2rem 0 .4rem;
-    @include breakpoint(md) { margin: 4rem 0 .4rem; }
-  }
-
-  footer button {
-    display: none;
-    padding: 1.4rem 3.2rem 1.2rem;
-    background: transparent;
-    color: var(--cloud);
-    font-size: 1.4rem;
-    transition: var(--ease);
-    @include breakpoint(md) { display: inherit; }
-  }
-
-  footer img {
-    position: absolute;
-    z-index: var(--z0);
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
   }
 
 </style>
