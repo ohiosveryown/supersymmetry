@@ -4,12 +4,14 @@
 	font-family: 'la-norde';
 	src: url('../type/la-norde.woff');
 	src: local('☺'), url('../type/la-norde.woff') format('woff');
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'px-grotesk';
 	src: url('../type/px-grotesk.woff');
 	src: local('☺'), url('../type/px-grotesk.woff') format('woff');
+	font-display: swap;
 }
 
 .f-la { font-family: 'la-norde', var(--system-ui); }
