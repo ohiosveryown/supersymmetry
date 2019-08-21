@@ -9,7 +9,8 @@
     </section>
 
     <button class="f-px uc">View Entry</button>
-    <figure><img :src='img'/></figure>
+    <div class="cover"/>
+    <img :src='img'/>
 
   </article>
 </template>
@@ -45,10 +46,10 @@
           background: var(--cloud);
           color: var(--gravity);
         }
-        // img {
-        //   transform: scale(1.1);
-        //   transition: transform 5600ms ease;
-        // }
+        img {
+          transform: scale(1.1);
+          transition: transform 5600ms ease;
+        }
       }
     }
 
@@ -67,8 +68,7 @@
       @include breakpoint(md) { display: inherit; }
     }
 
-    figure:before {
-      content: '';
+    .cover {
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;

@@ -38,7 +38,7 @@
     </article>
 
     <!-- previous post -->
-    <footer v-if='page.prevPost'>
+    <footer class="stagger-three" v-if='page.prevPost'>
       <router-link :to="page.prevPost.permalink">
         <NextPost
           :date = 'page.prevPost.date'
