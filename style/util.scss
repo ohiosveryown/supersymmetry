@@ -11,6 +11,11 @@
   width: 88vw;
 }
 
+.no-scroll {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 // animations
 .stagger {
   opacity: 0;

@@ -7,8 +7,9 @@
       <li class="f-px fs-md">2018–2020</li>
     </ul>
 
-    <h2 :class="{ red : isActive }" class="f-la fs-sm uc">Colophon</h2>
-    <button @click="isActive=!isActive">Click me</button>
+    <button class="f-la fs-sm uc">{{ btnText }}</button>
+    <!-- <button @click="isActive = !isActive">Click me</button> -->
+    <ColophonPost @click="isActive = !isActive" :class="{ open : isActive }" />
 
   </nav>
 </template>
@@ -18,9 +19,11 @@
 <style lang="scss" scoped>
   @import '../style/grid.scss';
 
-  .red { color: red; }
+  button { background: transparent; }
 
   nav {
+    position: relative;
+    z-index: var(--zmax);
     margin: 1.2rem 0 2rem;
     @include breakpoint(md) { margin: 2.4rem 0 2rem; }
   }
@@ -42,21 +45,19 @@
 
 <!-- logic -->
 <script>
-  export default {
-    data: () => ({
-        isActive: false
-    })
-  }
-</script>
+  const mybody = document.body
 
-<!--
-<script>
+  import ColophonPost from '../components/ColophonPost'
   export default {
-    data: () => {
-      return {
-        isActive: false
-      }
+    components: { ColophonPost },
+    data: () => ({
+        isActive: false,
+        btnText: 'Colophon'
+    }),
+    mounted() {
+      document.querySelector('button').addEventListener('click', () => {
+        mybody.classList.toggle('no-scroll')
+      })
     }
   }
 </script>
--->
