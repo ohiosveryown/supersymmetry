@@ -18,33 +18,44 @@
   -webkit-overflow-scrolling: touch;
 }
 
-// animations
-// .stagger {
-//   opacity: 0;
-//   will-change: opacity;
-//   animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
-// }
+animations
+.stagger {
+  opacity: 0;
+  will-change: opacity;
+  animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
+}
 
-// .stagger-two {
-//   opacity: 0;
-//   will-change: opacity;
-//   animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3) forwards;
-// }
+.stagger-two {
+  opacity: 0;
+  will-change: opacity;
+  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3) forwards;
+}
 
-// .stagger-three {
-//   opacity: 0;
-//   will-change: opacity;
-//   animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3.5) forwards;
-// }
+.stagger-three {
+  opacity: 0;
+  will-change: opacity;
+  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3.5) forwards;
+}
 
-// @keyframes In {
-//   0% { opacity: 0; }
-//   100% { opacity: 1; }
-// }
+.from-left {
+  transform: translateX(-100vw);
+  will-change: transform;
+  animation: FromLeft calc(var(--animbase) * 2) var(--inout) forwards;
+}
+
+@keyframes In {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 @keyframes Scale {
   0% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+@keyframes FromLeft {
+  0% { transform: translateX(-100vw); }
+  100% { transform: translateX(0); }
 }
 
 @keyframes FadeScale {
