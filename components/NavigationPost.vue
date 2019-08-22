@@ -7,9 +7,8 @@
       <li class="f-px fs-md">2018–2020</li>
     </ul>
 
-    <button class="f-la fs-sm uc">{{ btnText }}</button>
-    <!-- <button @click="isActive = !isActive">Click me</button> -->
-    <ColophonPost @click="isActive = !isActive" :class="{ open : isActive }" />
+    <button @click="isOpen = !isOpen" class="f-la fs-sm uc">{{ btnText }}</button>
+    <ColophonPost :class="{ open : isOpen }" />
 
   </nav>
 </template>
@@ -39,6 +38,8 @@
     }
   }
 
+  .open { transform: translateX(0); }
+
   .fs-lg { line-height: 1; }
 </style>
 
@@ -51,7 +52,7 @@
   export default {
     components: { ColophonPost },
     data: () => ({
-        isActive: false,
+        isOpen: false,
         btnText: 'Colophon'
     }),
     mounted() {

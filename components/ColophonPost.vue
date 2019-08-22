@@ -7,7 +7,7 @@
       <div class="row">
         <article class="mb-6">
           <h2 class="mb-2 f-px fs-sm uc">Purpose</h2>
-          <p class="f-la fs-p taj">Supersymmetry is a photo blog built on Vue/Saber showcasing architecture, interior design and structural engineering. The site is best viewed in Safari, Chrome or Firefox.</p>
+          <p class="f-la fs-p taj">Supersymmetry is a photo blog built on Vue / Saber showcasing architecture, interior design and structural engineering. The site is best viewed in Safari, Chrome or Firefox.</p>
         </article>
 
         <article class="mb-6">
@@ -50,10 +50,9 @@
   @import '../style/grid.scss';
 
   .width {
-    position: relative;
-    @include breakpoint(md) {
-      margin-top: 20rem;
-    }
+    margin-top: 16rem;
+    @include breakpoint(md)  { margin-top: 20rem; }
+    @include breakpoint(lg)  { margin-top: 22rem; }
   }
 
   section {
@@ -63,6 +62,9 @@
     width: 100vw; height: 100vh;
     background: papayawhip;
     overflow: scroll;
+    transform: translateX(-99vw);
+    transition: all 800ms var(--inout);
+    will-change: transform;
   }
 
   .row {
