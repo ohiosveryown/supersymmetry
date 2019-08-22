@@ -55,10 +55,11 @@
         isOpen: false,
         btnText: 'Colophon'
     }),
-    // mounted() {
-    //   document.querySelector('button').addEventListener('click', () => {
-    //     mybody.classList.toggle('no-scroll')
-    //   })
-    // }
+    mounted() {
+      const mybody = document.body
+      document.querySelector('button').addEventListener('click', () => {
+        mybody.classList.toggle('no-scroll')
+      })
+    }
   }
 </script>
