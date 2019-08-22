@@ -7,8 +7,7 @@
       <li class="f-px fs-md">2018–2020</li>
     </ul>
 
-    <button @click="isOpen = !isOpen" class="f-la fs-sm uc">{{ btnText }}</button>
-    <ColophonPost :class="{ open : isOpen }" />
+    <saber-link to="/colophon.html"><button class="f-la fs-sm uc">Colophon</button></saber-link>
 
   </nav>
 </template>
@@ -51,15 +50,9 @@
   import ColophonPost from '../components/ColophonPost'
   export default {
     components: { ColophonPost },
-    data: () => ({
-        isOpen: false,
-        btnText: 'Colophon'
-    }),
-    mounted() {
-      const mybody = document.body
-      document.querySelector('button').addEventListener('click', () => {
-        mybody.classList.toggle('no-scroll')
-      })
-    }
+    // data: () => ({
+    //     isOpen: false,
+    //     btnText: 'Colophon'
+    // }),
   }
 </script>

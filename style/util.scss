@@ -19,28 +19,28 @@
 }
 
 // animations
-.stagger {
-  opacity: 0;
-  will-change: opacity;
-  animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
-}
+// .stagger {
+//   opacity: 0;
+//   will-change: opacity;
+//   animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
+// }
 
-.stagger-two {
-  opacity: 0;
-  will-change: opacity;
-  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3) forwards;
-}
+// .stagger-two {
+//   opacity: 0;
+//   will-change: opacity;
+//   animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3) forwards;
+// }
 
-.stagger-three {
-  opacity: 0;
-  will-change: opacity;
-  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3.5) forwards;
-}
+// .stagger-three {
+//   opacity: 0;
+//   will-change: opacity;
+//   animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 3.5) forwards;
+// }
 
-@keyframes In {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+// @keyframes In {
+//   0% { opacity: 0; }
+//   100% { opacity: 1; }
+// }
 
 @keyframes Scale {
   0% { transform: scale(1.1); }

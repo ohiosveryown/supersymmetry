@@ -9,4 +9,8 @@ var layouts = {}
       layouts["post"] = layout_1
       
 
+      import layout_2 from "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/layouts/colophon.vue"
+      layouts["colophon"] = layout_2
+      
+
     export default layouts
