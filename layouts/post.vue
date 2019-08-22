@@ -3,7 +3,7 @@
   <main class="width">
 
     <!-- nav -->
-    <NavigationPost class="stagger-two"/>
+    <NavigationPost/>
 
     <!-- hero / main info -->
     <header>
@@ -56,6 +56,12 @@
 <!-- style -->
 <style lang="scss" scoped>
   @import '../style/grid.scss';
+
+  main {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    margin: 0 auto;
+  }
 
   .first-paragraph {
     margin-bottom: 3.2rem;
@@ -139,6 +145,23 @@
     100% { transform: translateX(104%); }
   }
 
+  // .pagee-enter-active, .pagee-leave-active { transition: all 500ms ease 2s; }
+  // .pagee-leave-active, .pagee-enter {
+  //   opacity: 0;
+  // }
+  // .post-enter-active, .post-leave-active { transition: all 500ms ease 2s; }
+  // .post-leave-active, .post-enter {
+  //   opacity: 0;
+  // }
+
+  .post-enter { opacity: 0; }
+  .post-enter-to { opacity: 1; }
+  .post-enter-active { transition: all 2s ease 0s; }
+
+  // .post-leave { opacity: 1; }
+  // .post-leave-to { opacity: 0; }
+  // .post-leave-active { transition: all 2s ease 0s; }
+
 </style>
 
 
@@ -152,6 +175,10 @@
   }
 
   export default {
+    transition: {
+      name: 'post',
+      mode: 'in-out'
+    },
     components: { NavigationPost, NextPost },
     props: [ 'page' ],
     head() {

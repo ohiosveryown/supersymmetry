@@ -49,6 +49,18 @@
               }
             },
 {
+              path: "/colophon.html",
+              meta: {
+                __relative: 'colophon.md',
+                __pageId: 'fb76bbc6'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--colophon-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.md?saberPage=fb76bbc6")
+                
+              }
+            },
+{
               path: "/",
               meta: {
                 __relative: 'index.vue',
