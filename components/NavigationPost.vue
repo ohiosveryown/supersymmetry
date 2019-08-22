@@ -46,7 +46,7 @@
 
 <!-- logic -->
 <script>
-  const mybody = document.body
+  // const mybody = document.body
 
   import ColophonPost from '../components/ColophonPost'
   export default {
@@ -55,10 +55,10 @@
         isOpen: false,
         btnText: 'Colophon'
     }),
-    mounted() {
-      document.querySelector('button').addEventListener('click', () => {
-        mybody.classList.toggle('no-scroll')
-      })
-    }
+    // mounted() {
+    //   document.querySelector('button').addEventListener('click', () => {
+    //     mybody.classList.toggle('no-scroll')
+    //   })
+    // }
   }
 </script>
