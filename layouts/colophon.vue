@@ -10,7 +10,7 @@
       <article class="mb-6">
         <h2 class="mb-2 f-px fs-sm uc">Purpose</h2>
         <p class="f-la fs-p taj">Supersymmetry is a photo blog built on Vue / Saber showcasing architecture, interior design and structural engineering. The site is best viewed in Safari, Chrome or Firefox.</p>
-        <a class="stagger-two" @click="$router.go(-1)">Go Back ⏪</a>
+        <a class="stagger-two" @click="$router.go(-1)">Go Baccck ⏪</a>
       </article>
 
       <article class="mb-6">
