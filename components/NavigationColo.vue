@@ -7,8 +7,7 @@
       <li class="f-px fs-md">2019–2020</li>
     </ul>
 
-    <!-- <button @click='$router.go(-1)' class="f-la fs-sm uc">Close Colophon</button> -->
-    <button @click='goBack' class="f-la fs-sm uc">Close Colophon</button>
+    <button @click='$router.go(-1)' class="f-la fs-sm uc">Close Colophon</button>
 
   </nav>
 </template>
@@ -45,16 +44,6 @@
 <!-- logic -->
 <script>
   export default {
-    // created() {
-    //   setTimeout( () => this.$router.push($router.go(-1)), 5000);
-    // }
-    methods: {
-      goBack: function() {
-        this.$router.push(this.$router.go(-1))
-      }
-    },
-    beforeDestroy() {
-      document.removeEventListener('backbutton', this.goBack)
-    }
+
   }
 </script>

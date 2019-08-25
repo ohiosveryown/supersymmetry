@@ -136,7 +136,7 @@
     transform: scaleX(0);
     will-change: transform;
     animation:
-      CoverMove calc( var(--animbase) * 3.5 ) var(--inout) calc(var(--animbase) + 0ms) forwards;
+      CoverMove calc( var(--animbase) * 3.5 ) var(--inout) calc( var(--animbase) + 0ms ) forwards;
   }
 
   @keyframes CoverMove {
@@ -145,14 +145,9 @@
     100% { transform: translateX(104%); }
   }
 
-  // .post-enter-active,
-  // .post-leave-active {
-  //   transition: all 500ms ease 1s;
-  // }
-  // .post-enter,
-  // .post-leave-to {
-  //   opacity: 0;
-  // }
+  // page transition timing (delay)
+  .post-enter-active { transition: all calc( var(--animbase) * 1 ) ease calc( var(--animbase) * .3 ); }
+
 
 </style>
 
@@ -167,10 +162,10 @@
   }
 
   export default {
-    // transition: {
-    //   name: 'post',
-    //   mode: 'in-out'
-    // },
+    transition: {
+      name: 'post',
+      mode: 'in-out'
+    },
     components: { Navigation, NextPost },
     props: [ 'page' ],
     head() {
