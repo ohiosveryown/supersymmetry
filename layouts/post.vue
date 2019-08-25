@@ -3,7 +3,7 @@
   <main class="width">
 
     <!-- nav -->
-    <NavigationPost/>
+    <!-- <NavigationPost/> -->
 
     <!-- hero / main info -->
     <header>
@@ -145,29 +145,11 @@
     100% { transform: translateX(104%); }
   }
 
-  // .pagee-enter-active, .pagee-leave-active { transition: all 500ms ease 2s; }
-  // .pagee-leave-active, .pagee-enter {
-  //   opacity: 0;
-  // }
-  // .post-enter-active, .post-leave-active { transition: all 500ms ease 2s; }
-  // .post-leave-active, .post-enter {
-  //   opacity: 0;
-  // }
-
-  .post-enter { opacity: 0; }
-  .post-enter-to { opacity: 1; }
-  .post-enter-active { transition: all 2s ease 0s; }
-
-  // .post-leave { opacity: 1; }
-  // .post-leave-to { opacity: 0; }
-  // .post-leave-active { transition: all 2s ease 0s; }
-
 </style>
 
 
 <!-- logic -->
 <script>
-  import NavigationPost from '../components/NavigationPost'
   import NextPost from '../components/NextPost'
   export const attributes = {
     // layout: 'default',
@@ -175,11 +157,11 @@
   }
 
   export default {
-    transition: {
-      name: 'post',
-      mode: 'in-out'
-    },
-    components: { NavigationPost, NextPost },
+    // transition: {
+    //   name: 'post',
+    //   mode: 'in-out'
+    // },
+    components: { NextPost },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title

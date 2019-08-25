@@ -3,7 +3,7 @@
   <main class="width">
 
     <!-- nav -->
-    <NavigationPost/>
+
 
     <!-- main content -->
     <section class="stagger-two">
@@ -53,12 +53,6 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  // main {
-  //   position: absolute;
-  //   top: 0; left: 0; right: 0;
-  //   margin: 0 auto;
-  // }
-
   section {
     display: flex;
     flex-direction: column;
@@ -91,31 +85,18 @@
     background: papayawhip;
   }
 
-  .colophon-leave-active, .colophon-enter-active { transition: all 500ms ease; }
-  .colophon-leave-active {
-    opacity: 0;
-  }
-
-  // .colophon-enter { opacity: 0; }
-  // .colophon-enter-to { opacity: 1; }
-  // .colophon-enter-active { transition: all 2s ease 2s; }
-
-  .colophon-leave { opacity: 1; }
-  .colophon-leave-to { opacity: 0; }
-  .colophon-leave-active { transition: all 1s ease 1s; }
-
 </style>
 
 
 <!-- logic -->
 <script>
-  import NavigationPost from '../components/NavigationPost'
+  // import NavigationPost from '../components/NavigationPost'
   export default {
-    transition: {
-      name: 'colophon',
-      mode: 'in-out'
-    },
-    components: { NavigationPost },
+    // transition: {
+    //   name: 'colophon',
+    //   mode: 'in-out'
+    // },
+    // components: { NavigationPost },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title
