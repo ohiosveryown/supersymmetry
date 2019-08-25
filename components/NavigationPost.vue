@@ -3,11 +3,12 @@
   <nav class="width">
 
     <ul>
-      <li class="f-px fs-lg uc"><saber-link to="/">Super—<br>Symmetry</saber-link></li>
+      <li class="f-px fs-lg uc"><saber-link to="/">Super—<br>Symmetdry</saber-link></li>
       <li class="f-px fs-md">2018–2020</li>
     </ul>
 
     <saber-link to="/colophon.html"><button class="f-la fs-sm uc">Colophon</button></saber-link>
+    <h5 @click="$router.go(-1)">Go Back</h5>
 
   </nav>
 </template>

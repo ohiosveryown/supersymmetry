@@ -57,11 +57,11 @@
 <style lang="scss" scoped>
   @import '../style/grid.scss';
 
-  main {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    margin: 0 auto;
-  }
+  // main {
+  //   position: absolute;
+  //   top: 0; left: 0; right: 0;
+  //   margin: 0 auto;
+  // }
 
   .first-paragraph {
     margin-bottom: 3.2rem;

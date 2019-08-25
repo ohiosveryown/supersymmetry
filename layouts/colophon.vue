@@ -53,11 +53,11 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  main {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    margin: 0 auto;
-  }
+  // main {
+  //   position: absolute;
+  //   top: 0; left: 0; right: 0;
+  //   margin: 0 auto;
+  // }
 
   section {
     display: flex;
@@ -91,7 +91,7 @@
     background: papayawhip;
   }
 
-  .colophon-leave-active, .colophon-enter-active { transition: all 500ms ease 1s; }
+  .colophon-leave-active, .colophon-enter-active { transition: all 500ms ease; }
   .colophon-leave-active {
     opacity: 0;
   }

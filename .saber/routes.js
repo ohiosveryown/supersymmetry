@@ -49,18 +49,6 @@
               }
             },
 {
-              path: "/",
-              meta: {
-                __relative: 'index.vue',
-                __pageId: '01ccd670'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
-                
-              }
-            },
-{
               path: "/colophon.html",
               meta: {
                 __relative: 'colophon.md',
@@ -69,6 +57,18 @@
               component: function() {
                 
                 return import(/* webpackChunkName: "page--colophon-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.md?saberPage=fb76bbc6")
+                
+              }
+            },
+{
+              path: "/",
+              meta: {
+                __relative: 'index.vue',
+                __pageId: '01ccd670'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
                 
               }
             },
