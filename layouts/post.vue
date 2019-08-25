@@ -145,6 +145,15 @@
     100% { transform: translateX(104%); }
   }
 
+  // .post-enter-active,
+  // .post-leave-active {
+  //   transition: all 500ms ease 1s;
+  // }
+  // .post-enter,
+  // .post-leave-to {
+  //   opacity: 0;
+  // }
+
 </style>
 
 
