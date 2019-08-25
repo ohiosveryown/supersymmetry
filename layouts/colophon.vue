@@ -83,10 +83,12 @@
   .cover {
     position: fixed;
     top: 0; left: 0;
-    // z-index: var(--z1);
     width: 100vw; height: 100vh;
-    background: papayawhip;
+    background: #F5F5F5;
   }
+
+  // page transition timing (delay)
+  .colophon-enter-active { transition: all 1000ms ease; }
 
 </style>
 
@@ -95,10 +97,10 @@
 <script>
   import NavigationColo from '../components/NavigationColo'
   export default {
-    // transition: {
-    //   name: 'colophon',
-    //   mode: 'in-out'
-    // },
+    transition: {
+      name: 'colophon',
+      mode: 'in-out'
+    },
     components: { NavigationColo },
     props: [ 'page' ],
     head() {
