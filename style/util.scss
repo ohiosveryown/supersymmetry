@@ -18,11 +18,23 @@
   -webkit-overflow-scrolling: touch;
 }
 
-animations
+// animations
+.stagger-zero {
+  opacity: 0;
+  will-change: opacity;
+  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 2) forwards;
+}
+
 .stagger {
   opacity: 0;
   will-change: opacity;
   animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
+}
+
+.stagger-one {
+  opacity: 0;
+  will-change: opacity;
+  animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.8) forwards;
 }
 
 .stagger-two {

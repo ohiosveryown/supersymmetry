@@ -3,42 +3,45 @@
   <main class="width">
 
     <!-- nav -->
+    <NavigationColo/>
 
-
-    <!-- main content -->
-    <section class="stagger-two">
+    <!-- main content / row one -->
+    <section class="stagger-zero">
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Purpose</h2>
-        <p class="f-la fs-p taj">Supersymmetry is a photo blog built on Vue / Saber showcasing architecture, interior design and structural engineering. The site is best viewed in Safari, Chrome or Firefox.</p>
-        <a class="stagger-two" @click="$router.go(-1)">Go Back ⏪</a>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.first_header }}</h2>
+        <p class="f-la fs-p taj">{{ page.first_paragraph }}</p>
       </article>
 
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Design</h2>
-        <p class="f-la fs-p taj">Supersymmetry was designed &amp; developed by <a target="_blank" href="https://twitter.com/cmykw_">me</a> . It was designed in Sketch &amp; developed in VS Code (<a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">source</a>).</p>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.second_header }}</h2>
+        <p class="f-la fs-p taj">{{ page.second_paragraph }}</p>
       </article>
 
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Thank You's</h2>
-        <p class="f-la fs-p taj">Mom, Mark, Nico, Gino, Jeremy, Andrew, Dan, Frank Lloyd Wright and Zaha Hadid.</p>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.third_header }}</h2>
+        <p class="f-la fs-p taj">{{ page.third_paragraph }}</p>
       </article>
     </section>
 
     <!-- row two -->
-    <section class="stagger-two">
+    <section class="stagger-one">
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Images</h2>
-        <p class="f-la fs-p taj">All images belong to their respective owners. For removal, please contact me at matt@ohiosveryown.co.</p>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.fourth_header }}</h2>
+        <p class="f-la fs-p taj">{{ page.fourth_paragraph }}</p>
       </article>
 
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Twitter</h2>
-        <p class="f-la fs-p taj"><a target="_blank" href="https://twitter.com/cmykw_">@cmykw_</a></p>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.fifth_header }}</h2>
+        <a target="_blank" href="https://twitter.com/cmykw_">
+          <p class="f-la fs-p taj">{{ page.fifth_paragraph }}</p>
+        </a>
       </article>
 
       <article class="mb-6">
-        <h2 class="mb-2 f-px fs-sm uc">Credits</h2>
-        <p class="f-la fs-p taj"><a target="_blank" href="http://ohiosveryown.co">ohiosveryown</a></p>
+        <h2 class="mb-2 f-px fs-sm uc">{{ page.sixth_header }}</h2>
+        <a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">
+          <p class="f-la fs-p taj">{{ page.sixth_paragraph }}</p>
+        </a>
       </article>
     </section>
 
@@ -90,13 +93,13 @@
 
 <!-- logic -->
 <script>
-  // import NavigationPost from '../components/NavigationPost'
+  import NavigationColo from '../components/NavigationColo'
   export default {
     // transition: {
     //   name: 'colophon',
     //   mode: 'in-out'
     // },
-    // components: { NavigationPost },
+    components: { NavigationColo },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title

@@ -3,7 +3,7 @@
   <main class="width">
 
     <!-- nav -->
-    <!-- <NavigationPost/> -->
+    <Navigation/>
 
     <!-- hero / main info -->
     <header>
@@ -150,6 +150,7 @@
 
 <!-- logic -->
 <script>
+  import Navigation from '../components/Navigation'
   import NextPost from '../components/NextPost'
   export const attributes = {
     // layout: 'default',
@@ -161,7 +162,7 @@
     //   name: 'post',
     //   mode: 'in-out'
     // },
-    components: { NextPost },
+    components: { Navigation, NextPost },
     props: [ 'page' ],
     head() {
       const pageTitle = this.page.title
