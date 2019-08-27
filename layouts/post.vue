@@ -21,7 +21,7 @@
     <!-- main content -->
     <article class="stagger-three">
       <!-- intro p -->
-      <p class="first-paragraph f-la fs-p taj">{{ page.first_paragraph }}</p>
+      <p class="first-paragraph fs-p taj">{{ page.first_paragraph }}</p>
 
       <!-- img group -->
       <section>
@@ -32,7 +32,7 @@
       <!-- lg p -->
       <p class="second-paragraph f-la fs-p-lg taj">{{ page.large_paragraph }}</p>
       <!-- sm /final p -->
-      <p class="third-paragraph f-la fs-p taj">{{ page.last_paragraph }}</p>
+      <p class="third-paragraph fs-p taj">{{ page.last_paragraph }}</p>
       <!-- credits / byline -->
       <a class="byline f-px fs-sm" :href="page.link">—{{ page.byline }}</a>
     </article>
