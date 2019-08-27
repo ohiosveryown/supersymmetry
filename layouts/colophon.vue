@@ -56,9 +56,7 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  main {
-    min-height: 100vh;
-  }
+  // main { min-height: 100vh; }
 
   section {
     display: flex;
@@ -109,10 +107,10 @@
     data: () => ({
       leaving: false
     }),
-    transition: {
-      name: 'colophon',
-      mode: 'in-out'
-    },
+    // transition: {
+    //   name: 'colophon',
+    //   mode: 'in-out'
+    // },
     components: { NavigationColo },
     props: [ 'page' ],
     head() {

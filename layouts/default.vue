@@ -33,10 +33,10 @@
   @import '../style/util.scss';
   @import '../style/type.scss';
 
-  .page-enter-active, .page-leave-active { transition: all 500ms ease; }
-  .page-leave-to, .page-enter {
-    opacity: 0;
-  }
+  // .page-enter-active, .page-leave-active { transition: all 500ms ease; }
+  // .page-leave-to, .page-enter {
+  //   opacity: 0;
+  // }
 
   // .pagee-enter-active, .pagee-leave-active { transition: all 500ms ease 2s; }
 </style>
@@ -46,10 +46,10 @@
 <script>
   export default {
     props: [ 'page' ],
-    transition: {
-      name: 'page',
-      mode: 'out-in'
-    },
+    // transition: {
+    //   name: 'page',
+    //   mode: 'out-in'
+    // },
     head() {
       const pageTitle = this.page.title
       return {

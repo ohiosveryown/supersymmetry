@@ -162,10 +162,10 @@
   }
 
   export default {
-    transition: {
-      name: 'post',
-      mode: 'in-out'
-    },
+    // transition: {
+    //   name: 'post',
+    //   mode: 'in-out'
+    // },
     components: { Navigation, NextPost },
     props: [ 'page' ],
     head() {
