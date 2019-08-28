@@ -1,10 +1,10 @@
 <!-- layout -->
 <template>
   <div>
-    <nav>
+    <!-- <nav>
       <saber-link to="/">Home</saber-link>
       <saber-link to="/about.html">About</saber-link>
-    </nav>
+    </nav> -->
 
     <!-- magic -->
     <slot/>

@@ -1,11 +1,8 @@
 <!-- layout -->
 <template>
-  <main>
+  <main class="debug">
 
-    <h1 class="f-la mb-1 tac">La Norde</h1>
-    <h1 class="f-px mb-9 tac">PX Grotesk</h1>
-
-    <ul v-if="page.posts">
+    <ul class="siema" v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
         <saber-link :to="post.permalink">{{ post.title }}</saber-link>
         <h4>{{ post.date }}</h4>
@@ -24,13 +21,27 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  main { min-height: 300vh; }
+  ul {
+    display: flex;
+    @include breakpoint(mdl) {
+      flex-direction: row;
+    }
+  }
+
+  li {
+    @include breakpoint(mdl) {
+      width: 33vw;
+    }
+  }
+
+  // main { min-height: 300vh; }
   img { max-width: 20rem; }
 </style>
 
 
 <!-- logic -->
 <script>
+  import Siema from 'siema'
   export const attributes = {
     layout: 'page',
     injectAllPosts: true
@@ -38,5 +49,10 @@
 
   export default {
     props: [ 'page' ],
+    mounted() {
+      new Siema({
+
+      })
+    }
   }
 </script>

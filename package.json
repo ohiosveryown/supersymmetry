@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "saber": "^0.7.0",
-    "saber-plugin-query-posts": "^0.4.0"
+    "saber-plugin-query-posts": "^0.4.0",
+    "siema": "^1.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
