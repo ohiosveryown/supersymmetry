@@ -5141,6 +5141,11 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
 
+v-siema@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/v-siema/-/v-siema-0.0.6.tgz#695572cce4d0ac2bd967dda310f1bd095a789bdf"
+  integrity sha512-o5qIubGx8X9v6tday8xIBqFbV8gr1InW7Ibp1ZdMN7vR2ekVh1T26dNy2Wou2U/gomBVFv0NNSDKvghyB+0Bjw==
+
 vendors@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.3.tgz#a6467781abd366217c050f8202e7e50cc9eef8c0"

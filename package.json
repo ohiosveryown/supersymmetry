@@ -6,7 +6,7 @@
   "dependencies": {
     "saber": "^0.7.0",
     "saber-plugin-query-posts": "^0.4.0",
-    "siema": "^1.5.1"
+    "v-siema": "^0.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
