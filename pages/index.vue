@@ -21,7 +21,9 @@
         <h4>{{ post.date }}</h4>
 
         <figure>
-          <img :src='post.assets.first_img'>
+          <div class="cover">
+            <img :src='post.assets.first_img'>
+          </div>
           <!-- <div class="cover"/> -->
         </figure>
       </li>
@@ -67,23 +69,23 @@
     }
   }
 
-  .cover {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: red;
-    mix-blend-mode: multiply;
-  }
-
   figure {
     width: 100%; height: 100%;
   }
 
-  img {
+  .cover {
     position: absolute;
     top: 0; left: 0;
     z-index: var(--z0);
+    background-color: red;
     width: 100%; height: 100%;
+  }
+
+
+  img {
+    width: 100%; height: 100%;
+    z-index: -2222;
+    mix-blend-mode: darken;
     object-fit: cover;
   }
 
