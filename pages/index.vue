@@ -2,7 +2,7 @@
 <template>
   <main class="debug">
 
-    <!-- <ul class="" v-if="page.posts">
+    <ul class="siema" v-if="page.posts">
       <li class="debug" v-for="post in page.posts" :key="post.permalink">
         <saber-link :to="post.permalink">{{ post.title }}</saber-link>
         <h4>{{ post.date }}</h4>
@@ -11,29 +11,10 @@
           <img :src='post.assets.first_img'>
         </figure>
       </li>
-    </ul>  -->
+    </ul>
 
-
-      <div>
-          <siema
-              ref="siema"
-              @init="init"
-              @change="change"
-              :loop="true"
-          >
-              <!-- The Slides -->
-              <div v-for="n in 5">
-                  <img src="http://via.placeholder.com/1920x1080" :alt="'Slide ' + n">
-              </div>
-          </siema>
-
-          <!-- Example using prev/next buttons -->
-          <div>
-              <a @click="prev">Prev</a>
-              <a @click="next">Next</a>
-          </div>
-      </div>
-
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
 
   </main>
 </template>
@@ -43,37 +24,29 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  // ul {
-  //   display: flex;
-  //   @include breakpoint(mdl) {
-  //     flex-direction: row;
-  //     width: 100vw;
-  //   }
-  // }
+  ul {
+    width: 100vw;
+  }
 
-  // li {
-  //   @include breakpoint(mdl) {
-  //     position: relative;
-  //     display: flex;
-  //     flex-direction: column;
-  //     width: 100%; height: 400px;
-  //     transition: all 400ms ease;
-  //     transform-origin: center;
-  //     will-change: transform;
-  //   }
-  // }
+  li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 64vh;
+    transition: all 600ms ease;
+    transform-origin: center;
+    will-change: transform;
+    animation-fill-mode: forwards;
+    @include breakpoint(md) { max-height: 76rem; height: 76vh; }
+  }
 
-  // main { min-height: 300vh; }
-  // img { max-width: 20rem; }
 </style>
 
 
 <!-- logic -->
 <script>
-  import Vue from 'vue';
-  import { Siema } from 'v-siema';
-
-  Vue.component('siema', Siema);
+  import Siema from 'siema'
   export const attributes = {
     layout: 'page',
     injectAllPosts: true
@@ -81,22 +54,26 @@
 
   export default {
     props: [ 'page' ],
-    methods: {
-        init() {
-            console.log('Initialized!');
-        },
+    mounted() {
 
-        change() {
-            console.log('Changed!');
+      const mySiema = new Siema({
+        // perPage: 1,
+        loop: true,
+        duration: 800,
+        threshold: 0,
+        multipleDrag: true,
+        easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
+        perPage: {
+          0: 1,
+          800: 1,
+          1000: 2,
+          1400: 2,
         },
+      })
 
-        prev() {
-            this.$refs.siema.prev();
-        },
+      document.querySelector('.prev').addEventListener('click', () => mySiema.prev())
+      document.querySelector('.next').addEventListener('click', () => mySiema.next())
 
-        next() {
-            this.$refs.siema.next();
-        },
-    },
+    }
   }
 </script>

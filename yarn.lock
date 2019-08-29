@@ -4556,6 +4556,11 @@ shallow-clone@^1.0.0:
     kind-of "^5.0.0"
     mixin-object "^2.0.1"
 
+siema@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/siema/-/siema-1.5.1.tgz#eff312b77e8340fa4d81d5d053ebbeb9113ff888"
+  integrity sha1-7/MSt36DQPpNgdXQU+u+uRE/+Ig=
+
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
@@ -5140,11 +5145,6 @@ uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
-
-v-siema@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/v-siema/-/v-siema-0.0.6.tgz#695572cce4d0ac2bd967dda310f1bd095a789bdf"
-  integrity sha512-o5qIubGx8X9v6tday8xIBqFbV8gr1InW7Ibp1ZdMN7vR2ekVh1T26dNy2Wou2U/gomBVFv0NNSDKvghyB+0Bjw==
 
 vendors@^1.0.0:
   version "1.0.3"
