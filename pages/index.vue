@@ -1,20 +1,36 @@
 <!-- layout -->
 <template>
-  <main class="debug">
+  <main>
+
+    <header>
+      <article>
+        <h3>2019-2020</h3>
+        <h1>Super—</h1>
+        <h1>Symmetry</h1>
+        <saber-link to='/colophon.html'>
+          <button>
+            <h2>Colophon</h2>
+          </button>
+        </saber-link>
+      </article>
+    </header>
 
     <ul class="siema" v-if="page.posts">
-      <li class="debug" v-for="post in page.posts" :key="post.permalink">
+      <li v-for="post in page.posts" :key="post.permalink">
         <saber-link :to="post.permalink">{{ post.title }}</saber-link>
         <h4>{{ post.date }}</h4>
 
         <figure>
           <img :src='post.assets.first_img'>
+          <!-- <div class="cover"/> -->
         </figure>
       </li>
     </ul>
 
-    <button class="prev">Prev</button>
-    <button class="next">Next</button>
+    <footer>
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </footer>
 
   </main>
 </template>
@@ -24,8 +40,18 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  main {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  header {
+    width: calc(100vw * .3333);
+  }
+
   ul {
-    width: 100vw;
+    width: calc(100vw * .6666);
   }
 
   li {
@@ -34,11 +60,36 @@
     flex-direction: column;
     width: 100%;
     height: 64vh;
-    transition: all 600ms ease;
-    transform-origin: center;
-    will-change: transform;
-    animation-fill-mode: forwards;
-    @include breakpoint(md) { max-height: 76rem; height: 76vh; }
+    overflow: hidden;
+
+    @include breakpoint(md) {
+      height: 100vh;
+    }
+  }
+
+  .cover {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: red;
+    mix-blend-mode: multiply;
+  }
+
+  figure {
+    width: 100%; height: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: var(--z0);
+    width: 100%; height: 100%;
+    object-fit: cover;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 2rem; right: 2rem;
   }
 
 </style>
@@ -57,7 +108,6 @@
     mounted() {
 
       const mySiema = new Siema({
-        // perPage: 1,
         loop: true,
         duration: 800,
         threshold: 0,
