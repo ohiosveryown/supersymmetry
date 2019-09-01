@@ -17,14 +17,21 @@
 
     <ul class="siema" v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
-        <saber-link :to="post.permalink">{{ post.title }}</saber-link>
-        <h4>{{ post.date }}</h4>
+        <!-- <saber-link :to="post.permalink">{{ post.title }}</saber-link> -->
+        <h3 class="">{{ post.date }}</h3>
+        <h1>{{ post.title }}</h1>
+        <h2>{{ post.architect }}</h2>
+        <saber-link to='/colophon.html'>
+          <button>
+            <h2>View Entry</h2>
+          </button>
+        </saber-link>
 
         <figure>
           <div class="cover">
             <img :src='post.assets.first_img'>
           </div>
-
+          <!-- <div class="cover"/> -->
         </figure>
       </li>
     </ul>
@@ -60,9 +67,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 64vh;
+    width: 100%; height: 64vh;
     overflow: hidden;
+    color: var(--cloud);
 
     @include breakpoint(md) {
       height: 100vh;
@@ -84,7 +91,7 @@
 
   img {
     width: 100%; height: 100%;
-    z-index: -2222;
+    z-index: var(--z0);
     mix-blend-mode: darken;
     object-fit: cover;
   }
