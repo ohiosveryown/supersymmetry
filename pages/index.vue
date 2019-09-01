@@ -24,7 +24,7 @@
           <div class="cover">
             <img :src='post.assets.first_img'>
           </div>
-          <!-- <div class="cover"/> -->
+
         </figure>
       </li>
     </ul>
