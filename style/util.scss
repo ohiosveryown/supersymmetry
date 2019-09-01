@@ -18,6 +18,14 @@
   -webkit-overflow-scrolling: touch;
 }
 
+// button(s)
+.button-primary, .button-primary--white {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
+}
+
+.button-primary--white { background: var(--cloud); }
+
 // animations
 .stagger-zero {
   opacity: 0;

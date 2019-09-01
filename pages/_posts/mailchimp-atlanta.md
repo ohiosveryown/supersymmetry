@@ -2,6 +2,9 @@
 title: Mailchimp Atlanta
 date: February 2020
 layout: post
+architect: Some Dude – 2016
+byline: The New Yorker
+link: https://www.newyorker.com/culture/cultural-comment/the-best-part-of-calatravas-oculus
 assets:
   first_img: ./img/2020-02/01.jpg
 ---

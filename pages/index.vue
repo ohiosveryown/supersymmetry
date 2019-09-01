@@ -16,22 +16,27 @@
     </header>
 
     <ul class="siema" v-if="page.posts">
-      <li v-for="post in page.posts" :key="post.permalink">
-        <!-- <saber-link :to="post.permalink">{{ post.title }}</saber-link> -->
-        <h3 class="">{{ post.date }}</h3>
-        <h1>{{ post.title }}</h1>
-        <h2>{{ post.architect }}</h2>
-        <saber-link to='/colophon.html'>
-          <button>
-            <h2>View Entry</h2>
+      <li
+       v-for="post in page.posts" :key="post.permalink"
+       @mouseover = "hover = true"
+       @mouseleave = "hover = false"
+      >
+        <h3 class="f-px fs-md uc">{{ post.date }}</h3>
+        <h1 class="f-px fs-lg uc">{{ post.title }}</h1>
+        <h2 class="f-la fs-sm uc">{{ post.architect }}</h2>
+
+        <!-- button -->
+        <saber-link :to="post.permalink">
+          <button v-if="hover" class="button-primary--white">
+            <span class="f-px uc">View Entry</span>
           </button>
         </saber-link>
 
+        <!-- img -->
         <figure>
           <div class="cover">
             <img :src='post.assets.first_img'>
           </div>
-          <!-- <div class="cover"/> -->
         </figure>
       </li>
     </ul>
@@ -114,6 +119,11 @@
 
   export default {
     props: [ 'page' ],
+    data() {
+      return {
+        hover: false
+      }
+    },
     mounted() {
 
       const mySiema = new Siema({
