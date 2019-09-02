@@ -1,5 +1,7 @@
 ---
 title: The Oculus
+first_line: The
+second_line: Oculus
 date: January 2020
 layout: post
 architect: Santiago Calatrava – 2016

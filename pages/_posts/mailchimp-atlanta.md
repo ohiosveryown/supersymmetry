@@ -1,5 +1,7 @@
 ---
 title: Mailchimp Atlanta
+first_line: Mailchimp
+second_line: Atlanta
 date: February 2020
 layout: post
 architect: Some Dude – 2016

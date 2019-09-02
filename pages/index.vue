@@ -4,33 +4,34 @@
 
     <header>
       <article>
-        <h3>2019-2020</h3>
-        <h1>Super—</h1>
-        <h1>Symmetry</h1>
+        <h3 class="date f-px fs-md uc">2019-2020</h3>
+        <h1 class="title f-px fs-lg uc">Super—</h1>
+        <h1 class="title f-px fs-lg uc">Symmetry</h1>
         <saber-link to='/colophon.html'>
-          <button>
-            <h2>Colophon</h2>
+          <button class="button-primary architect f-la fs-sm uc">
+            <span class="f-px uc">Colophon</span>
           </button>
         </saber-link>
       </article>
     </header>
 
     <ul class="siema" v-if="page.posts">
-      <li
-       v-for="post in page.posts" :key="post.permalink"
-       @mouseover = "hover = true"
-       @mouseleave = "hover = false"
-      >
-        <h3 class="f-px fs-md uc">{{ post.date }}</h3>
-        <h1 class="f-px fs-lg uc">{{ post.title }}</h1>
-        <h2 class="f-la fs-sm uc">{{ post.architect }}</h2>
+      <li v-for="post in page.posts" :key="post.permalink">
 
-        <!-- button -->
-        <saber-link :to="post.permalink">
-          <button v-if="hover" class="button-primary--white">
-            <span class="f-px uc">View Entry</span>
-          </button>
-        </saber-link>
+        <!-- main content -->
+        <article>
+          <h3 class="date f-px fs-md uc">{{ post.date }}</h3>
+          <h1 class="title f-px fs-lg uc">{{ post.first_line }}</h1>
+          <h1 class="title f-px fs-lg uc">{{ post.second_line }}</h1>
+          <h2 class="architect f-la fs-sm uc">{{ post.architect }}</h2>
+
+          <!-- button -->
+          <saber-link :to="post.permalink">
+            <button class="button-primary--white">
+              <span class="f-px uc">View Entry</span>
+            </button>
+          </saber-link>
+        </article>
 
         <!-- img -->
         <figure>
@@ -53,6 +54,26 @@
 <!-- style -->
 <style lang='scss' scoped>
   @import '../style/grid.scss';
+
+  .date {
+    @include breakpoint(mdl) { margin-bottom: 6.4rem; }
+  }
+
+  .title {
+    line-height: 1;
+    @include breakpoint(mdl) { margin-bottom: .4rem; }
+  }
+
+  .architect {
+    @include breakpoint(mdl) { margin-bottom: 4rem; }
+  }
+
+  .button-primary--white {
+    // opacity: 0;
+    transition: var(--ease);
+  }
+
+  li:hover .button-primary--white { opacity: 1; }
 
   main {
     display: flex;
@@ -81,7 +102,20 @@
     }
   }
 
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    @include breakpoint(mdl) { transform: translateY(-2rem); padding-left: 2.4rem; }
+    @include breakpoint(lg)  { padding: 0 4rem; }
+  }
+
   figure {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: var(--zmin);
     width: 100%; height: 100%;
   }
 
@@ -119,11 +153,6 @@
 
   export default {
     props: [ 'page' ],
-    data() {
-      return {
-        hover: false
-      }
-    },
     mounted() {
 
       const mySiema = new Siema({

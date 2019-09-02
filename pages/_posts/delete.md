@@ -1,5 +1,7 @@
 ---
 title: Delete Post
+first_line: Delete
+second_line: Post
 date: January 2015
 createdAt: 2015-12-02
 layout: post
