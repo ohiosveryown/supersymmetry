@@ -19,6 +19,7 @@
 
 .fs-lg {
 	font-size: 2.4rem;
+	line-height: 1;
 	@include breakpoint(md) { font-size: 3.2rem; }
 }
 

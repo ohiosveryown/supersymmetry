@@ -20,8 +20,9 @@
 
 // button(s)
 .button-primary, .button-primary--white {
-  padding: 1.2rem 2.4rem;
+  padding: 1.4rem 2.4rem 1.2rem;
   font-size: 1.4rem;
+  transition: var(--ease);
 }
 
 .button-primary--white { background: var(--cloud); }
@@ -85,6 +86,8 @@
 }
 
 // general
+.op-0 { opacity: 0; }
+
 .mt-0 { margin-top: calc(var(--unit) * 0.5 ); }
 .mt-1 { margin-top: calc(var(--unit) * 1 ); }
 .mt-2 { margin-top: calc(var(--unit) * 2); }
