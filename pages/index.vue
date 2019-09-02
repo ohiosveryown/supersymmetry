@@ -7,7 +7,7 @@
 
       <section class="width">
         <h1 class="f-px fs-lg uc">Super—<br>Symmetry</h1>
-        <span class="f-px fs-md uc">2019-2020</span>
+        <span class="f-px fs-md uc">2019–2020</span>
       </section>
       <saber-link to='/colophon.html'><h2 class="width f-la fs-sm uc">Colophon</h2></saber-link>
 
