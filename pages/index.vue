@@ -14,12 +14,12 @@
     </header>
 
     <!-- header mdl -->
-    <header class="debug header--mdl">
+    <header class="header--mdl">
       <article>
 
-        <h3 class="f-px fs-md uc">2019-2020</h3>
-        <h1 class="f-px fs-lg uc">Super—<br>Symmetry</h1>
-        <saber-link to='/colophon.html'><h2 class="f-la fs-sm uc">Colophon</h2></saber-link>
+        <h3 class="date f-px fs-md uc">2019-2020</h3>
+        <h1 class="title f-px fs-lg uc">Super—<br>Symmetry</h1>
+        <saber-link to='/colophon.html'><h2 class="architect f-la fs-sm uc">Colophon</h2></saber-link>
 
         <!-- hidden button / get offa' my lawn -->
         <button class="op-0 button-primary--white">
@@ -35,10 +35,10 @@
 
         <!-- main content -->
         <article>
-          <h3 class="f-px fs-md uc">{{ post.date }}</h3>
+          <h3 class="date f-px fs-md uc">{{ post.date }}</h3>
           <h1 class="f-px fs-lg uc">{{ post.first_line }}</h1>
-          <h1 class="f-px fs-lg uc">{{ post.second_line }}</h1>
-          <h2 class="f-la fs-sm uc">{{ post.architect }}</h2>
+          <h1 class="title f-px fs-lg uc">{{ post.second_line }}</h1>
+          <h2 class="architect f-la fs-sm uc">{{ post.architect }}</h2>
 
           <!-- button -->
           <saber-link :to="post.permalink">
@@ -73,25 +73,36 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  .date {
+    margin-bottom: 5.6rem;
+  }
+
+  .title {
+    margin-bottom: 1.2rem;
+  }
+
+  .architect {
+    margin-bottom: 4rem;
+  }
+
   main {
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-
     @include breakpoint(mdl) { flex-direction: row; }
   }
 
   .header--sm {
     padding-bottom: 1.2rem;
     width: 100vw;
+    @include breakpoint(mdl) { display: none; }
 
     section {
       display: flex;
       justify-content: space-between;
       padding: 1.2rem 0 2rem;
     }
-    @include breakpoint(mdl) { display: none; }
   }
 
   .header--mdl {
@@ -121,7 +132,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    width: 88vw; height: 100vh;
+    transform: translateY(-14rem);
 
     @include breakpoint(mdl) { transform: translateY(-2rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
