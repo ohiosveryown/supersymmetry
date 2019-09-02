@@ -178,7 +178,7 @@
     width: 88vw; height: 100vh;
     transform: translateY(-16rem);
 
-    @include breakpoint(mdl) { transform: translateY(-4.8rem); padding-left: 2.4rem; }
+    @include breakpoint(mdl) { transform: translateY(-3.2rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
   }
 
