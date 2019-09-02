@@ -135,7 +135,7 @@
     margin: 0 auto;
     max-width: var(--max-width);
     width: 88vw; height: 100vh;
-    transform: translateY(-14rem);
+    transform: translateY(-16rem);
 
     @include breakpoint(mdl) { transform: translateY(-2rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
