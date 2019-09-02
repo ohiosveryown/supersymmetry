@@ -60,9 +60,19 @@
     </ul>
 
     <!-- prev / next buttons -->
-    <footer>
-      <button class="prev">Prev</button>
-      <button class="next">Next</button>
+    <footer class="">
+      <button class="prev">
+        <svg width="56" height="56">
+          <path d="M19.29 27.28a.996.996 0 0 0-.29.73v.004c0 .057.023.107.033.162.012.064.013.13.038.191.061.16.162.293.29.401l5.897 5.908a.992.992 0 0 0 .707.294 1.004 1.004 0 0 0 .707-1.71l-4.236-4.245H37a1.001 1.001 0 0 0 0-2.003H22.384l4.323-4.332a1.002 1.002 0 0 0 0-1.416.998.998 0 0 0-1.414 0l-6.004 6.015zM28 53.666C13.847 53.667 2.333 42.153 2.333 28 2.333 13.847 13.847 2.333 28 2.333c14.153 0 25.667 11.514 25.667 25.667 0 14.153-11.514 25.667-25.667 25.667zM28 0C12.536 0 0 12.536 0 28s12.536 28 28 28 28-12.536 28-28S43.464 0 28 0z" fill="#FFF"/>
+        </svg>
+      </button>
+
+
+      <button class="next">
+        <svg width="56" height="56">
+          <path d="M36.71 27.28a.996.996 0 0 1 .29.73v.004c0 .057-.023.107-.033.162-.012.064-.013.13-.038.191a.984.984 0 0 1-.29.401l-5.897 5.908a.992.992 0 0 1-.707.294 1.004 1.004 0 0 1-.707-1.71l4.236-4.245H19a1.001 1.001 0 0 1 0-2.003h14.616l-4.323-4.332a1.002 1.002 0 0 1 0-1.416.998.998 0 0 1 1.414 0l6.004 6.015zM28 53.666c14.153 0 25.667-11.514 25.667-25.667C53.667 13.847 42.153 2.333 28 2.333 13.847 2.333 2.333 13.847 2.333 28c0 14.153 11.514 25.667 25.667 25.667zM28 0c15.464 0 28 12.536 28 28S43.464 56 28 56 0 43.464 0 28 12.536 0 28 0z" fill="#FFF" />
+        </svg>
+      </button>
     </footer>
 
   </main>
@@ -72,6 +82,37 @@
 <!-- style -->
 <style lang='scss' scoped>
   @import '../style/grid.scss';
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0; bottom: 3.2rem;
+    width: 100vw;
+    @include breakpoint(mdl) {
+      bottom: 2rem;
+      width: calc(100vw * .6666);
+    }
+  }
+
+  .prev, .next {
+    opacity: .64;
+    background: transparent;
+    transform: scale(.75);
+    transition: var(--ease);
+    &:hover { @include breakpoint(mdl) { opacity: 1; }}
+  }
+
+  .prev {
+    padding-left: 2.4rem;
+    @include breakpoint(mdl) { padding-left: 2.4rem; }
+  }
+
+  .next {
+    padding-right: 2.4rem;
+    @include breakpoint(mdl) { padding-right: 2.4rem; }
+  }
+
 
   .date {
     margin-bottom: 5.6rem;
@@ -137,7 +178,7 @@
     width: 88vw; height: 100vh;
     transform: translateY(-16rem);
 
-    @include breakpoint(mdl) { transform: translateY(-2rem); padding-left: 2.4rem; }
+    @include breakpoint(mdl) { transform: translateY(-4.8rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
   }
 
@@ -164,10 +205,10 @@
     object-fit: cover;
   }
 
-  footer {
-    position: absolute;
-    bottom: 2rem; right: 2rem;
-  }
+  // footer {
+  //   position: absolute;
+  //   bottom: 2rem; right: 2rem;
+  // }
 
 </style>
 
