@@ -90,7 +90,7 @@
     right: 0; bottom: 3.2rem;
     width: 100vw;
     @include breakpoint(mdl) {
-      bottom: 2rem;
+      bottom: 2.4rem;
       width: calc(100vw * .6666);
     }
   }
@@ -178,7 +178,7 @@
     width: 88vw; height: 100vh;
     transform: translateY(-16rem);
 
-    @include breakpoint(mdl) { transform: translateY(-3.2rem); padding-left: 2.4rem; }
+    @include breakpoint(mdl) { transform: translateY(-4.8rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
   }
 
