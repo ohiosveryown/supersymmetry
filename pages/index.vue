@@ -90,7 +90,7 @@
     right: 0; bottom: 3.2rem;
     width: 100vw;
     @include breakpoint(mdl) {
-      bottom: 2.4rem;
+      bottom: 2rem;
       width: calc(100vw * .6666);
     }
   }
@@ -178,7 +178,7 @@
     width: 88vw; height: 100vh;
     transform: translateY(-16rem);
 
-    @include breakpoint(mdl) { transform: translateY(-4.8rem); padding-left: 2.4rem; }
+    @include breakpoint(mdl) { transform: translateY(-3.2rem); padding-left: 2.4rem; }
     @include breakpoint(lg)  { padding: 0 4rem; }
   }
 
@@ -230,7 +230,7 @@
         duration: 800,
         threshold: 0,
         multipleDrag: true,
-        easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
+        easing: 'cubic-bezier(0.165, 0.84, 0.44, .02)',
         perPage: {
           0: 1,
           800: 1,
