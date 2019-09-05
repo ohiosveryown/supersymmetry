@@ -230,7 +230,7 @@
         duration: 800,
         threshold: 0,
         multipleDrag: true,
-        easing: 'cubic-bezier(0.165, 0.84, 0.44, .02)',
+        easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
         perPage: {
           0: 1,
           800: 1,
