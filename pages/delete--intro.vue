@@ -1,12 +1,13 @@
 <!-- layout -->
 <template>
-  <div>
+  <main class="debug">
 
     <DeleteNav/>
-    <h1>This is Intro</h1>
+    <header ref="myId" class="uc">Super—<br>Symmetry</header>
+    <div ref="cover" class="cover"/>
 
 
-  </div>
+  </main>
 </template>
 
 
@@ -14,6 +15,35 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  main {
+    position: relative;
+    height: 100vh;
+  }
+
+  header {
+    position: absolute;
+    top: 10%;
+    z-index: var(--zmax);
+    transition: all 400ms ease;
+  }
+
+  .open {
+    top: 50%;
+    transition: all 400ms ease;
+  }
+
+  .cover {
+    position: absolute;
+    z-index: var(--z0);
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: lightgray;
+    transition: all 400ms ease;
+  }
+
+  .cover-close {
+    width: 33vw;
+  }
 
 </style>
 
@@ -24,5 +54,12 @@
 
   export default {
     components: { DeleteNav },
+    beforeDestroy() {
+      const target = this.$refs.myId
+      target.classList.add('open')
+
+      const cover = this.$refs.cover
+      cover.classList.add('cover-close')
+    },
   }
 </script>

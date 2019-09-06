@@ -42,7 +42,7 @@
 
   .page-enter,
   .page-leave-to {
-    opacity: 0;
+    // opacity: 0;
   }
 
   $t-duration: 800ms;
@@ -142,7 +142,7 @@
   export default {
     props: [ 'page' ],
     transition: {
-      name: 'intro',
+      // name: 'intro',
     },
     head() {
       const pageTitle = this.page.title

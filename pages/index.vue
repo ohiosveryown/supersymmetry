@@ -1,25 +1,11 @@
 <!-- layout -->
 <template>
-  <main>
+  <main class="debug">
 
-    <DeleteNav @click.native="isOpen = !isOpen"/>
-    <h1>Home</h1>
-    <!-- <header ref="myId" class="uc">Super—<br>Symmetry</header> -->
-    <header  ref="myId" class="uc">Super—<br>Symmetry</header>
+    <DeleteNav/>
+    <header ref="myId" class="uc">Super—<br>Symmetry</header>
+    <div ref="cover" class="cover"/>
 
-    <div v-if="page.posts">
-        <div v-for="post in page.posts" :key="post.permalink">
-
-            <Posts
-              :date = 'post.date'
-              :title = 'post.title'
-              :architect = 'post.architect'
-              :img = 'post.assets.first_img'
-              :earl = 'post.permalink'
-            />
-
-        </div>
-    </div>
 
   </main>
 </template>
@@ -29,15 +15,33 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  header {
+  main {
     position: relative;
+    height: 100vh;
+  }
+
+  header {
+    position: absolute;
+    top: 50%;
     z-index: var(--zmax);
     transition: all 400ms ease;
-    // color: red;
+  }
+
+  .cover {
+    position: absolute;
+    z-index: var(--z0);
+    top: 0; left: 0;
+    width: 33vw; height: 100vh;
+    background: lightgray;
+    transition: all 400ms ease;
+  }
+
+  .cover-open {
+    width: 100vw;
   }
 
   .open {
-    transform: translateX(40vw);
+    top: 10%;
     transition: all 400ms ease;
   }
 
@@ -71,6 +75,9 @@
     beforeDestroy() {
       const target = this.$refs.myId
       target.classList.add('open')
+
+      const cover = this.$refs.cover
+      cover.classList.add('cover-open')
     },
 
     mounted() {
