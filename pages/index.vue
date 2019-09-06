@@ -2,14 +2,15 @@
 <template>
   <div class="index-wrapper">
 
-    <header class="debug">Header</header>
+    <header ref='header' class="">Header</header>
 
     <ul class="siema" v-if="page.posts">
-        <li class="debug" v-for="post in page.posts" :key="post.permalink">
+        <li class="" v-for="post in page.posts" :key="post.permalink">
 
-            <Posts
+            <Post
               :date = 'post.date'
-              :title = 'post.title'
+              :first_line = 'post.first_line'
+              :second_line = 'post.second_line'
               :architect = 'post.architect'
               :img = 'post.assets.first_img'
               :earl = 'post.permalink'
@@ -39,6 +40,13 @@
     z-index: var(--z1);
     top: 0; left: 0;
     width: calc(100vw * .28); height: 100%;
+    box-shadow: 20px 0 16px 0 #F0F0F0;
+    background: var(--stone);
+    transition: all 500ms ease;
+  }
+
+  .header-leave {
+    width: 100vw;
   }
 
   ul {
@@ -58,7 +66,7 @@
 <!-- logic -->
 <script>
   import Siema from 'siema'
-  import Posts from '../components/Posts'
+  import Post from '../components/Post'
 
   export const attributes = {
     layout: 'page',
@@ -67,7 +75,12 @@
 
   export default {
     props: [ 'page' ],
-    components: { Posts },
+    components: { Post },
+
+    beforeDestroy() {
+      const header = this.$refs.header
+      header.classList.add('header-leave')
+    },
 
     mounted() {
       const mySiema = new Siema({
