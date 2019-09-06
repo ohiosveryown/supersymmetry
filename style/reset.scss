@@ -19,7 +19,8 @@
   --zmin: -9999;
 //
   --gravity: #202023;
-  --cloud: #F7F3F0;
+  --cloud: #f7f3f0;
+  --stone: #f0f0f0;
   --primary: #c71429;
 //
   --xs: 360px;
@@ -41,7 +42,7 @@ html {
 
 body {
   overflow: hidden;
-  background: #fff;
+  background: var(--stone);
   color: var(--gravity);
   font: normal 1.6rem/1.4 var(--system-ui);
 }

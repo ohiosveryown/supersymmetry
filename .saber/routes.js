@@ -37,42 +37,6 @@
               }
             },
 {
-              path: "/about.html",
-              meta: {
-                __relative: 'about.md',
-                __pageId: '7ad1997a'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--about-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/about.md?saberPage=7ad1997a")
-                
-              }
-            },
-{
-              path: "/colophon.html",
-              meta: {
-                __relative: 'colophon.md',
-                __pageId: 'fb76bbc6'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--colophon-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.md?saberPage=fb76bbc6")
-                
-              }
-            },
-{
-              path: "/delete--intro.html",
-              meta: {
-                __relative: 'delete--intro.vue',
-                __pageId: '01465737'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--delete--intro-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/delete--intro.vue?saberPage=01465737")
-                
-              }
-            },
-{
               path: "/",
               meta: {
                 __relative: 'index.vue',

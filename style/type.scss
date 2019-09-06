@@ -14,8 +14,9 @@
 // 	font-display: swap;
 }
 
-.f-la { font-family: 'la-norde', var(--system-ui); }
-.f-px { font-family: 'px-grotesk', var(--system-ui); }
+.f-prim { font-family: 'px-grotesk', var(--system-ui); }
+.f-sec { font-family: 'la-norde', var(--system-ui); }
+
 
 .fs-lg {
 	font-size: 2.4rem;

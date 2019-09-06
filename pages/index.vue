@@ -1,13 +1,24 @@
 <!-- layout -->
 <template>
-  <main class="debug">
+  <div class="index-wrapper">
 
-    <DeleteNav/>
-    <header ref="myId" class="uc">Super—<br>Symmetry</header>
-    <div ref="cover" class="cover"/>
+    <header class="debug">Header</header>
 
+    <ul class="siema" v-if="page.posts">
+        <li class="debug" v-for="post in page.posts" :key="post.permalink">
 
-  </main>
+            <Posts
+              :date = 'post.date'
+              :title = 'post.title'
+              :architect = 'post.architect'
+              :img = 'post.assets.first_img'
+              :earl = 'post.permalink'
+            />
+
+        </li>
+    </ul>
+
+  </div>
 </template>
 
 
@@ -15,34 +26,30 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  main {
+  .index-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     position: relative;
     height: 100vh;
   }
 
   header {
     position: absolute;
-    top: 50%;
-    z-index: var(--zmax);
-    transition: all 400ms ease;
-  }
-
-  .cover {
-    position: absolute;
-    z-index: var(--z0);
+    z-index: var(--z1);
     top: 0; left: 0;
-    width: 33vw; height: 100vh;
-    background: lightgray;
-    transition: all 400ms ease;
+    width: calc(100vw * .28); height: 100%;
   }
 
-  .cover-open {
+  ul {
+    // width: calc(100vw * .6666);
     width: 100vw;
+    transform: translateX(calc(100vw * .28));
   }
 
-  .open {
-    top: 10%;
-    transition: all 400ms ease;
+  li {
+    margin-left: 4rem;
+    height: 46vh;
   }
 
 </style>
@@ -53,8 +60,6 @@
   import Siema from 'siema'
   import Posts from '../components/Posts'
 
-  import DeleteNav from '../components/DeleteNav'
-
   export const attributes = {
     layout: 'page',
     injectAllPosts: true
@@ -62,29 +67,22 @@
 
   export default {
     props: [ 'page' ],
-    // transition: {
-    //   name: 'home',
-    //   mode: 'in-out'
-    // },
-    components: { Posts, DeleteNav },
-
-    data: () => ({
-      isOpen: false,
-    }),
-
-    beforeDestroy() {
-      const target = this.$refs.myId
-      target.classList.add('open')
-
-      const cover = this.$refs.cover
-      cover.classList.add('cover-open')
-    },
+    components: { Posts },
 
     mounted() {
-
-      // const target = this.$refs.myId
-      // target.style.color = 'yellow'
-
+      const mySiema = new Siema({
+        loop: true,
+        duration: 800,
+        threshold: 0,
+        multipleDrag: true,
+        easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
+        perPage: {
+          0: 1,
+          800: 1,
+          1000: 2,
+          1400: 2,
+        },
+      })
     }
   }
 </script>
