@@ -4,7 +4,7 @@
 
     <HeaderIndex/>
 
-    <ul class="debug siema" v-if="page.posts">
+    <ul class="siema" v-if="page.posts">
       <li class="" v-for="post in page.posts" :key="post.permalink">
         <Post
           :date = 'post.date'
@@ -32,32 +32,42 @@
     align-items: center;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: calc( 100vh - 12rem );
+
+    @include breakpoint(md)  { height: calc( 100vh - 7rem ); }
+    @include breakpoint(lg)  { height: 100vh; }
   }
 
   ul {
     width: 100vw;
-    transform: translateX(4rem);
+    transform: translateX(calc(100vw * .08));
 
-    @include breakpoint(mdl) {
-      transform: translateX(calc(100vw * .28));
-    }
+    @include breakpoint(md)  { transform: translateX(calc(100vw * .08)); }
+    @include breakpoint(mdl) { transform: translateX(calc(100vw * .28)); }
   }
 
   li {
-    height: 46vh;
-    width: 94%;
+    margin: 0 2.4rem 0 0;
+    height: 42vh;
+
+    @include breakpoint(md) {
+      margin: 0 4rem 0 0;
+      height: 36vh;
+     }
 
     @include breakpoint(mdl) {
-      margin-left: 4rem;
+      margin: 0 0 0 4rem;
+      height: 46vh;
     }
   }
 
   .button--next {
     position: absolute;
-    right: 4rem; bottom: 3.2rem;
+    right: 2.4rem; bottom: 2.4rem;
     transition: var(--ease);
     cursor: pointer;
+
+    @include breakpoint(md) { right: 4rem; bottom: 3.2rem; }
   }
 
   // .header-leave {
@@ -101,7 +111,7 @@
         easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
         perPage: {
           0: 1,
-          800: 2,
+          800: 1,
           1000: 2,
           2000: 3,
         },
