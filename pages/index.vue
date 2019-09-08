@@ -62,7 +62,7 @@
   }
 
   .button--next {
-    position: absolute;
+    position: fixed;
     right: 2.4rem; bottom: 2.4rem;
     transition: var(--ease);
     cursor: pointer;

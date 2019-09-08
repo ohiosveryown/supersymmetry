@@ -13,7 +13,7 @@
   @import '../style/grid.scss';
 
   header {
-    position: absolute;
+    position: fixed;
     z-index: var(--z1);
     top: 0; left: 0;
     width: 100vw;
@@ -23,7 +23,7 @@
     transition: all 500ms ease;
 
     @include breakpoint(mdl) {
-      width: calc(100vw * .28); height: 100%;
+      width: calc(100vw * .28); height: 100vh;
     }
   }
 
