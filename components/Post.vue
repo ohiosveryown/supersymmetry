@@ -7,7 +7,7 @@
     <h1 class="f-prim fs-lg uc">{{ first_line }}</h1>
     <h1 class="title f-prim fs-lg uc">{{ second_line }}</h1>
     <h2 class="architect f-sec fs-sm uc">{{ architect }}</h2>
-    <saber-link :to='earl'><button>VIEW POST</button></saber-link>
+    <button class="f-prim"><saber-link :to='earl'>VIEW POST</saber-link></button>
     <img :src='img'/>
     <div class="cover"/>
   </article>
@@ -21,10 +21,26 @@
   @import '../style/grid.scss';
 
   .date {
-    @include breakpoint(md) {
-      margin-bottom: 5.6rem;
-    }
+    margin-bottom: 2.4rem;
+    @include breakpoint(md) { margin-bottom: 5.6rem; }
   }
+
+  .title {
+    margin-bottom: 6.4rem;
+    @include breakpoint(md) { margin-bottom: 1.2rem; }
+  }
+
+  .architect { margin-bottom: 2.8rem; }
+
+  button {
+    align-self: flex-start;
+    background: var(--cloud);
+    padding: 1rem 2rem .8rem;
+    transition: var(--ease);
+  }
+
+  @media (pointer: coarse) { button { opacity: 1; }}
+  @media (pointer: fine) { button { opacity: 0; }}
 
   article {
     display: flex;
@@ -34,6 +50,10 @@
     padding: 0 4rem;
     height: 100%;
     color: var(--cloud);
+  }
+
+  article:hover button {
+    @include breakpoint(mdl) { opacity: 1; }
   }
 
   img {
