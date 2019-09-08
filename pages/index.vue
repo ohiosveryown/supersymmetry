@@ -42,6 +42,7 @@
     width: calc(100vw * .28); height: 100%;
     box-shadow: 20px 0 16px 0 #F0F0F0;
     background: var(--stone);
+    background: pink;
     transition: all 500ms ease;
   }
 
