@@ -17,30 +17,17 @@
 .f-prim { font-family: 'px-grotesk', var(--system-ui); }
 .f-sec { font-family: 'la-norde', var(--system-ui); }
 
-
 .fs-lg {
 	font-size: 2.4rem;
 	line-height: 1;
-
-	@include breakpoint(md)  { font-size: 2.4rem; }
-	@include breakpoint(lg) { font-size: 3.2rem; }
 }
 
 .fs-md {
 	font-size: 1.6rem;
-	@include breakpoint(lg) { font-size: 1.9rem; }
 }
 
-.fs-sm { font-size: 1.6rem; }
+.fs-sm {
 
-.fs-p-lg {
-	font-size: 1.6rem;
-	@include breakpoint(mdl) { font-size: 2.4rem; }
-}
-
-.fs-p {
-	font-size: 1.6rem;
-	@include breakpoint(mdl) { font-size: 2rem; }
 }
 
 .uc { text-transform: uppercase; }
