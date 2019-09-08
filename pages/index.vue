@@ -5,7 +5,7 @@
     <HeaderIndex/>
 
     <ul class="siema" v-if="page.posts">
-      <li class="" v-for="post in page.posts" :key="post.permalink">
+      <li v-for="post in page.posts" :key="post.permalink">
         <Post
           :date = 'post.date'
           :first_line = 'post.first_line'
