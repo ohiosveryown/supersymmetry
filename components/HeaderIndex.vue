@@ -8,7 +8,7 @@
       <h1 class="f-prim fs-lg uc">Super—</h1>
       <h1 class="title f-prim fs-lg uc">Symmetry</h1>
       <h2 class="link f-sec fs-md uc">Colophon</h2>
-      <button class="f-prim uc"><saber-link to='/'>View Entry</saber-link></button>
+      <button class="f-prim uc"><saber-link to='/colophon.html'>View Entry</saber-link></button>
     </section>
   </header>
 
@@ -90,7 +90,7 @@
      }
 
     @include breakpoint(mdl) {
-      margin: 0 0 0 4rem;
+      margin: 0 0 0 20%;
       height: 46vh;
     }
   }

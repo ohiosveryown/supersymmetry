@@ -48,6 +48,18 @@
                 
               }
             },
+{
+              path: "/colophon.html",
+              meta: {
+                __relative: 'colophon.vue',
+                __pageId: '73607480'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--colophon-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.vue?saberPage=73607480")
+                
+              }
+            },
       
       // An addtional route to catch all other requests, i.e. 404 page
       {
