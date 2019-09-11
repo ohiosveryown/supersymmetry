@@ -148,7 +148,7 @@
       header_first_line.style.transition = 'all 900ms cubic-bezier(.8,0,.16,1) 50ms'
 
       const header_second_line = document.querySelector('.header-second-line')
-      header_second_line.style.transform = 'translateY(48px)'
+      header_second_line.style.transform = 'translateY(52px)'
       header_second_line.style.transition = 'all 900ms cubic-bezier(.8,0,.16,1) 100ms'
 
       const header_link = document.querySelector('.header-link')

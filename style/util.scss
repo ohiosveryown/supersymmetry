@@ -31,7 +31,7 @@
 .stagger-swift {
   opacity: 0;
   will-change: opacity;
-  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 1) forwards;
+  animation: In calc(var(--animbase) * 2) var(--inout) 200ms forwards;
 }
 
 .stagger-zero {
