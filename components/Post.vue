@@ -3,11 +3,11 @@
 
 
   <article>
-    <h3 class="date f-prim fs-md uc">{{ date }}</h3>
-    <h1 class="f-prim fs-lg uc">{{ first_line }}</h1>
-    <h1 class="title f-prim fs-lg uc">{{ second_line }}</h1>
-    <h2 class="architect f-sec fs-md uc">{{ architect }}</h2>
-    <button class="f-prim uc"><saber-link :to='earl'>View Entry</saber-link></button>
+    <h3 class="ref-date date f-prim fs-sm uc">{{ date }}</h3>
+    <h1 class="ref-first-line f-prim fs-lg uc">{{ first_line }}</h1>
+    <h1 class="ref-second-line title f-prim fs-lg uc">{{ second_line }}</h1>
+    <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
+    <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
     <img :src='img'/>
     <div class="cover"/>
   </article>
@@ -38,10 +38,12 @@
 
   .title {
     margin-bottom: 6.4rem;
-    @include breakpoint(md) { margin-bottom: 1.2rem; }
+    @include breakpoint(md) { margin-bottom: 1.4rem; }
   }
 
   .architect { margin-bottom: 2.8rem; }
+
+  a { align-self: flex-start; }
 
   button {
     align-self: flex-start;
@@ -70,7 +72,6 @@
     background: var(--primary);
     mix-blend-mode: darken;
   }
-
 </style>
 
 

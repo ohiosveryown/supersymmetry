@@ -1,18 +1,6 @@
 
     export default [
       {
-              path: "/posts/delete.html",
-              meta: {
-                __relative: '_posts/delete.md',
-                __pageId: '2b4e79be'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-delete-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete.md?saberPage=2b4e79be")
-                
-              }
-            },
-{
               path: "/posts/mailchimp-atlanta.html",
               meta: {
                 __relative: '_posts/mailchimp-atlanta.md',
@@ -37,6 +25,18 @@
               }
             },
 {
+              path: "/colophon.html",
+              meta: {
+                __relative: 'colophon.vue',
+                __pageId: '73607480'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--colophon-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.vue?saberPage=73607480")
+                
+              }
+            },
+{
               path: "/",
               meta: {
                 __relative: 'index.vue',
@@ -49,14 +49,14 @@
               }
             },
 {
-              path: "/colophon.html",
+              path: "/posts/delete2.html",
               meta: {
-                __relative: 'colophon.vue',
-                __pageId: '73607480'
+                __relative: '_posts/delete2.md',
+                __pageId: '60c08777'
               },
               component: function() {
                 
-                return import(/* webpackChunkName: "page--colophon-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.vue?saberPage=73607480")
+                return import(/* webpackChunkName: "page--_posts-delete2-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete2.md?saberPage=60c08777")
                 
               }
             },

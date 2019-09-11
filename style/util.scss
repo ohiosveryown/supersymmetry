@@ -28,6 +28,12 @@
 .button-primary--white { background: var(--cloud); }
 
 // animations
+.stagger-swift {
+  opacity: 0;
+  will-change: opacity;
+  animation: In calc(var(--animbase) * 2) var(--inout) calc(var(--animbase) * 1) forwards;
+}
+
 .stagger-zero {
   opacity: 0;
   will-change: opacity;
@@ -64,9 +70,20 @@
   animation: FromLeft calc(var(--animbase) * 2) var(--inout) forwards;
 }
 
+.stagger-out {
+  opacity: 0;
+  will-change: opacity;
+  animation: Out var(--animbase) var(--inout) calc(var(--animbase) * 1) forwards;
+}
+
 @keyframes In {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes Out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 @keyframes Scale {
