@@ -60,6 +60,18 @@
                 
               }
             },
+{
+              path: "/posts/delete3.html",
+              meta: {
+                __relative: '_posts/delete3.md',
+                __pageId: '60c0fbd6'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-delete3-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete3.md?saberPage=60c0fbd6")
+                
+              }
+            },
       
       // An addtional route to catch all other requests, i.e. 404 page
       {
