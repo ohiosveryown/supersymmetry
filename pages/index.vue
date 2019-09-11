@@ -28,7 +28,7 @@
     <ButtonNext class="button--next"/>
 
     <div class="shadow"/>
-    <div class="changeit"/>
+    <div class="page-cover"/>
 
   </div>
 </template>
@@ -38,7 +38,7 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .changeit {
+  .page-cover {
     position: fixed;
     z-index: var(--z3);
     top: 0; left: 0;
