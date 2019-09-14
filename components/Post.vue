@@ -48,7 +48,7 @@
   button {
     align-self: flex-start;
     background: var(--cloud);
-    padding: 1rem 2rem .8rem;
+    padding: 1.2rem 2.4rem 1rem;
     transition: var(--ease);
   }
 

@@ -2,15 +2,7 @@
 <template>
   <div class="index-wrapper">
 
-    <!-- <HeaderIndex/> -->
-    <header class="stagger-swift">
-      <section>
-        <h3 class="header-date date f-prim fs-sm uc">2019—2020</h3>
-        <h1 class="header-first-line f-prim fs-lg uc">Super—</h1>
-        <h1 class="header-second-line title f-prim fs-lg uc">Symmetry</h1>
-        <saber-link to='/colophon.html'><h2 class="header-link link f-sec fs-md uc">Colophon</h2></saber-link>
-      </section>
-    </header>
+    <HeaderIndex/>
 
     <ul class="stagger-swift siema" v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
@@ -68,12 +60,6 @@
     @include breakpoint(lg) { height: 100vh; }
   }
 
-  header {
-    position: relative;
-    z-index: var(--z4);
-    margin-left: 4vw;
-  }
-
   ul {
     position: relative;
     z-index: var(--z1);
@@ -107,18 +93,12 @@
     @include breakpoint(md) { right: 4rem; bottom: 3.2rem; }
   }
 
-  .header-date, .header-first-line, .header-second-line, .header-link {
-    position: absolute;
-    top: 0;
-  }
-
 </style>
 
 
 <!-- logic -->
 <script>
   import { leave_logic, static_logic } from '../logic/for-index.js'
-
   import Siema from 'siema'
   import HeaderIndex from '../components/HeaderIndex'
   import Post from '../components/Post'
@@ -138,7 +118,6 @@
     },
 
     mounted() {
-
       static_logic()
       // next arrow
       const next = document.querySelector('.next')
