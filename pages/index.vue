@@ -30,27 +30,6 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .page-cover {
-    position: fixed;
-    z-index: var(--z3);
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: var(--stone);
-    background: #fff;
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  .shadow {
-    position: fixed;
-    z-index: var(--z2);
-    top: 0; left: 0;
-    width: 32vw; height: 100vh;
-    background: var(--stone);
-    box-shadow: 20px 0 16px 0 var(--stone);
-  }
-
-
   .index-wrapper {
     overflow: hidden;
     position: relative;
@@ -91,6 +70,26 @@
     transition: var(--ease);
     cursor: pointer;
     @include breakpoint(md) { right: 4rem; bottom: 3.2rem; }
+  }
+
+  .shadow {
+    position: fixed;
+    z-index: var(--z2);
+    top: 0; left: 0;
+    width: 32vw; height: 100vh;
+    background: var(--stone);
+    box-shadow: 20px 0 16px 0 var(--stone);
+  }
+
+  .page-cover {
+    position: fixed;
+    z-index: var(--z3);
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: var(--stone);
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
   }
 
 </style>
