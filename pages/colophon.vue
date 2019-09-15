@@ -24,23 +24,23 @@
           <li class="f-sec fs-md"><a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">github (source)</a></li>
         </ul>
 
-        <article class="mb-8">
+        <article>
           <h1 class="mb-2 f-prim fs-md uc">Purpose</h1>
           <p class="f-sec fs-md">Supersymmetry is a photo blog built on Vue and Saber showcasing architecture, interior design and structural engineering – basically spaces. The site is best viewed in Safari, Chrome or Firefox.</p>
         </article>
-        <article class="mb-8">
+        <article>
           <h1 class="mb-2 f-prim fs-md uc">Design</h1>
           <p class="f-sec fs-md">Supersymmetry was designed and developed by me, Matt. It was designed in Sketch and developed in VS Code.</p>
         </article>
-        <article class="mb-8">
+        <article>
           <h1 class="mb-2 f-prim fs-md uc">Thank You's</h1>
           <p class="f-sec fs-md">Mom, Mark, Nico, Gino, Jeremy, Andrew, Scott, Dan, Frank Lloyd Wright, Zaha Hadid and plenty of others.</p>
         </article>
-        <article class="mb-8">
+        <article>
           <h1 class="mb-2 f-prim fs-md uc">Images</h1>
           <p class="f-sec fs-md">All images belong to their respective owners. For removal, please contact me at matt@ohiosveryown.co.</p>
         </article>
-        <article class="mb-8">
+        <article>
           <h1 class="mb-2 f-prim fs-md uc">Typography</h1>
           <p class="f-sec fs-md">The majority of headlines are set in PX Grotesk by Optimo Type Foundry. Body and subtitle styles are set in BW Gradual by Branding With Type.</p>
         </article>
@@ -70,7 +70,9 @@
   }
 
   .section-left {
+    margin-bottom: 6.4rem;
     @include breakpoint(md) {
+      margin-bottom: 0rem;
       width: grid-width(6);
     }
   }
@@ -78,9 +80,11 @@
   .section-right {
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 14rem;
 
     @include breakpoint(md) {
       flex-direction: column;
+      margin-bottom: 3.2rem;
       margin-left: grid-width(.5);
       width: grid-width(5.5);
     }
@@ -95,6 +99,11 @@
     @include breakpoint(md) {
       margin-bottom: 12.4rem;
     }
+  }
+
+  article {
+    margin-bottom: 4.8rem;
+    @include breakpoint(md) { margin-bottom: 6.4rem; }
   }
 
   .page-cover {
