@@ -1,9 +1,9 @@
 @import './style/grid.scss';
 
 @font-face {
-	font-family: 'la-norde';
-	src: url('../type/la-norde.woff');
-	src: local('☺'), url('../type/la-norde.woff') format('woff');
+	font-family: 'bw-gradual';
+	src: url('../type/bw-gradual.woff');
+	src: local('☺'), url('../type/bw-gradual.woff') format('woff');
 // 	font-display: swap;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .f-prim { font-family: 'px-grotesk', var(--system-ui); }
-.f-sec { font-family: 'la-norde', var(--system-ui); }
+.f-sec { font-family: 'bw-gradual', var(--system-ui); }
 
 .fs-lg {
 	font-size: 2.8rem;

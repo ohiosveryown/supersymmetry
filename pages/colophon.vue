@@ -5,7 +5,7 @@
 
     <HeaderColophon/>
 
-    <main style="min-height: 300vh;" class="debug width">
+    <main class="debug width">
       <!-- left / img section -->
       <section class="debug section-left">
         <figure class="sticky">
@@ -18,49 +18,35 @@
       <section class="debug section-right">
 
         <ul>
-          <h1>credits</h1>
-          <li><a href="">@cmykw_</a></li>
-          <li><a href="">ohiosveryown</a></li>
-          <li><a href="">github (source)</a></li>
+          <h1 class="f-prim fs-md uc">credits</h1>
+          <li class="f-sec fs-md"><a target="_blank" href="https://twitter.com/cmykw_">@cmykw_</a></li>
+          <li class="f-sec fs-md"><a target="_blank" href="http://ohiosveryown.co">ohiosveryown</a></li>
+          <li class="f-sec fs-md"><a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">github (source)</a></li>
         </ul>
 
         <article>
-          <h1>Purpose</h1>
-          <p>Supersymmetry is a photo blog built on Vue and Saber showcasing architecture, interior design and structural engineering – basically spaces. The site is best viewed in Safari, Chrome or Firefox.</p>
+          <h1 class="f-prim fs-md uc">Purpose</h1>
+          <p class="f-sec fs-md">Supersymmetry is a photo blog built on Vue and Saber showcasing architecture, interior design and structural engineering – basically spaces. The site is best viewed in Safari, Chrome or Firefox.</p>
         </article>
         <article>
-          <h1>Design</h1>
-          <p>Supersymmetry was designed and developed by me, Matt. It was designed in Sketch and developed in VS Code.</p>
+          <h1 class="f-prim fs-md uc">Design</h1>
+          <p class="f-sec fs-md">Supersymmetry was designed and developed by me, Matt. It was designed in Sketch and developed in VS Code.</p>
         </article>
         <article>
-          <h1>Thank You's</h1>
-          <p>Mom, Mark, Nico, Gino, Jeremy, Andrew, Scott, Dan, Frank Lloyd Wright, Zaha Hadid and plenty of others.</p>
+          <h1 class="f-prim fs-md uc">Thank You's</h1>
+          <p class="f-sec fs-md">Mom, Mark, Nico, Gino, Jeremy, Andrew, Scott, Dan, Frank Lloyd Wright, Zaha Hadid and plenty of others.</p>
         </article>
         <article>
-          <h1>Images</h1>
-          <p>All images belong to their respective owners. For removal, please contact me at matt@ohiosveryown.co.</p>
+          <h1 class="f-prim fs-md uc">Images</h1>
+          <p class="f-sec fs-md">All images belong to their respective owners. For removal, please contact me at matt@ohiosveryown.co.</p>
         </article>
         <article>
-          <h1>Typography</h1>
-          <p>The majority of headlines are set in PX Grotesk by Optimo Type Foundry. Body and subtitle styles are set in BW Gradual by Branding With Type.</p>
+          <h1 class="f-prim fs-md uc">Typography</h1>
+          <p class="f-sec fs-md">The majority of headlines are set in PX Grotesk by Optimo Type Foundry. Body and subtitle styles are set in BW Gradual by Branding With Type.</p>
         </article>
 
       </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="page-cover colorshift"/>
@@ -90,7 +76,11 @@
   }
 
   .section-right {
+    display: flex;
+    flex-direction: column-reverse;
+
     @include breakpoint(md) {
+      flex-direction: column;
       margin-left: grid-width(.5);
       width: grid-width(5.5);
     }
@@ -101,6 +91,12 @@
     top: 4.6rem;
   }
 
+  ul {
+    @include breakpoint(md) {
+      margin-bottom: 12.4rem;
+    }
+  }
+
   .page-cover {
     position: fixed;
     z-index: var(--z0);
@@ -108,6 +104,8 @@
     width: 100vw; height: 100vh;
     background: #fff;
   }
+
+  a { text-decoration: underline; }
 
 </style>
 
