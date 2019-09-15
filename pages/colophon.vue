@@ -5,15 +5,10 @@
 
     <HeaderColophon/>
 
-    <button class="prim">Click</button><span></span>
-
     <main class="width">
       <!-- left / img section -->
       <section class="section-left">
-        <figure class="sticky">
-          <img class="mb-1" src="./img/house-01.jpg" alt="">
-          <figcaption class="f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
-        </figure>
+        <ColophonImg/>
       </section>
 
       <!-- right / content section -->
@@ -127,33 +122,12 @@
 <!-- logic -->
 <script>
   import HeaderColophon from '../components/HeaderColophon'
+  import ColophonImg from '../components/ColophonImg'
 
   export default {
-    components: { HeaderColophon },
+    components: { HeaderColophon, ColophonImg },
     mounted() {
-const posts = [
-  '/zytkow-objects.html',
-  '/temperature-of-a-black-hole.html',
-  '/what-is-dark-energy',
-]
 
-const prim = document.querySelector('.prim')
-const trigger = document.querySelector('button')
-const span = document.querySelector('span')
-
-let count = 0
-
-trigger.addEventListener('click', () => {
-  const post = posts[~~(Math.random() * posts.length)]
-  const btn = document.createElement('button')
-  span.appendChild(btn)
-  btn.innerText = post
-
-  count += 1
-  if (count >= 3) { prim.disabled = true }
-
-  // console.log(count)
-})
     },
 
     beforeDestroy() {

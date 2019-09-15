@@ -35,7 +35,6 @@
 
   h1, h2 { width: max-content; }
 
-
 </style>
 
 
