@@ -40,12 +40,17 @@
 
       img.src = imgs[0]
       let myIndex = 1
+      let count = 0
 
       figure.addEventListener('click', () => {
-        const newImgSrc = imgs[myIndex++%imgs.length]
-        const newImg = document.createElement('img')
+        let newImgSrc = imgs[myIndex++ % imgs.length]
+        let newImg = document.createElement('img')
+
         figure.appendChild(newImg)
         newImg.src = newImgSrc
+
+        count += 1
+        if (count >= 3) { newImgSrc == null }
       })
     }
   }
