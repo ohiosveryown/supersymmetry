@@ -5,6 +5,8 @@
 
     <HeaderColophon/>
 
+    <button class="prim">Click</button><span></span>
+
     <main class="width">
       <!-- left / img section -->
       <section class="section-left">
@@ -59,6 +61,10 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  header {
+    margin-bottom: 4.8rem;
+  }
+
   main {
     display: flex;
     flex-direction: column;
@@ -80,19 +86,18 @@
   .section-right {
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 14rem;
+    margin-bottom: 9.6rem;
 
     @include breakpoint(md) {
       flex-direction: column;
-      margin-bottom: 3.2rem;
-      margin-left: grid-width(.5);
+      margin: 0 0 9.6rem grid-width(.5);
       width: grid-width(5.5);
     }
   }
 
   .sticky {
     position: sticky;
-    top: 4.6rem;
+    top: 3.2rem;
   }
 
   ul {
@@ -125,6 +130,32 @@
 
   export default {
     components: { HeaderColophon },
+    mounted() {
+const posts = [
+  '/zytkow-objects.html',
+  '/temperature-of-a-black-hole.html',
+  '/what-is-dark-energy',
+]
+
+const prim = document.querySelector('.prim')
+const trigger = document.querySelector('button')
+const span = document.querySelector('span')
+
+let count = 0
+
+trigger.addEventListener('click', () => {
+  const post = posts[~~(Math.random() * posts.length)]
+  const btn = document.createElement('button')
+  span.appendChild(btn)
+  btn.innerText = post
+
+  count += 1
+  if (count >= 3) { prim.disabled = true }
+
+  // console.log(count)
+})
+    },
+
     beforeDestroy() {
       const header = document.querySelector('header')
       header.style.opacity = '0'
