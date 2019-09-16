@@ -3,7 +3,6 @@
 
 
   <figure class="sticky">
-    <!-- <img class="mb-1" src="../pages/img/house-01.jpg" alt=""> -->
     <img class="mb-1" src="" alt="">
     <figcaption class="f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
   </figure>

@@ -15,31 +15,31 @@
       <section class="section-right">
 
         <ul>
-          <h1 class="mb-1 f-prim fs-md uc">credits</h1>
-          <li class="mb-0 f-sec fs-md"><a target="_blank" href="https://twitter.com/cmykw_">@cmykw_</a></li>
-          <li class="mb-0 f-sec fs-md"><a target="_blank" href="http://ohiosveryown.co">ohiosveryown</a></li>
-          <li class="f-sec fs-md"><a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">github (source)</a></li>
+          <h1 class="mb-1 f-prim fs-md uc">{{ page.credits_header }}</h1>
+          <li class="mb-0 f-sec fs-md"><a target="_blank" href="https://twitter.com/cmykw_">{{ page.twitter }}</a></li>
+          <li class="mb-0 f-sec fs-md"><a target="_blank" href="http://ohiosveryown.co">{{ page.site }}</a></li>
+          <li class="f-sec fs-md"><a target="_blank" href="https://github.com/ohiosveryown/supersymmetry">{{ page.source }}</a></li>
         </ul>
 
         <article>
-          <h1 class="mb-2 f-prim fs-md uc">Purpose</h1>
-          <p class="f-sec fs-md">Supersymmetry is a photo blog built on Vue and Saber showcasing architecture, interior design and structural engineering – basically spaces. The site is best viewed in Safari, Chrome or Firefox.</p>
+          <h1 class="mb-2 f-prim fs-md uc">{{ page.article_one_header }}</h1>
+          <p class="f-sec fs-md">{{ page.article_one }}</p>
         </article>
         <article>
-          <h1 class="mb-2 f-prim fs-md uc">Design</h1>
-          <p class="f-sec fs-md">Supersymmetry was designed and developed by me, Matt. It was designed in Sketch and developed in VS Code.</p>
+          <h1 class="mb-2 f-prim fs-md uc">{{ page.article_two_header }}</h1>
+          <p class="f-sec fs-md">{{ page.article_two }}</p>
         </article>
         <article>
-          <h1 class="mb-2 f-prim fs-md uc">Thank You's</h1>
-          <p class="f-sec fs-md">Mom, Mark, Nico, Gino, Jeremy, Andrew, Scott, Dan, Frank Lloyd Wright, Zaha Hadid and plenty of others.</p>
+          <h1 class="mb-2 f-prim fs-md uc">{{ page.article_three_header }}</h1>
+          <p class="f-sec fs-md">{{ page.article_three }}</p>
         </article>
         <article>
-          <h1 class="mb-2 f-prim fs-md uc">Images</h1>
-          <p class="f-sec fs-md">All images belong to their respective owners. For removal, please contact me at matt@ohiosveryown.co.</p>
+          <h1 class="mb-2 f-prim fs-md uc">{{ page.article_four_header }}</h1>
+          <p class="f-sec fs-md">{{ page.article_four }}</p>
         </article>
         <article>
-          <h1 class="mb-2 f-prim fs-md uc">Typography</h1>
-          <p class="f-sec fs-md">The majority of headlines are set in PX Grotesk by Optimo Type Foundry. Body and subtitle styles are set in BW Gradual by Branding With Type.</p>
+          <h1 class="mb-2 f-prim fs-md uc">{{ page.article_five_header }}</h1>
+          <p class="f-sec fs-md">{{ page.article_five }}</p>
         </article>
 
       </section>
@@ -56,9 +56,7 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  header {
-    margin-bottom: 4.8rem;
-  }
+  header { margin-bottom: 4.8rem; }
 
   main {
     display: flex;
@@ -72,6 +70,7 @@
 
   .section-left {
     margin-bottom: 6.4rem;
+
     @include breakpoint(md) {
       margin-bottom: 0rem;
       width: grid-width(6);
@@ -95,11 +94,7 @@
     top: 3.2rem;
   }
 
-  ul {
-    @include breakpoint(md) {
-      margin-bottom: 12.4rem;
-    }
-  }
+  ul { @include breakpoint(md) { margin-bottom: 12.4rem; }}
 
   article {
     margin-bottom: 4.8rem;
@@ -126,8 +121,15 @@
 
   export default {
     components: { HeaderColophon, ColophonImg },
-    mounted() {
+    props: [ 'page' ],
 
+    head() {
+      const pageTitle = this.page.title
+      return {
+        title: pageTitle ?
+          `${pageTitle} - ${this.$siteConfig.title}` :
+          this.$siteConfig.title
+      }
     },
 
     beforeDestroy() {
