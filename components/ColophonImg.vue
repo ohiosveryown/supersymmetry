@@ -2,7 +2,7 @@
 <template>
 
 
-  <figure>
+  <figure class="sticky">
     <div class="cover"><img class="mb-1" src="" alt=""></div>
     <figcaption class="stagger-swift f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
   </figure>
@@ -14,6 +14,11 @@
 <!-- style -->
 <style lang='scss' scoped>
   @import '../style/grid.scss';
+
+  .sticky {
+    position: sticky;
+    top: 3.2rem;
+  }
 
   .cover {
     display: flex;
@@ -36,6 +41,7 @@
   }
 
   img {
+    cursor: pointer;
     opacity: 0;
     will-change: opacity;
     animation:
