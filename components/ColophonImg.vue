@@ -38,17 +38,6 @@
         'http://ohiosveryown.co/supersymmetry/house-02.jpg'
       ]
 
-      // const imgs = [
-      //   {
-      //     source: 'http://ohiosveryown.co/supersymmetry/house-01.jpg',
-      //     transform : 'rotate(0)'
-      //   },
-      //   {
-      //     source: 'http://ohiosveryown.co/supersymmetry/house-02.jpg',
-      //     transform : 'rotate(15deg)'
-      //   }
-      // ]
-
       const styles = [
         'rotate(3deg)',
         'rotate(-3deg)',
@@ -60,9 +49,6 @@
       figure.addEventListener('click', () => {
         let newImgSrc = imgs[imgIndex++ % imgs.length]
         img.src = newImgSrc
-
-        // const styl = styles[~~(Math.random() * styles.length)]
-        // img.style.transform = styl
       })
     }
   }
