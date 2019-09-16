@@ -76,6 +76,18 @@
   animation: Out var(--animbase) var(--inout) calc(var(--animbase) * 1) forwards;
 }
 
+.scale-left {
+  transform: translateX(0);
+  will-change: transform;
+  animation: ScaleLeft calc(var(--animbase) * 2) var(--inout) forwards;
+}
+
+.stagger-scale-swift {
+  opacity: 0;
+  will-change: opacity;
+  animation: FadeScale calc(var(--animbase) * 2) var(--inout) 200ms forwards;
+}
+
 @keyframes In {
   0% { opacity: 0; }
   100% { opacity: 1; }
@@ -94,6 +106,12 @@
 @keyframes FromLeft {
   0% { transform: translateX(-100vw); }
   100% { transform: translateX(0); }
+}
+
+@keyframes ScaleLeft {
+  0% { transform: scaleX(0); }
+  50% { transform: scaleX(1); }
+  100% { transform: translateX(104%); }
 }
 
 @keyframes FadeScale {

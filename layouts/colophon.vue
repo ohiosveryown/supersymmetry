@@ -12,7 +12,7 @@
       </section>
 
       <!-- right / content section -->
-      <section class="section-right">
+      <section class="stagger section-right">
 
         <ul>
           <h1 class="mb-1 f-prim fs-md uc">{{ page.credits_header }}</h1>

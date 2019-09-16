@@ -2,9 +2,9 @@
 <template>
 
 
-  <figure class="sticky">
-    <img class="mb-1" src="" alt="">
-    <figcaption class="f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
+  <figure>
+    <div class="cover"><img class="mb-1" src="" alt=""></div>
+    <figcaption class="stagger-swift f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
   </figure>
 
 
@@ -15,10 +15,32 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  .cover {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: var(--z1);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    transform-origin: left;
+    background: var(--gravity);
+    will-change: transform;
+    animation: ScaleLeft 1800ms var(--inout) forwards;
+  }
+
   img {
-    cursor: pointer;
-    width: 100%; height: auto;
-    object-fit: cover;
+    opacity: 0;
+    will-change: opacity;
+    animation:
+      Scale 1600ms ease 1000ms forwards,
+      In 300ms var(--inout) 850ms forwards;
   }
 
 
