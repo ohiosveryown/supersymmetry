@@ -35,7 +35,8 @@
 
       const imgs = [
         'http://ohiosveryown.co/supersymmetry/house-01.jpg',
-        'http://ohiosveryown.co/supersymmetry/house-02.jpg'
+        'http://ohiosveryown.co/supersymmetry/house-02.jpg',
+        'http://ohiosveryown.co/supersymmetry/house-03.jpg',
       ]
 
       const styles = [
