@@ -5,35 +5,54 @@ const leave_logic = () => {
   const header_second_line = document.querySelector('.header-second-line')
   const header_link = document.querySelector('.header-link')
   const page_cover = document.querySelector('.page-cover')
+  const mq = window.matchMedia( '(min-width: 700px)' )
 
   // styles
-  header_date.style.cssText = `
-    transform: translateY(0);
-    opacity: 0;
-    transition: transform 900ms var(--inout),
-    opacity 500ms ease 400ms;
-  `
+  if (mq.matches) {
+    header_date.style.cssText = `
+      transform: translateY(0);
+      opacity: 0;
+      transition: transform 900ms var(--inout),
+      opacity 500ms ease 400ms;
+    `
 
-  header_first_line.style.cssText = `
-    transform: translateY(24px);
-    transition: all 900ms var(--inout) 50ms;
-  `
+    header_first_line.style.cssText = `
+      transform: translateY(24px);
+      transition: all 900ms var(--inout) 50ms;
+    `
 
-  header_second_line.style.cssText = `
-    transform: translateY(52px);
-    transition: all 900ms var(--inout) 100ms;
-  `
+    header_second_line.style.cssText = `
+      transform: translateY(52px);
+      transition: all 900ms var(--inout) 100ms;
+    `
 
-  header_link.style.cssText = `
-    transform: translateY(0);
-    opacity: 0;
-    transition: all 900ms var(--inout) 150ms, opacity 500ms ease 150ms;
-  `
+    header_link.style.cssText = `
+      transform: translateY(0);
+      opacity: 0;
+      transition: all 900ms var(--inout) 150ms, opacity 500ms ease 150ms;
+    `
 
-  page_cover.style.cssText = `
-    transform: scaleX(1);
-    transition: all 1000ms var(--inout);
-  `
+    page_cover.style.cssText = `
+      transform: scaleX(1);
+      transition: all 1000ms var(--inout);
+    `
+
+  } else {
+      header_date.style.cssText = `
+        opacity: 0;
+        transition: opacity 500ms ease 400ms;
+      `
+
+      header_link.style.cssText = `
+        opacity: 0;
+        transition: opacity 500ms ease 150ms;
+      `
+
+      page_cover.style.cssText = `
+        transform: scaleX(1);
+        transition: all 1000ms var(--inout);
+      `
+  }
 }
 
 

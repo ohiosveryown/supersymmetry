@@ -114,10 +114,7 @@
     props: [ 'page' ],
     components: { Post, ButtonNext, HeaderIndex },
 
-    beforeDestroy() {
-      const mq = window.matchMedia( '(min-width: 700px)' )
-      if (mq.matches) { leave_logic() }
-    },
+    beforeDestroy() { leave_logic() },
 
     mounted() {
       const mq = window.matchMedia( '(min-width: 700px)' )

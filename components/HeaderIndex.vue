@@ -4,7 +4,7 @@
 
   <header class="stagger-swift">
     <section>
-      <h3 class="header-date date f-prim fs-sm uc">2019—2020</h3>
+      <h3 class="header-date f-prim fs-sm uc">2019—2020</h3>
         <div>
           <h1 class="header-first-line f-prim fs-lg uc">Super—</h1>
           <h1 class="header-second-line title f-prim fs-lg uc">Symmetry</h1>
