@@ -17,7 +17,7 @@
       </li>
     </ul>
 
-    <ButtonNext class="button--next"/>
+    <ButtonNext class="stagger-swift button--next"/>
 
     <div class="shadow"/>
     <div class="page-cover"/>
@@ -43,14 +43,14 @@
     position: relative;
     z-index: var(--z1);
     width: 100vw;
-    transform: translateX(calc(100vw * .08)) translateY(8vh);
+    transform: translateX(4vw) translateY(8vh);
 
-    @include breakpoint(md)  { transform: translateX(calc(100vw * .08)); }
-    @include breakpoint(mdl) { transform: translateX(calc(100vw * .32)) translateY(22vh); }
+    @include breakpoint(md)  { transform: translateX(8vw); }
+    @include breakpoint(mdl) { transform: translateX(32vw) translateY(22vh); }
   }
 
   li {
-    margin: 0 2.4rem 0 0;
+    margin: 0;
     height: 42vh;
 
     @include breakpoint(md) {
