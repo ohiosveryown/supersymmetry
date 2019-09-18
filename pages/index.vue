@@ -43,7 +43,7 @@
     position: relative;
     z-index: var(--z1);
     width: 100vw;
-    transform: translateX(calc(100vw * .08));
+    transform: translateX(calc(100vw * .08)) translateY(8vh);
 
     @include breakpoint(md)  { transform: translateX(calc(100vw * .08)); }
     @include breakpoint(mdl) { transform: translateX(calc(100vw * .32)) translateY(22vh); }
@@ -73,12 +73,14 @@
   }
 
   .shadow {
+    display: none;
     position: fixed;
     z-index: var(--z2);
     top: 0; left: 0;
     width: 32vw; height: 100vh;
     background: var(--stone);
     box-shadow: 20px 0 16px 0 var(--stone);
+    @include breakpoint(md) { display: inherit; }
   }
 
   .page-cover {
@@ -113,11 +115,13 @@
     components: { Post, ButtonNext, HeaderIndex },
 
     beforeDestroy() {
-      leave_logic()
+      const mq = window.matchMedia( '(min-width: 700px)' )
+      if (mq.matches) { leave_logic() }
     },
 
     mounted() {
-      static_logic()
+      const mq = window.matchMedia( '(min-width: 700px)' )
+      if (mq.matches) { static_logic() }
       // next arrow
       const next = document.querySelector('.next')
       next.addEventListener('click', () => mySiema.next())

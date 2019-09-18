@@ -88,7 +88,6 @@ const static_logic = () => {
     const ref_link_y = ref_link_dim.top + 'px'
     header_link.style.transform = `translateY(${ref_link_y})`
   }
-
   window.onresize = update_y
 }
 
