@@ -3,13 +3,16 @@
 
 
   <article>
-    <h3 class="ref-date date f-prim fs-sm uc">{{ date }}</h3>
-    <h1 class="ref-first-line f-prim fs-lg uc">{{ first_line }}</h1>
-    <h1 class="ref-second-line title f-prim fs-lg uc">{{ second_line }}</h1>
-    <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
+    <div class="article-content stagger-long">
+      <h3 class="ref-date date f-prim fs-sm uc">{{ date }}</h3>
+      <h1 class="ref-first-line f-prim fs-lg uc">{{ first_line }}</h1>
+      <h1 class="ref-second-line title f-prim fs-lg uc">{{ second_line }}</h1>
+      <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
+    </div>
     <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
-    <img :src='img'/>
+    <img class="scale-md" :src='img'/>
     <div class="cover"/>
+    <div class="enter from-top"/>
   </article>
 
 
@@ -20,6 +23,14 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  .enter {
+    position: absolute;
+    z-index: var(--zmax);
+    top: 0; left: -4%;
+    width: 108%; height: 100%;
+    background: var(--stone);
+  }
+
   article {
     display: flex;
     flex-direction: column;
@@ -28,6 +39,7 @@
     padding: 0 4rem;
     height: 100%;
     color: var(--cloud);
+    overflow: hidden;
     &:hover { button {@include breakpoint(mdl) { opacity: 1; }}}
   }
 
@@ -52,9 +64,17 @@
     transition: var(--ease);
   }
 
-  // button styles for touch / non-touch devices
-  @media (pointer: coarse) { button { opacity: 1; }}
+  // button styles for non-touch / touch devices
   @media (pointer: fine) { button { opacity: 0; }}
+
+  @media (pointer: coarse) {
+    button {
+      opacity: 0;
+      will-change: opacity;
+      animation: In 1000ms ease 1300ms forwards;
+    }
+  }
+
 
   img {
     position: absolute;
@@ -62,6 +82,7 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
+    will-change: scale;
   }
 
   .cover {

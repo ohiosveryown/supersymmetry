@@ -34,6 +34,12 @@
   animation: In calc(var(--animbase) * 2) var(--inout) 200ms forwards;
 }
 
+.stagger-swift-ease {
+  opacity: 0;
+  will-change: opacity;
+  animation: In 1000ms ease 400ms forwards;
+}
+
 .stagger-zero {
   opacity: 0;
   will-change: opacity;
@@ -44,6 +50,12 @@
   opacity: 0;
   will-change: opacity;
   animation: In var(--animbase) var(--inout) calc(var(--animbase) * 2.4) forwards;
+}
+
+.stagger-long {
+  opacity: 0;
+  will-change: opacity;
+  animation: In 1000ms ease calc(var(--animbase) * 2.4) forwards;
 }
 
 .stagger-one {
@@ -70,10 +82,21 @@
   animation: FromLeft calc(var(--animbase) * 2) var(--inout) forwards;
 }
 
+.from-top {
+  will-change: transform;
+  animation: FromTop 1200ms var(--inout) forwards;
+}
+
 .stagger-out {
   opacity: 0;
   will-change: opacity;
   animation: Out var(--animbase) var(--inout) calc(var(--animbase) * 1) forwards;
+}
+
+.scale-md {
+  transform: scale(1.1);
+  will-change: transform;
+  animation: ScaleMd 1500ms ease forwards;
 }
 
 .scale-left {
@@ -103,9 +126,19 @@
   100% { transform: scale(1); }
 }
 
+@keyframes ScaleMd {
+  0% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
 @keyframes FromLeft {
   0% { transform: translateX(-100vw); }
   100% { transform: translateX(0); }
+}
+
+@keyframes FromTop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(102%); }
 }
 
 @keyframes ScaleLeft {

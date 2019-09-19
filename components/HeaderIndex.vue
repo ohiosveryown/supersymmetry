@@ -2,7 +2,7 @@
 <template>
 
 
-  <header class="stagger-swift">
+  <header class="stagger-swift-ease">
     <section>
       <h3 class="header-date f-prim fs-sm uc">2019—2020</h3>
         <div>

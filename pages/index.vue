@@ -4,7 +4,7 @@
 
     <HeaderIndex/>
 
-    <ul class="stagger-swift siema" v-if="page.posts">
+    <ul class="siema" v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
         <Post
           :date = 'post.date'
@@ -110,6 +110,12 @@
     beforeDestroy() { leave_logic() },
 
     mounted() {
+      // delay for second entries
+      const enterDelay = document.querySelectorAll('.enter')[1]
+      enterDelay.style.animationDelay = '200ms'
+      const articleDelay = document.querySelectorAll('.article-content')[1]
+      articleDelay.style.animationDelay = '1300ms'
+      // logic for enter
       const mq = window.matchMedia( '(min-width: 700px)' )
       if (mq.matches) { static_logic() }
       // next arrow

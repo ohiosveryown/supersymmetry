@@ -3,7 +3,7 @@
 
 
   <button>
-    <h3 class="mt-0 mr-2 f-prim fs-xs uc">Swipe</h3>
+    <!-- <h3 class="mt-0 mr-2 f-prim fs-xs uc">Swipe</h3> -->
     <svg class="" width="56" height="56">
       <g fill="#181819">
         <path class="halo" d="M28 56c15.464 0 28-12.536 28-28S43.464 0 28 0 0 12.536 0 28s12.536 28 28 28zm0-2C13.64 54 2 42.36 2 28S13.64 2 28 2s26 11.64 26 26-11.64 26-26 26z"/>
