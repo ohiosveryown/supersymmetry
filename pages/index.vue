@@ -44,9 +44,7 @@
     z-index: var(--z1);
     width: 100vw;
     transform: translateX(4vw) translateY(8vh);
-
-    @include breakpoint(md)  { transform: translateX(8vw); }
-    @include breakpoint(mdl) { transform: translateX(32vw) translateY(22vh); }
+    @include breakpoint(md)  { transform: translateX(32vw) translateY(22vh); }
   }
 
   li {
@@ -54,11 +52,6 @@
     height: 42vh;
 
     @include breakpoint(md) {
-      margin: 0 4rem 0 0;
-      height: 36vh;
-     }
-
-    @include breakpoint(mdl) {
       margin: 0 0 0 4rem;
       height: 52vh;
     }
@@ -120,7 +113,7 @@
       const mq = window.matchMedia( '(min-width: 700px)' )
       if (mq.matches) { static_logic() }
       // next arrow
-      const next = document.querySelector('.next')
+      const next = document.querySelector('.button--next')
       next.addEventListener('click', () => mySiema.next())
       // siema  slide option
       const mySiema = new Siema({
@@ -131,7 +124,6 @@
         easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
         perPage: {
           0: 1,
-          800: 1,
           1000: 2,
           2000: 3,
         },
