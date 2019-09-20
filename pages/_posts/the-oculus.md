@@ -3,7 +3,7 @@ title: The Oculus
 first_line: The
 second_line: Oculus
 date: January 2020
-layout: post
+layout: post-layout-one
 architect: Santiago Calatrava – 2016
 byline: The New Yorker
 link: https://www.newyorker.com/culture/cultural-comment/the-best-part-of-calatravas-oculus
@@ -21,7 +21,4 @@ large_paragraph: |
 
 last_paragraph: |
     From inside, the Oculus is as eye-popping as its name implies, consisting of ribs of steel, interleaved with windows, that reach to an arching strip of glass, a hundred and sixty feet overhead: a spine seen in negative. Underfoot, white marble tiles offer an almost liquid sheen, like an ice rink on an unseasonably warm day just before the Zamboni is loosed upon it.
-
 ---
-
-Delete this eventually – just for testing.
