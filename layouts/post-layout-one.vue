@@ -4,7 +4,7 @@
 
 
     <!-- nav -->
-    <HeaderPost/>
+    <HeaderPost class="stagger-swift"/>
 
     <!-- hero / main info -->
     <main class="width">
@@ -55,6 +55,8 @@
 
     </main>
 
+
+    <div class="page-cover colorshift"/>
 
 
   </div>
@@ -147,11 +149,23 @@
     100% { transform: translateX(104%); }
   }
 
+  .page-cover {
+    position: fixed;
+    z-index: var(--z3);
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: var(--stone);
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
 </style>
 
 
 <!-- logic -->
 <script>
+  import { leave_logic, } from '../logic/for-post.js'
   import HeaderPost from '../components/HeaderPost'
   import NextPost from '../components/NextPost'
   export const attributes = {
@@ -169,6 +183,7 @@
           `${pageTitle} - ${this.$siteConfig.title}` :
           this.$siteConfig.title
       }
-    }
+    },
+    beforeDestroy() { leave_logic() },
   }
 </script>
