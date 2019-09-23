@@ -25,6 +25,9 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
+  .main-carousel { display: block; }
+  .flickity { display: block; }
+
   .index-wrapper {
     overflow: hidden;
     position: relative;
