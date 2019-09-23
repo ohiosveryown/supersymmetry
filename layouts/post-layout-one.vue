@@ -4,7 +4,7 @@
 
 
     <!-- nav -->
-    <HeaderPost class="stagger-swift"/>
+    <HeaderPost/>
 
     <!-- hero / main info -->
     <main class="width">

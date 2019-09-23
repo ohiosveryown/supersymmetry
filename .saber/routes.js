@@ -72,6 +72,18 @@
                 
               }
             },
+{
+              path: "/testing.html",
+              meta: {
+                __relative: 'testing.vue',
+                __pageId: 'f180a0f4'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--testing-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/testing.vue?saberPage=f180a0f4")
+                
+              }
+            },
       
       // An addtional route to catch all other requests, i.e. 404 page
       {
