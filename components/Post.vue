@@ -75,7 +75,6 @@
     }
   }
 
-
   img {
     position: absolute;
     z-index: var(--zmin);

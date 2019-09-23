@@ -3,9 +3,9 @@
   <div class="index-wrapper">
 
 
-    <ul class="main-carousel" v-if="page.posts">
+    <!-- <ul class="embla main-carousel" v-if="page.posts">
       <li v-for="post in page.posts" :key="post.permalink">
-        <Post
+        <Post class="slide"
           :date = 'post.date'
           :first_line = 'post.first_line'
           :second_line = 'post.second_line'
@@ -14,7 +14,22 @@
           :earl = 'post.permalink'
         />
       </li>
-    </ul>
+    </ul> -->
+
+
+    <div class="embla">
+      <div class="embla__container">
+        <div class="embla__slide">
+          Slide 1
+        </div>
+        <div class="embla__slide">
+          Slide 2
+        </div>
+        <div class="embla__slide">
+          Slide 3
+        </div>
+      </div>
+    </div>
 
 
   </div>
@@ -25,25 +40,21 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .index-wrapper {
+  .embla {
     overflow: hidden;
-    position: relative;
-    // height: calc( 100vh - 12rem );
+  }
 
-    // @include breakpoint(md) { height: calc( 100vh - 7rem ); }
-    // @include breakpoint(lg) { height: 100vh; }
+  .embla__container {
+    display: flex;
+  }
+
+  .embla__slide {
+    position: relative; /* Needed if loop: true */
+    flex: 0 0 100%; /* Choose any width */
+    background: papayawhip;
   }
 
 
-  ul {
-    width: 100%;
-  }
-
-  li {
-    margin-right: 12px;
-    width: 64%;
-    // width: 100%;
-  }
 
 
 </style>
@@ -53,7 +64,7 @@
 <script>
   import Siema from 'siema'
   import Post from '../components/Post'
-  import Flickity from 'flickity'
+  import EmblaCarousel from 'embla-carousel'
 
   export const attributes = {
     layout: 'page',
@@ -65,17 +76,9 @@
     components: { Post, },
 
     mounted() {
-      const Flickity = require('flickity')
-      const elem = document.querySelector('.main-carousel');
-      const flkty = new Flickity( elem, {
-        // options
-        cellAlign: 'left',
-        contain: true,
-        wrapAround: true,
-        pageDots: false,
-        resize: true,
-        accessibility: true
-      })
+      const emblaNode = document.querySelector('.embla')
+      const options = { loop: true }
+      const embla = EmblaCarousel(emblaNode, options)
     }
   }
 </script>
