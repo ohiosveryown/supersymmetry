@@ -25,9 +25,6 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .main-carousel { display: block; }
-  .flickity { display: block; }
-
   .index-wrapper {
     overflow: hidden;
     position: relative;
@@ -68,21 +65,17 @@
     components: { Post, },
 
     mounted() {
-      require( ['flickity'], function(Flickity) {
-        const elem = document.querySelector('.main-carousel');
-        const flkty = new Flickity( elem, {
-          // options
-          cellAlign: 'left',
-          contain: true,
-          wrapAround: true,
-          pageDots: false,
-          resize: true,
-          accessibility: true
-        })
-        console.log('Flickity')
+      const Flickity = require('flickity')
+      const elem = document.querySelector('.main-carousel');
+      const flkty = new Flickity( elem, {
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        pageDots: false,
+        resize: true,
+        accessibility: true
       })
-
-
     }
   }
 </script>
