@@ -24,6 +24,7 @@
             <li class="debug slide" v-for="post in page.posts" :key="post.permalink">
               <Post
               :first_line = 'post.second_line'
+              :earl = 'post.permalink'
               />
             </li>
           </ul>
