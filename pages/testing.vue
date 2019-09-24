@@ -1,6 +1,5 @@
 <!-- layout -->
 <template>
-  <div class="debug">
 
 
     <!-- <ul class="embla main-carousel" v-if="page.posts">
@@ -17,23 +16,23 @@
     </ul> -->
 
 
-
-      <div class="">
-        <div class="index-wrapper recent-posts" v-if="page.posts">
-          <ul class="container">
-            <li class="debug slide" v-for="post in page.posts" :key="post.permalink">
-              <Post
-              :first_line = 'post.second_line'
-              :earl = 'post.permalink'
-              />
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-
+  <div class="index-wrapper" v-if="page.posts">
+    <ul class="container">
+      <li class="slide" v-for="post in page.posts" :key="post.permalink">
+        <Post
+          :date = 'post.date'
+          :first_line = 'post.first_line'
+          :second_line = 'post.second_line'
+          :architect = 'post.architect'
+          :img = 'post.assets.first_img'
+          :earl = 'post.permalink'
+        />
+      </li>
+    </ul>
   </div>
+
+
+
 </template>
 
 
@@ -42,8 +41,10 @@
   @import '../style/grid.scss';
 
   .index-wrapper {
+    display: flex;
     overflow: hidden;
-    height: 50vh;
+    width: 66.666vw; height: 100vh;
+    transform: translateX(33.333vw);
 
     &.is-draggable {
       cursor: move;
@@ -57,14 +58,15 @@
 
   .container {
     display: flex;
-    height: 100%;
+    // height: 100%;
   }
 
   .slide {
+    align-self: center;
     position: relative;
     flex: 0 0 auto;
-    // padding-left: 2rem;
-    width: 80%; height: 50%;
+    padding-left: 4rem;
+    width: 72%; height: 56%;
     // background: papayawhip;
   }
 
