@@ -19,13 +19,16 @@
 
 
       <div class="">
-        <div class="index-wrapper recent-posts" v-if="page.posts">
+        <div class="index-wrapper recent-posts">
           <ul class="container">
-            <li class="debug slide" v-for="post in page.posts" :key="post.permalink">
-              <Post
-              :first_line = 'post.second_line'
-              :earl = 'post.permalink'
-              />
+            <li class="debug slide">
+              one
+            </li>
+            <li class="debug slide">
+              two
+            </li>
+            <li class="debug slide">
+              three
             </li>
           </ul>
         </div>
