@@ -1,6 +1,6 @@
 <!-- layout -->
 <template>
-  <div class="index-wrapper">
+  <div class="debug">
 
 
     <!-- <ul class="embla main-carousel" v-if="page.posts">
@@ -17,19 +17,19 @@
     </ul> -->
 
 
-    <div class="embla">
-      <div class="embla__container">
-        <div class="embla__slide">
-          Slide 1
-        </div>
-        <div class="embla__slide">
-          Slide 2
-        </div>
-        <div class="embla__slide">
-          Slide 3
+
+      <div class="">
+        <div class="index-wrapper recent-posts" v-if="page.posts">
+          <ul class="container">
+            <li class="debug slide" v-for="post in page.posts" :key="post.permalink">
+              <Post
+              :first_line = 'post.second_line'
+              />
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
+
 
 
   </div>
@@ -40,18 +40,31 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .embla {
+  .index-wrapper {
     overflow: hidden;
+    height: 50vh;
+
+    &.is-draggable {
+      cursor: move;
+      cursor: grab;
+    }
+
+    &.is-dragging {
+      cursor: grabbing;
+    }
   }
 
-  .embla__container {
+  .container {
     display: flex;
+    height: 100%;
   }
 
-  .embla__slide {
-    position: relative; /* Needed if loop: true */
-    flex: 0 0 100%; /* Choose any width */
-    background: papayawhip;
+  .slide {
+    position: relative;
+    flex: 0 0 auto;
+    // padding-left: 2rem;
+    width: 80%; height: 50%;
+    // background: papayawhip;
   }
 
 
@@ -62,7 +75,6 @@
 
 <!-- logic -->
 <script>
-  import Siema from 'siema'
   import Post from '../components/Post'
   import EmblaCarousel from 'embla-carousel'
 
@@ -76,9 +88,16 @@
     components: { Post, },
 
     mounted() {
-      const emblaNode = document.querySelector('.embla')
-      const options = { loop: true }
-      const embla = EmblaCarousel(emblaNode, options)
+      const emblaNode = document.querySelector('.index-wrapper')
+      const embla = EmblaCarousel(emblaNode, {
+        align: 'start',
+        loop: true,
+        speed: 10,
+        startIndex: 0,
+        selectedClass: 'is-selected',
+        draggableClass: 'is-draggable',
+        draggingClass: 'is-dragging',
+      })
     }
   }
 </script>
