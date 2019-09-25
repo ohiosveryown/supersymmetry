@@ -145,6 +145,10 @@
 
       const buttonNext = document.querySelector('.button--next')
       buttonNext.addEventListener('click', embla.scrollNext, false)
-    }
+    },
+
+    beforeDestroy() {
+      leave_logic()
+    },
   }
 </script>

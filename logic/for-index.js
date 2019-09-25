@@ -1,5 +1,3 @@
-
-
 const leave_logic = () => {
   // constance wu's
   const header_date = document.querySelector('.header-date')

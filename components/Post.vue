@@ -74,12 +74,7 @@
 
   // button styles for non-touch / touch devices
   @media (pointer: fine) { button { opacity: 0; }}
-
-  @media (pointer: coarse) {
-    button {
-      opacity: 1;
-    }
-  }
+  @media (pointer: coarse) { button { opacity: 1; }}
 
   img {
     position: absolute;
