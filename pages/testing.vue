@@ -1,38 +1,28 @@
 <!-- layout -->
 <template>
+  <div class="index-wrapper">
 
+    <HeaderIndex/>
 
-    <!-- <ul class="embla main-carousel" v-if="page.posts">
-      <li v-for="post in page.posts" :key="post.permalink">
-        <Post class="slide"
-          :date = 'post.date'
-          :first_line = 'post.first_line'
-          :second_line = 'post.second_line'
-          :architect = 'post.architect'
-          :img = 'post.assets.first_img'
-          :earl = 'post.permalink'
-        />
-      </li>
-    </ul> -->
+    <div class="post-wrapper" v-if="page.posts">
+      <ul>
+        <li v-for="post in page.posts" :key="post.permalink">
+          <Post
+            :date = 'post.date'
+            :first_line = 'post.first_line'
+            :second_line = 'post.second_line'
+            :architect = 'post.architect'
+            :img = 'post.assets.first_img'
+            :earl = 'post.permalink'
+          />
+        </li>
+      </ul>
+    </div>
 
+    <div class="shadow"/>
+    <div class="page-cover"/>
 
-  <div class="index-wrapper" v-if="page.posts">
-    <ul class="container">
-      <li class="slide" v-for="post in page.posts" :key="post.permalink">
-        <Post
-          :date = 'post.date'
-          :first_line = 'post.first_line'
-          :second_line = 'post.second_line'
-          :architect = 'post.architect'
-          :img = 'post.assets.first_img'
-          :earl = 'post.permalink'
-        />
-      </li>
-    </ul>
   </div>
-
-
-
 </template>
 
 
@@ -41,43 +31,80 @@
   @import '../style/grid.scss';
 
   .index-wrapper {
+    position: relative;
+    height: calc( 100vh - 14rem );
+    @include breakpoint(md) { height: calc( 100vh - 7.6rem ); }
+    @include breakpoint(lg) { height: 100vh; }
+  }
+
+  .post-wrapper {
     display: flex;
     overflow: hidden;
-    width: 66.666vw; height: 100vh;
-    transform: translateX(33.333vw);
+    width: 100vw; height: 42vh;
+    transform: translateY(8vh);
 
-    &.is-draggable {
-      cursor: move;
-      cursor: grab;
+    @include breakpoint(md) {
+      max-height: 40rem;
+      height: 50vh;
+      min-height: 34rem;
+      transform: translateY(24vh);
     }
 
-    &.is-dragging {
-      cursor: grabbing;
+    @include breakpoint(mdl) {
+      width: 66.666vw;
+      transform: translateX(33.333vw) translateY(22vh);
     }
+
+    &.is-draggable { cursor: move; cursor: grab; }
+    &.is-dragging { cursor: grabbing; }
   }
 
-  .container {
+  ul {
     display: flex;
-    // height: 100%;
+    width: 100%;
   }
 
-  .slide {
-    align-self: center;
+  li {
     position: relative;
     flex: 0 0 auto;
-    padding-left: 4rem;
-    width: 72%; height: 56%;
-    // background: papayawhip;
+    padding-left: 2rem;
+    width: 100%; height: 100%;
+
+    @include breakpoint(md) {
+      padding-left: 4rem;
+      width: 72%; height: 100%;
+    }
   }
 
+  .shadow {
+    display: none;
+    position: fixed;
+    z-index: var(--z2);
+    top: 0; left: 0;
+    width: 33.333vw; height: 100vh;
+    background: var(--stone);
+    box-shadow: 20px 0 16px 0 var(--stone);
+    @include breakpoint(md) { display: inherit; }
+  }
 
-
+  .page-cover {
+    position: fixed;
+    z-index: var(--z3);
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: var(--stone);
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
 
 </style>
 
 
 <!-- logic -->
 <script>
+  import { leave_logic, static_logic } from '../logic/for-index.js'
+  import HeaderIndex from '../components/HeaderIndex'
   import Post from '../components/Post'
   import EmblaCarousel from 'embla-carousel'
 
@@ -88,10 +115,13 @@
 
   export default {
     props: [ 'page' ],
-    components: { Post, },
+    components: { HeaderIndex, Post, },
 
     mounted() {
-      const emblaNode = document.querySelector('.index-wrapper')
+      const mq = window.matchMedia( '(min-width: 700px)' )
+      if (mq.matches) { static_logic() }
+
+      const emblaNode = document.querySelector('.post-wrapper')
       const embla = EmblaCarousel(emblaNode, {
         align: 'start',
         loop: true,

@@ -10,7 +10,7 @@
       <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
     </div>
     <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
-    <img class="scale-md" :src='img'/>
+    <!-- <img class="scale-md" :src='img'/> -->
     <div class="cover"/>
     <div class="enter from-top"/>
   </article>
@@ -29,6 +29,7 @@
     top: 0; left: -4%;
     width: 108%; height: 100%;
     background: var(--stone);
+    will-change: transform;
   }
 
   article {

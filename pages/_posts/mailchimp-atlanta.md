@@ -9,8 +9,8 @@ byline: The New Yorker
 link: https://www.newyorker.com/culture/cultural-comment/the-best-part-of-calatravas-oculus
 
 assets:
-  first_img: ./img/2020-01/01.jpg
-  second_img: ./img/2020-01/02.jpg
+  first_img: ./img/2020-02/01.jpg
+  second_img: ./img/2020-02/02.jpg
   third_img: ./img/2020-01/03.jpg
 
 first_paragraph: |
