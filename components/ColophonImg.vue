@@ -69,14 +69,17 @@
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-02.jpg',
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-03.jpg',
       ]
+
       // init logic
       let i = 1
       let img = document.querySelector('img')
       img.src = images[0]
+
       // img propagate function
       const placeImage = () => {
         const next = images[i]
         const img = document.createElement("img")
+
         // img styles
         img.setAttribute("src", next)
         img.setAttribute("draggable", "false")
@@ -85,10 +88,12 @@
         img.style.top = 0
         img.style.transform = "rotate(" + (Math.random() * 20 - 10) + "deg)"
         document.querySelector('figure').appendChild(img)
+
         // cont logic
         i = i + 1
         i = (i >= images.length) ? 0 : i
       }
+
       // events
       document.addEventListener('click', () => { placeImage() })
       document.addEventListener('touchend', () => { placeImage() })
