@@ -3,8 +3,10 @@
 
 
   <figure class="sticky">
-    <div class="cover"><img class="mb-1" src="" alt=""></div>
-    <figcaption class="stagger-swift f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
+    <div class="cover">
+      <img src="" alt="" class="first-img">
+    </div>
+    <figcaption class="stagger-swift mt-1 f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
   </figure>
 
 
@@ -40,6 +42,10 @@
     animation: ScaleLeft 1800ms var(--inout) forwards;
   }
 
+  figure {
+    position: relative;
+  }
+
   img {
     cursor: pointer;
     opacity: 0;
@@ -57,26 +63,46 @@
 <script>
   export default {
     mounted() {
-      const figure = document.querySelector('figure')
-      const img = document.querySelector('img')
 
-      const imgs = [
-        'http://ohiosveryown.co/supersymmetry/house-01.jpg',
-        'http://ohiosveryown.co/supersymmetry/house-02.jpg',
-        'http://ohiosveryown.co/supersymmetry/house-03.jpg',
+      const images = [
+        'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-01.jpg',
+        'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-02.jpg',
+        'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-03.jpg',
       ]
 
-      const styles = [
-        'rotate(3deg)',
-        'rotate(-3deg)',
-      ]
+      let i = 1
 
-      img.src = imgs[0]
-      let imgIndex = 1
+      let img = document.querySelector('img')
+      img.src = images[0]
 
-      figure.addEventListener('click', () => {
-        let newImgSrc = imgs[imgIndex++ % imgs.length]
-        img.src = newImgSrc
+      function placeImage() {
+        const nextSrc = images[i]
+
+        const img = document.createElement("img")
+        img.setAttribute("src", nextSrc)
+        img.setAttribute("draggable", "false")
+
+        img.style.position = 'absolute'
+        img.style.left = 0
+        img.style.top = 0
+        img.style.transform = "rotate(" + (Math.random() * 20 - 10) + "deg)"
+
+        document.querySelector('figure').appendChild(img)
+
+        i = i + 1
+        if (i >= images.length) {
+          i = 0
+        }
+      }
+
+      document.addEventListener("click", function (event) {
+        event.preventDefault()
+        placeImage()
+      })
+
+      document.addEventListener("touchend", function (event) {
+        event.preventDefault()
+        placeImage()
       })
     }
   }
