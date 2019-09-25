@@ -119,7 +119,7 @@
   }
 
   // const page styles
-  main { margin: 4.6rem auto 8rem; }
+  main { margin: 4.6rem 4vw 8rem; }
   figcaption { margin-bottom: 2.4rem; }
 
   // cover styles

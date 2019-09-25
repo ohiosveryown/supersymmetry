@@ -1,15 +1,18 @@
 <!-- layout -->
 <template>
-
-
   <figure class="sticky">
+
+
     <div class="cover">
-      <img src="" alt="" class="first-img">
+      <img src="" alt="Childhood Homes" class="first-img">
     </div>
-    <figcaption class="stagger-swift mt-1 f-sec fs-md uc">Childhood Homes—Ohio</figcaption>
+
+    <figcaption class="stagger-swift mt-1 f-sec fs-md uc">
+      Childhood Homes—Ohio
+    </figcaption>
+
+
   </figure>
-
-
 </template>
 
 
@@ -55,7 +58,6 @@
       In 300ms var(--inout) 850ms forwards;
   }
 
-
 </style>
 
 
@@ -96,7 +98,6 @@
 
       // events
       document.addEventListener('click', () => { placeImage() })
-      // document.addEventListener('touchend', () => { placeImage() })
     }
   }
 </script>
