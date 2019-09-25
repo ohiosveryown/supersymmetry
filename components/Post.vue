@@ -10,7 +10,7 @@
       <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
     </div>
     <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
-    <!-- <img class="scale-md" :src='img'/> -->
+    <img class="scale-md" :src='img'/>
     <div class="cover"/>
     <div class="enter from-top"/>
   </article>
@@ -44,6 +44,11 @@
     &:hover { button {@include breakpoint(mdl) { opacity: 1; }}}
   }
 
+  .article-content {
+    position: relative;
+    z-index: var(--z2);
+  }
+
   .date {
     margin-bottom: 2.4rem;
     @include breakpoint(md) { margin-bottom: 5.6rem; }
@@ -59,6 +64,8 @@
   a { align-self: flex-start; }
 
   button {
+    position: relative;
+    z-index: var(--z2);
     align-self: flex-start;
     background: var(--cloud);
     padding: 1.2rem 2.4rem 1rem;
@@ -87,7 +94,7 @@
 
   .cover {
     position: absolute;
-    z-index: var(--zmin);
+    z-index: var(--z1);
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: var(--primary);
