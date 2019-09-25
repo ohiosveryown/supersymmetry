@@ -3,9 +3,9 @@
   <article>
 
     <section>
-      <h3 class="f-prim fs-md uc">{{ date }}</h3>
+      <h3 class="date f-prim fs-md uc">{{ date }}</h3>
       <h1 class="f-prim fs-lg uc">{{ first_line }}</h1>
-      <h1 class="f-prim fs-lg uc">{{ second_line }}</h1>
+      <h1 class="title f-prim fs-lg uc">{{ second_line }}</h1>
       <h2 class="f-sec fs-sm uc">{{ architect }}</h2>
     </section>
 
@@ -54,13 +54,15 @@
       }
     }
 
-    article h1 {
-      // margin: 3.2rem 0 .4rem;
-      // @include breakpoint(md) { margin: 4rem 0 .4rem; }
+    .date, .title {
+      margin-bottom: 2rem;
+      @include breakpoint(md) { margin-bottom: 3.2rem; }
     }
 
-    article button {
+    button {
       display: none;
+      position: relative;
+      z-index: var(--z1);
       padding: 1.4rem 3.2rem 1.2rem;
       background: transparent;
       color: var(--cloud);
@@ -85,11 +87,9 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: var(--primary);
-      mix-blend-mode: darken;
-      // mix-blend-mode: multiply;
+      // mix-blend-mode: darken;
+      mix-blend-mode: multiply;
     }
-
-    button { position: relative; z-index: var(--z1); }
 
     section {
       position: relative;
