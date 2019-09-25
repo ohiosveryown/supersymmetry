@@ -24,15 +24,6 @@
 <style lang='scss' scoped>
   @import '../style/grid.scss';
 
-  .enter {
-    position: absolute;
-    z-index: var(--zmax);
-    top: 0; left: -4%;
-    width: 108%; height: 100%;
-    background: var(--stone);
-    will-change: transform;
-  }
-
   article {
     display: flex;
     flex-direction: column;
@@ -93,6 +84,15 @@
     background: var(--primary);
     // mix-blend-mode: darken;
     mix-blend-mode: multiply;
+  }
+
+  .enter {
+    position: absolute;
+    z-index: var(--zmax);
+    top: -4%; left: -4%;
+    width: 108%; height: 108%;
+    background: var(--stone);
+    will-change: transform;
   }
 </style>
 
