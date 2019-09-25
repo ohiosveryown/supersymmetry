@@ -8,8 +8,9 @@
       <h1 class="ref-first-line f-prim fs-lg uc">{{ first_line }}</h1>
       <h1 class="ref-second-line title f-prim fs-lg uc">{{ second_line }}</h1>
       <h2 class="ref-link architect f-sec fs-md uc">{{ architect }}</h2>
+      <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
     </div>
-    <saber-link :to='earl'><button class="f-prim uc">View Entry</button></saber-link>
+
     <img class="scale-md" :src='img'/>
     <div class="cover"/>
     <div class="enter from-top"/>
@@ -65,7 +66,6 @@
 
   button {
     position: relative;
-    z-index: var(--z2);
     align-self: flex-start;
     background: var(--cloud);
     padding: 1.2rem 2.4rem 1rem;
@@ -77,9 +77,7 @@
 
   @media (pointer: coarse) {
     button {
-      opacity: 0;
-      will-change: opacity;
-      animation: In 1000ms ease 1300ms forwards;
+      opacity: 1;
     }
   }
 

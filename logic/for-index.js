@@ -91,6 +91,12 @@ const static_logic = () => {
   const header_link = document.querySelector('.header-link')
   header_link.style.transform = `translateY(${ref_link_y})`
 
+  // delay for second entries
+  const enterDelay = document.querySelectorAll('.enter')[1]
+  enterDelay.style.animationDelay = '200ms'
+  const articleDelay = document.querySelectorAll('.article-content')[1]
+  articleDelay.style.animationDelay = '1300ms'
+
   // update on resize
   const update_y = () => {
     const ref_date_dim = ref_date.getBoundingClientRect()
