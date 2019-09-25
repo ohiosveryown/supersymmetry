@@ -96,7 +96,7 @@
 
       // events
       document.addEventListener('click', () => { placeImage() })
-      document.addEventListener('touchend', () => { placeImage() })
+      // document.addEventListener('touchend', () => { placeImage() })
     }
   }
 </script>
