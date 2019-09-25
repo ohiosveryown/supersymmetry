@@ -63,47 +63,35 @@
 <script>
   export default {
     mounted() {
-
+      // images
       const images = [
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-01.jpg',
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-02.jpg',
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-03.jpg',
       ]
-
+      // init logic
       let i = 1
-
       let img = document.querySelector('img')
       img.src = images[0]
-
-      function placeImage() {
-        const nextSrc = images[i]
-
+      // img propagate function
+      const placeImage = () => {
+        const next = images[i]
         const img = document.createElement("img")
-        img.setAttribute("src", nextSrc)
+        // img styles
+        img.setAttribute("src", next)
         img.setAttribute("draggable", "false")
-
         img.style.position = 'absolute'
         img.style.left = 0
         img.style.top = 0
         img.style.transform = "rotate(" + (Math.random() * 20 - 10) + "deg)"
-
         document.querySelector('figure').appendChild(img)
-
+        // cont logic
         i = i + 1
-        if (i >= images.length) {
-          i = 0
-        }
+        i = (i >= images.length) ? 0 : i
       }
-
-      document.addEventListener("click", function (event) {
-        event.preventDefault()
-        placeImage()
-      })
-
-      document.addEventListener("touchend", function (event) {
-        event.preventDefault()
-        placeImage()
-      })
+      // events
+      document.addEventListener('click', () => { placeImage() })
+      document.addEventListener('touchend', () => { placeImage() })
     }
   }
 </script>
