@@ -185,10 +185,6 @@
       }
     },
 
-    created() {
-      console.log(this.$route.path);
-    },
-
     beforeDestroy() { leave_logic() },
   }
 </script>
