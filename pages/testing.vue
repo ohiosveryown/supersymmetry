@@ -19,6 +19,8 @@
       </ul>
     </div>
 
+
+    <ButtonNext class="stagger-swift button--next"/>
     <div class="shadow"/>
     <div class="page-cover"/>
 
@@ -76,6 +78,14 @@
     }
   }
 
+  .button--next {
+    position: fixed;
+    right: 2.4rem; bottom: 2.4rem;
+    transition: var(--ease);
+    cursor: pointer;
+    @include breakpoint(md) { right: 4rem; bottom: 3.2rem; }
+  }
+
   .shadow {
     display: none;
     position: fixed;
@@ -104,9 +114,10 @@
 <!-- logic -->
 <script>
   import { leave_logic, static_logic } from '../logic/for-index.js'
+  import EmblaCarousel from 'embla-carousel'
   import HeaderIndex from '../components/HeaderIndex'
   import Post from '../components/Post'
-  import EmblaCarousel from 'embla-carousel'
+  import ButtonNext from '../components/ButtonNext'
 
   export const attributes = {
     layout: 'page',
@@ -115,7 +126,7 @@
 
   export default {
     props: [ 'page' ],
-    components: { HeaderIndex, Post, },
+    components: { HeaderIndex, Post, ButtonNext, },
 
     mounted() {
       const mq = window.matchMedia( '(min-width: 700px)' )
@@ -131,6 +142,9 @@
         draggableClass: 'is-draggable',
         draggingClass: 'is-dragging',
       })
+
+      const buttonNext = document.querySelector('.button--next')
+      buttonNext.addEventListener('click', embla.scrollNext, false)
     }
   }
 </script>
