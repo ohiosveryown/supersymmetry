@@ -78,7 +78,7 @@
       img.src = images[0]
 
       // img propagate function
-      const placeImage = () => {
+      let placeImage = () => {
         const next = images[i]
         const img = document.createElement("img")
 
@@ -97,7 +97,7 @@
       }
 
       // events
-      document.addEventListener('click', () => { placeImage() })
-    }
+      // document.body.addEventListener('click', () => { placeImage() })
+    },
   }
 </script>

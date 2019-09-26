@@ -127,18 +127,34 @@
       }
     },
 
+    mounted() {
+      //  if ( this.$route.path === '/colophon.html' ) {
+      //     console.log('its the colophonnnnnn')
+      //   } else {
+      //     console.log('its another routeeeeee')
+      //   }
+    },
+
     beforeDestroy() {
-      const main = document.querySelector('main')
-      main.style.opacity = '0'
-      main.style.transition = 'all 500ms ease 200ms'
 
-      const header = document.querySelector('header')
-      header.style.opacity = '0'
-      header.style.transition = 'all 500ms ease 200ms'
+       if ( this.$route.path === '/posts/delete3.html' ) {
+          console.log('its the detaillll')
+          const main = document.querySelector('main')
+          main.style.color = 'red'
+        } else {
+          console.log('its the indexxxx')
+          const main = document.querySelector('main')
+          main.style.opacity = 0
+          main.style.transition = 'all 500ms ease 200ms'
 
-      const colorshift = document.querySelector('.colorshift')
-      colorshift.style.background = 'var(--stone)'
-      colorshift.style.transition = 'all 500ms ease 200ms'
+          const header = document.querySelector('header')
+          header.style.opacity = 0
+          header.style.transition = 'all 500ms ease 200ms'
+
+          const colorshift = document.querySelector('.colorshift')
+          colorshift.style.background = 'var(--stone)'
+          colorshift.style.transition = 'all 500ms ease 200ms'
+        }
     }
   }
 </script>
