@@ -14,7 +14,7 @@
             <img class="first-img" :src='page.assets.first_img'>
           </div>
           <figcaption class="stagger-three mt-3">
-            <h1 class="mb-0 f-prim fs-xl">{{ page.title }}</h1>
+            <h1 class="mb-1 f-prim fs-xl">{{ page.title }}</h1>
             <h2 class="f-sec fs-sm uc">{{ page.architect }}</h2>
           </figcaption>
         </figure>
