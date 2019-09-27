@@ -1,7 +1,7 @@
 ---
 title: Delete Three
-first_line: The
-second_line: Oculus
+first_line: Third
+second_line: One
 date: April 2020
 layout: post-layout-one
 architect: Santiago Calatrava – 2016

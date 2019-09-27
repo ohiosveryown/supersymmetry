@@ -137,12 +137,12 @@
 
     beforeDestroy() {
 
-       if ( this.$route.path === '/posts/delete3.html' ) {
-          console.log('its the detaillll')
+       if ( this.$route.path === '/' ) {
+          console.log('its the indexxxx')
           const main = document.querySelector('main')
           main.style.color = 'red'
         } else {
-          console.log('its the indexxxx')
+          console.log('its detail')
           const main = document.querySelector('main')
           main.style.opacity = 0
           main.style.transition = 'all 500ms ease 200ms'

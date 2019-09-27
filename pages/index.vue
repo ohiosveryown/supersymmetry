@@ -4,21 +4,23 @@
 
     <HeaderIndex/>
 
-    <ul class="siema" v-if="page.posts">
-      <li v-for="post in page.posts" :key="post.permalink">
-        <Post
-          :date = 'post.date'
-          :first_line = 'post.first_line'
-          :second_line = 'post.second_line'
-          :architect = 'post.architect'
-          :img = 'post.assets.first_img'
-          :earl = 'post.permalink'
-        />
-      </li>
-    </ul>
+    <div class="post-wrapper" v-if="page.posts">
+      <ul>
+        <li v-for="post in page.posts" :key="post.permalink">
+          <Post
+            :date = 'post.date'
+            :first_line = 'post.first_line'
+            :second_line = 'post.second_line'
+            :architect = 'post.architect'
+            :img = 'post.assets.first_img'
+            :earl = 'post.permalink'
+          />
+        </li>
+      </ul>
+    </div>
+
 
     <ButtonNext class="stagger-swift button--next"/>
-
     <div class="shadow"/>
     <div class="page-cover"/>
 
@@ -31,29 +33,48 @@
   @import '../style/grid.scss';
 
   .index-wrapper {
-    overflow: hidden;
     position: relative;
-    height: calc( 100vh - 12rem );
-
-    @include breakpoint(md) { height: calc( 100vh - 7rem ); }
+    height: calc( 100vh - 14rem );
+    @include breakpoint(md) { height: calc( 100vh - 7.6rem ); }
     @include breakpoint(lg) { height: 100vh; }
   }
 
+  .post-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100vw; height: 42vh;
+    transform: translateY(8vh);
+
+    @include breakpoint(md) {
+      max-height: 40rem;
+      height: 50vh;
+      min-height: 34rem;
+      transform: translateX(33.333vw) translateY(24vh);
+    }
+
+    @include breakpoint(mdl) {
+      width: 66.666vw;
+      transform: translateX(33.333vw) translateY(22vh);
+    }
+
+    &.is-draggable { cursor: move; cursor: grab; }
+    &.is-dragging { cursor: grabbing; }
+  }
+
   ul {
-    position: relative;
-    z-index: var(--z1);
-    width: 100vw;
-    transform: translateX(4vw) translateY(8vh);
-    @include breakpoint(md)  { transform: translateX(32vw) translateY(22vh); }
+    display: flex;
+    width: 100%;
   }
 
   li {
-    margin: 0;
-    height: 42vh;
+    position: relative;
+    flex: 0 0 auto;
+    padding-left: 2rem;
+    width: 100%; height: 100%;
 
     @include breakpoint(md) {
-      margin: 0 0 0 4rem;
-      height: 52vh;
+      padding-left: 4rem;
+      width: 72%; height: 100%;
     }
   }
 
@@ -70,7 +91,7 @@
     position: fixed;
     z-index: var(--z2);
     top: 0; left: 0;
-    width: 32vw; height: 100vh;
+    width: 33.333vw; height: 100vh;
     background: var(--stone);
     box-shadow: 20px 0 16px 0 var(--stone);
     @include breakpoint(md) { display: inherit; }
@@ -93,7 +114,7 @@
 <!-- logic -->
 <script>
   import { leave_logic, static_logic } from '../logic/for-index.js'
-  import Siema from 'siema'
+  import EmblaCarousel from 'embla-carousel'
   import HeaderIndex from '../components/HeaderIndex'
   import Post from '../components/Post'
   import ButtonNext from '../components/ButtonNext'
@@ -105,35 +126,29 @@
 
   export default {
     props: [ 'page' ],
-    components: { Post, ButtonNext, HeaderIndex },
-
-    beforeDestroy() { leave_logic() },
+    components: { HeaderIndex, Post, ButtonNext, },
 
     mounted() {
-      // delay for second entries
-      const enterDelay = document.querySelectorAll('.enter')[1]
-      enterDelay.style.animationDelay = '200ms'
-      const articleDelay = document.querySelectorAll('.article-content')[1]
-      articleDelay.style.animationDelay = '1300ms'
-      // logic for enter
       const mq = window.matchMedia( '(min-width: 700px)' )
       if (mq.matches) { static_logic() }
-      // next arrow
-      const next = document.querySelector('.button--next')
-      next.addEventListener('click', () => mySiema.next())
-      // siema  slide option
-      const mySiema = new Siema({
+
+      const emblaNode = document.querySelector('.post-wrapper')
+      const embla = EmblaCarousel(emblaNode, {
+        align: 'start',
         loop: true,
-        duration: 800,
-        threshold: 0,
-        multipleDrag: true,
-        easing: 'cubic-bezier(0.165, 0.84, 0.44, 1)',
-        perPage: {
-          0: 1,
-          1000: 2,
-          2000: 3,
-        },
+        speed: 10,
+        startIndex: 0,
+        selectedClass: 'is-selected',
+        draggableClass: 'is-draggable',
+        draggingClass: 'is-dragging',
       })
-    }
+
+      const buttonNext = document.querySelector('.button--next')
+      buttonNext.addEventListener('click', embla.scrollNext, false)
+    },
+
+    beforeDestroy() {
+      leave_logic()
+    },
   }
 </script>
