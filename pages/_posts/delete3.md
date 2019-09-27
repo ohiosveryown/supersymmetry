@@ -1,15 +1,15 @@
 ---
-title: Delete Three
-first_line: Third
-second_line: One
+title: Beijing Daxing Airport
+first_line: Daxing
+second_line: Airport
 date: April 2020
 layout: post-layout-one
-architect: Santiago Calatrava – 2016
+architect: Zaha Hadid Architects – 2019
 byline: The New Yorker
 link: https://www.newyorker.com/culture/cultural-comment/the-best-part-of-calatravas-oculus
 
 assets:
-  first_img: ./img/2020-01/02.jpg
+  first_img: ./img/delete.jpg
   second_img: ./img/2020-01/01.jpg
   third_img: ./img/2020-01/03.jpg
 
