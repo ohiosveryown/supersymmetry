@@ -4,7 +4,7 @@
 
     <HeaderIndex/>
 
-    <div class="post-wrapper" v-if="page.posts">
+    <main class="post-wrapper" v-if="page.posts">
       <ul>
         <li v-for="post in page.posts" :key="post.permalink">
           <Post
@@ -17,7 +17,7 @@
           />
         </li>
       </ul>
-    </div>
+    </main>
 
 
     <ButtonNext class="stagger-swift button--next"/>

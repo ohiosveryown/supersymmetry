@@ -99,7 +99,7 @@
     width: 100%; max-height: 64vh;
     opacity: 0;
     animation:
-      FadeScale calc( var(--animbase) * 3.5 ) var(--inout) calc(var(--animbase) + 400ms) forwards;
+      FadeScale calc( var(--animbase) * 3.5 ) var(--inout) 400ms forwards;
   }
 
   .second-img {
@@ -140,7 +140,7 @@
     transform: scaleX(0);
     will-change: transform;
     animation:
-      CoverMove calc( var(--animbase) * 3.5 ) var(--inout) calc(var(--animbase) + 0ms) forwards;
+      CoverMove calc( var(--animbase) * 3.5 ) var(--inout) 10ms forwards;
   }
 
   @keyframes CoverMove {

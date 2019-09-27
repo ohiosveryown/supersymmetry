@@ -29,12 +29,13 @@ const leave_logic = () => {
     header_link.style.cssText = `
       transform: translateY(0);
       opacity: 0;
-      transition: all 900ms var(--inout) 150ms, opacity 500ms ease 150ms;
+      transition: transform 900ms var(--inout) 150ms, opacity 500ms ease 150ms;
     `
 
     page_cover.style.cssText = `
       transform: scaleX(1);
-      transition: all 1000ms var(--inout);
+      transition: transform 1000ms var(--inout), background 600ms ease 400ms;
+      background: var(--stone);
     `
 
   } else {
