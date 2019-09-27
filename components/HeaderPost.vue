@@ -10,7 +10,7 @@
       <saber-link to='/'>Symmetry</saber-link>
     </h1>
 
-    <h2 class="stagger-swift header-link link f-sec fs-md uc">
+    <h2 class="header-link link f-sec fs-md uc">
       <saber-link to='/colophon.html'>View Colophon</saber-link>
     </h2>
   </header>
@@ -40,5 +40,7 @@
 
 <!-- logic -->
 <script>
-  export default { }
+  export default {
+    props: [ 'date', ],
+  }
 </script>

@@ -1,4 +1,24 @@
-const leave_logic = () => {
+const enter = () => {
+  // constance wu's
+  const header_link = document.querySelector('.header-link')
+
+  // styles
+  header_link.style.cssText = `
+    opacity: 0;
+    animation: In calc(var(--animbase) * 2) var(--inout) 200ms forwards;
+  `
+}
+
+const to_index = () => {
+  const main = document.querySelector('main')
+
+  main.style.cssText = `
+    opacity: 1;
+    animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
+  `
+}
+
+const to_colophon = () => {
   // constance wu's
   const page_cover = document.querySelector('.page-cover')
   const header = document.querySelector('header')
@@ -11,16 +31,10 @@ const leave_logic = () => {
   `
 
   header_link.style.cssText = `
-    opacity: 0;
-    transition: opacity 500ms ease 150ms;
+    opacity: 1;
+    animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
   `
-
-  // header_link.style.cssText = `
-  //   opacity: 0;
-  //   transition: opacity 500ms ease 150ms;
-  // `
 }
 
-
 // exports
-export { leave_logic }
+export { enter, to_index, to_colophon }

@@ -16,6 +16,7 @@
           <figcaption class="stagger-three mt-3">
             <h1 class="mb-1 f-prim fs-xl">{{ page.title }}</h1>
             <h2 class="f-sec fs-sm uc">{{ page.architect }}</h2>
+            <h2 class="f-sec fs-sm uc">Entry: {{ page.date }}</h2>
           </figcaption>
         </figure>
       </section>
@@ -165,7 +166,7 @@
 
 <!-- logic -->
 <script>
-  import { leave_logic, } from '../logic/for-post.js'
+  import { enter, to_index, to_colophon, } from '../logic/for-post.js'
   import HeaderPost from '../components/HeaderPost'
   import NextPost from '../components/NextPost'
   export const attributes = {
@@ -185,22 +186,21 @@
       }
     },
 
+    mounted() {
+      enter()
+    },
+
     beforeDestroy() {
-      // leave_logic()
 
-      let routeLogic =
-        ( this.$route.path === '/' ) ? console.log('its the indexxxx') :
-        ( this.$route.path === '/colophon.html' ) ? console.log('its the colophon') :
+      if ( this.$route.path === '/' ) {
+        to_index()
+
+      } else if (this.$route.path === '/colophon.html') {
+        to_colophon()
+
+      } else {
         console.log('its another detail')
-
-      // if ( this.$route.path === '/' ) {
-      //   console.log('its the indexxxx')
-      // } else if (this.$route.path === '/colophon.html') {
-      //   console.log('its the colophon')
-      //   leave_logic()
-      // } else {
-      //   console.log('its another detail')
-      // }
+      }
 
     },
   }
