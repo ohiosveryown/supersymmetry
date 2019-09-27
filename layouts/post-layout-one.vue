@@ -185,6 +185,23 @@
       }
     },
 
-    beforeDestroy() { leave_logic() },
+    beforeDestroy() {
+      // leave_logic()
+
+      let routeLogic =
+        ( this.$route.path === '/' ) ? console.log('its the indexxxx') :
+        ( this.$route.path === '/colophon.html' ) ? console.log('its the colophon') :
+        console.log('its another detail')
+
+      // if ( this.$route.path === '/' ) {
+      //   console.log('its the indexxxx')
+      // } else if (this.$route.path === '/colophon.html') {
+      //   console.log('its the colophon')
+      //   leave_logic()
+      // } else {
+      //   console.log('its another detail')
+      // }
+
+    },
   }
 </script>
