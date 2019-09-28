@@ -111,6 +111,7 @@
 
 <!-- logic -->
 <script>
+  import { to_detail, } from '../logic/for-colophon'
   import HeaderColophon from '../components/HeaderColophon'
   import ColophonImg from '../components/ColophonImg'
 
@@ -128,11 +129,7 @@
     },
 
     mounted() {
-      //  if ( this.$route.path === '/colophon.html' ) {
-      //     console.log('its the colophonnnnnn')
-      //   } else {
-      //     console.log('its another routeeeeee')
-      //   }
+
     },
 
     beforeDestroy() {
@@ -141,18 +138,7 @@
         const main = document.querySelector('main')
         main.style.color = 'red'
       } else {
-        console.log('its detail')
-        const main = document.querySelector('main')
-        main.style.opacity = 0
-        main.style.transition = 'all 500ms ease 200ms'
-
-        const header = document.querySelector('header')
-        header.style.opacity = 0
-        header.style.transition = 'all 500ms ease 200ms'
-
-        const colorshift = document.querySelector('.colorshift')
-        colorshift.style.background = 'var(--stone)'
-        colorshift.style.transition = 'all 500ms ease 200ms'
+        to_detail()
       }
     }
   }
