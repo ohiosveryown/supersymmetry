@@ -11,8 +11,27 @@ const enter = () => {
 
 const to_index = () => {
   const main = document.querySelector('main')
+  const header_first_line = document.querySelector('.first-line')
+  const header_second_line = document.querySelector('.second-line')
+  const header_link = document.querySelector('.header-link')
 
+  // styles
   main.style.cssText = `
+    opacity: 1;
+    animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
+  `
+
+  header_first_line.style.cssText = `
+    transform: translateX(-200px);
+    transition: all 600ms var(--inout);
+  `
+
+  header_second_line.style.cssText = `
+    transform: translateX(-200px);
+    transition: all 600ms var(--inout) 100ms;
+  `
+
+  header_link.style.cssText = `
     opacity: 1;
     animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
   `
