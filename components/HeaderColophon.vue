@@ -3,14 +3,14 @@
 
 
   <header>
-    <h1 class="f-prim fs-lg uc">
+    <h1 class="first-line f-prim fs-lg uc">
       <saber-link to='/'>Super—</saber-link>
     </h1>
-    <h1 class="title f-prim fs-lg uc">
+    <h1 class="second-line title f-prim fs-lg uc">
       <saber-link to='/'>Symmetry</saber-link>
     </h1>
 
-    <h2 class="stagger-swift f-sec fs-md uc">
+    <h2 class="stagger-swift header-link f-sec fs-md uc">
       <a @click="$router.go(-1)">Close Colophon</a>
     </h2>
   </header>

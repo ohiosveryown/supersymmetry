@@ -111,7 +111,7 @@
 
 <!-- logic -->
 <script>
-  import { to_detail, } from '../logic/for-colophon'
+  import { to_index, to_detail, } from '../logic/for-colophon'
   import HeaderColophon from '../components/HeaderColophon'
   import ColophonImg from '../components/ColophonImg'
 
@@ -134,9 +134,7 @@
 
     beforeDestroy() {
       if ( this.$route.path === '/' ) {
-        console.log('its the indexxxx')
-        const main = document.querySelector('main')
-        main.style.color = 'red'
+        to_index()
       } else {
         to_detail()
       }
