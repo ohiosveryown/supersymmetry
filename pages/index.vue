@@ -113,7 +113,7 @@
 
 <!-- logic -->
 <script>
-  import { leave_logic, static_logic } from '../logic/for-index.js'
+  import { leave_logic, to_colophon, static_logic } from '../logic/for-index.js'
   import EmblaCarousel from 'embla-carousel'
   import HeaderIndex from '../components/HeaderIndex'
   import Post from '../components/Post'
@@ -148,7 +148,12 @@
     },
 
     beforeDestroy() {
-      leave_logic()
+      if ( this.$route.path === '/colophon.html' ) {
+        leave_logic()
+        to_colophon()
+      } else {
+        leave_logic()
+      }
     },
   }
 </script>

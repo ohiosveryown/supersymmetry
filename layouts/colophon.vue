@@ -128,10 +128,6 @@
       }
     },
 
-    mounted() {
-
-    },
-
     beforeDestroy() {
       if ( this.$route.path === '/' ) {
         to_index()

@@ -56,6 +56,16 @@ const leave_logic = () => {
   }
 }
 
+const to_colophon = () => {
+  const page_cover = document.querySelector('.page-cover')
+
+  page_cover.style.cssText = `
+    transform: scaleX(1);
+    transition: transform 1000ms var(--inout), background 600ms ease 400ms;
+    background: #fff;
+  `
+}
+
 
 const static_logic = () => {
   // date
@@ -119,4 +129,4 @@ const static_logic = () => {
 
 
 // exports
-export { leave_logic, static_logic }
+export { leave_logic, to_colophon, static_logic }
