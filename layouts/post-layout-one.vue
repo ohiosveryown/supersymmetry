@@ -166,7 +166,7 @@
 
 <!-- logic -->
 <script>
-  import { enter, to_index, to_colophon, } from '../logic/for-post.js'
+  import { enter, to_index, to_detail, to_colophon, } from '../logic/for-post.js'
   import HeaderPost from '../components/HeaderPost'
   import NextPost from '../components/NextPost'
   export const attributes = {
@@ -199,7 +199,7 @@
         to_colophon()
 
       } else {
-        console.log('its another detail')
+        to_detail()
       }
 
     },
