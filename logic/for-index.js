@@ -66,7 +66,6 @@ const to_colophon = () => {
   `
 }
 
-
 const static_logic = () => {
   // date
   const ref_date = document.querySelector('.ref-date')
