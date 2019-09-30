@@ -191,17 +191,13 @@
     },
 
     beforeDestroy() {
-
       if ( this.$route.path === '/' ) {
         to_index()
-
       } else if (this.$route.path === '/colophon.html') {
         to_colophon()
-
       } else {
         to_detail()
       }
-
     },
   }
 </script>
