@@ -1,6 +1,6 @@
 ---
 title: Delete Two
-first_line: Delete
+first_line: Deletee
 second_line: Two
 date: March 2020
 layout: post-layout-one
