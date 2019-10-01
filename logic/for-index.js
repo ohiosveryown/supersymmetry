@@ -51,7 +51,8 @@ const leave_logic = () => {
 
       page_cover.style.cssText = `
         transform: scaleX(1);
-        transition: all 1000ms var(--inout);
+        transition: transform 1000ms var(--inout), background 600ms ease 400ms;
+        background: var(--stone);
       `
   }
 }
