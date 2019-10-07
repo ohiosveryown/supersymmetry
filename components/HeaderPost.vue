@@ -27,6 +27,11 @@
     position: relative;
     z-index: var(--z4);
     margin: 2.4rem 4vw 0;
+
+    @include breakpoint(mdl) {
+      position: sticky;
+      top: 2.4rem;
+    }
   }
 
   .title {
