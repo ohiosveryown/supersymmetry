@@ -73,6 +73,7 @@
       ]
 
       // init logic
+      const figure = document.querySelector('figure')
       let i = 1
       let img = document.querySelector('img')
       img.src = images[0]
@@ -89,7 +90,7 @@
         img.style.left = 0
         img.style.top = 0
         img.style.transform = "rotate(" + (Math.random() * 20 - 10) + "deg)"
-        document.querySelector('figure').appendChild(img)
+        figure.appendChild(img)
 
         // cont logic
         i = i + 1
@@ -97,7 +98,7 @@
       }
 
       // events
-      document.querySelector('figure').addEventListener('click', () => { placeImage() })
+      figure.addEventListener('click', () => { placeImage() })
     },
   }
 </script>
