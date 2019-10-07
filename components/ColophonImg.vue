@@ -70,6 +70,7 @@
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-01.jpg',
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-02.jpg',
         'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-03.jpg',
+        'https://raw.githubusercontent.com/ohiosveryown/supersymmetry/master/pages/img/house-04.jpg',
       ]
 
       // init logic
