@@ -131,7 +131,7 @@
     mounted() {
       const mq = window.matchMedia( '(min-width: 700px)' )
       if (mq.matches) { static_logic() }
-
+      // carousel
       const emblaNode = document.querySelector('.post-wrapper')
       const embla = EmblaCarousel(emblaNode, {
         align: 'start',
@@ -142,7 +142,7 @@
         draggableClass: 'is-draggable',
         draggingClass: 'is-dragging',
       })
-
+      // next button
       const buttonNext = document.querySelector('.button--next')
       buttonNext.addEventListener('click', embla.scrollNext, false)
     },
