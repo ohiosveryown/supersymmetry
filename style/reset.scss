@@ -29,7 +29,6 @@
   --mdl: 1000px;
   --lg: 1200px;
   --xl: 1400px;
-
   --ylg: 32vh;
 }
 
@@ -63,5 +62,4 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 button     { border: none; background: #ccc; cursor: pointer; font-size: 1.3rem; }
 video, img { display: block; max-width: 100%; height: auto; }
 ul         { list-style-type: none; -webkit-margin-before: 0; -webkit-margin-after: 0; }
-// li         { display: inline-block; }
 :focus     { outline: 0; }
