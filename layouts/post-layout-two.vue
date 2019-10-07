@@ -69,8 +69,9 @@
   @import '../style/grid.scss';
 
   .first-paragraph {
+    margin: 4rem 0;
+
     @include breakpoint(md) {
-      margin: 4rem 0;
       width: grid-width(7);
     }
 
@@ -80,14 +81,16 @@
   }
 
   .second-paragraph {
+    @include breakpoint(md) { margin-bottom: 5.6rem; }
+
     @include breakpoint(mdl) {
-      margin-bottom: 5.6rem;
       margin-left: grid-width(1.5);
       width: grid-width(10.5);
     }
   }
 
   .third-paragraph {
+    text-indent: 3ch;
     @include breakpoint(md) {
       margin-bottom: 3.2rem;
     }
@@ -105,6 +108,8 @@
   }
 
   .first-img {
+    margin-bottom: 1.6rem;
+
     @include breakpoint(md) {
       margin-bottom: 6.4rem;
       width: grid-width(8);
@@ -112,12 +117,16 @@
   }
 
   .second-img {
+    margin-bottom: 4rem;
+
     @include breakpoint(md) {
+      margin-bottom: 0;
       width: grid-width(3);
     }
   }
 
   .third-img {
+    margin-top: 4rem;
     @include breakpoint(md) {
       margin: 6.4rem 0 14rem;
     }
@@ -125,7 +134,7 @@
 
   .img-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     @include breakpoint(md) {
       flex-direction: row;
@@ -140,7 +149,7 @@
   }
 
   // const page styles
-  main { margin: 2rem 4vw 8rem; }
+  main { margin: 4.6rem 4vw 8rem; @include breakpoint(md) { margin-top: 2rem; } }
   figcaption { margin-bottom: 2.4rem; }
 
   // cover styles
