@@ -1,42 +1,6 @@
 
     export default [
       {
-              path: "/posts/delete2.html",
-              meta: {
-                __relative: '_posts/delete2.md',
-                __pageId: '60c08777'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-delete2-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete2.md?saberPage=60c08777")
-                
-              }
-            },
-{
-              path: "/posts/delete3.html",
-              meta: {
-                __relative: '_posts/delete3.md',
-                __pageId: '60c0fbd6'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-delete3-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/delete3.md?saberPage=60c0fbd6")
-                
-              }
-            },
-{
-              path: "/posts/mailchimp-atlanta.html",
-              meta: {
-                __relative: '_posts/mailchimp-atlanta.md',
-                __pageId: '494d49b0'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-mailchimp-atlanta-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/mailchimp-atlanta.md?saberPage=494d49b0")
-                
-              }
-            },
-{
               path: "/posts/the-oculus.html",
               meta: {
                 __relative: '_posts/the-oculus.md',
@@ -69,6 +33,42 @@
               component: function() {
                 
                 return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
+                
+              }
+            },
+{
+              path: "/posts/daxing-airport.html",
+              meta: {
+                __relative: '_posts/daxing-airport.md',
+                __pageId: '0767cc27'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-daxing-airport-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/daxing-airport.md?saberPage=0767cc27")
+                
+              }
+            },
+{
+              path: "/posts/milan-house.html",
+              meta: {
+                __relative: '_posts/milan-house.md',
+                __pageId: '0ae3b66e'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-milan-house-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/milan-house.md?saberPage=0ae3b66e")
+                
+              }
+            },
+{
+              path: "/posts/riverside-high-school.html",
+              meta: {
+                __relative: '_posts/riverside-high-school.md',
+                __pageId: '35985449'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-riverside-high-school-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/riverside-high-school.md?saberPage=35985449")
                 
               }
             },

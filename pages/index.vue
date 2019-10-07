@@ -46,7 +46,7 @@
     transform: translateY(8vh);
 
     @include breakpoint(md) {
-      max-height: 40rem;
+      max-height: 52rem;
       height: 50vh;
       min-height: 34rem;
       transform: translateX(33.333vw) translateY(24vh);

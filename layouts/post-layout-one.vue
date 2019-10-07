@@ -79,7 +79,7 @@
   }
 
   .third-paragraph {
-    text-indent: 3ch;
+    text-indent: 8ch;
     margin-bottom: 1.6rem;
 
     @include breakpoint(md) {
