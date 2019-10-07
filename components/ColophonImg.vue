@@ -45,9 +45,7 @@
     animation: ScaleLeft 1800ms var(--inout) forwards;
   }
 
-  figure {
-    position: relative;
-  }
+  figure { position: relative; }
 
   img {
     cursor: pointer;

@@ -31,15 +31,5 @@
           this.$siteConfig.title
       }
     },
-
-    // watch: {
-    //   $route: function() {
-    //     if ( this.$route.path === '/colophon.html' ) {
-    //       console.log('its the colophonnnnnn')
-    //     } else {
-    //       console.log('its another routeeeeee')
-    //     }
-    //   }
-    // }
   }
 </script>

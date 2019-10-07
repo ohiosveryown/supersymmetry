@@ -1,9 +1,9 @@
 ---
 title: Beijing Daxing Airport
-first_line: Daxing
-second_line: Airport
+first_line: Beijing
+second_line: Daxing Airport
 date: April 2020
-layout: post-layout-one
+layout: post-layout-two
 architect: Zaha Hadid Architects – 2019
 byline: The Guardian
 link: https://www.theguardian.com/world/2019/sep/25/daxing-international-airport-zaha-hadid-starfish-opens-beijing
@@ -20,5 +20,5 @@ large_paragraph: |
   The airport is arranged around a central "grand courtyard" with five aircraft piers radiating directly out to give the building the appearance of a starfish from above. The four-storey airport is arranged around this central space, which is naturally lit with a glass roof that the studio refers to as a "central orientation space dome".
 
 last_paragraph: |
-    "Echoing principles within traditional Chinese architecture that organise interconnected spaces around a central courtyard, the terminal's design guides all passengers seamlessly through the relevant departure, arrival or transfer zones towards the grand courtyard at its centre – a multi- layered meeting space at the heart of the terminal," explained the studio.
+  "Echoing principles within traditional Chinese architecture that organise interconnected spaces around a central courtyard, the terminal's design guides all passengers seamlessly through the relevant departure, arrival or transfer zones towards the grand courtyard at its centre – a multi- layered meeting space at the heart of the terminal," explained the studio.
 ---

@@ -17,4 +17,8 @@ var layouts = {}
       layouts["post"] = layout_3
       
 
+      import layout_4 from "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/layouts/post-layout-two.vue"
+      layouts["post-layout-two"] = layout_4
+      
+
     export default layouts
