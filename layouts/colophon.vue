@@ -23,23 +23,23 @@
 
         <article>
           <h1 class="mb-2 f-prim fs-md uc">{{ page.article_one_header }}</h1>
-          <p class="f-sec fs-md">{{ page.article_one }}</p>
+          <p class="f-sec fs-p">{{ page.article_one }}</p>
         </article>
         <article>
           <h1 class="mb-2 f-prim fs-md uc">{{ page.article_two_header }}</h1>
-          <p class="f-sec fs-md">{{ page.article_two }}</p>
+          <p class="f-sec fs-p">{{ page.article_two }}</p>
         </article>
         <article>
           <h1 class="mb-2 f-prim fs-md uc">{{ page.article_three_header }}</h1>
-          <p class="f-sec fs-md">{{ page.article_three }}</p>
+          <p class="f-sec fs-p">{{ page.article_three }}</p>
         </article>
         <article>
           <h1 class="mb-2 f-prim fs-md uc">{{ page.article_four_header }}</h1>
-          <p class="f-sec fs-md">{{ page.article_four }}</p>
+          <p class="f-sec fs-p">{{ page.article_four }}</p>
         </article>
         <article>
           <h1 class="mb-2 f-prim fs-md uc">{{ page.article_five_header }}</h1>
-          <p class="f-sec fs-md">{{ page.article_five }}</p>
+          <p class="f-sec fs-p">{{ page.article_five }}</p>
         </article>
 
       </section>
