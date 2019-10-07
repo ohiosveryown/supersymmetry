@@ -97,7 +97,7 @@
       }
 
       // events
-      // document.body.addEventListener('click', () => { placeImage() })
+      document.querySelector('figure').addEventListener('click', () => { placeImage() })
     },
   }
 </script>
