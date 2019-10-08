@@ -34,7 +34,10 @@
 
   .index-wrapper {
     position: relative;
+    width: 100vw;
     height: calc( 100vh - 14rem );
+    overflow: hidden;
+
     @include breakpoint(md) { height: calc( 100vh - 7.6rem ); }
     @include breakpoint(lg) { height: 100vh; }
   }
