@@ -57,10 +57,16 @@ const to_colophon = () => {
 
 const to_detail = () => {
   // constance wu's
-  const post_wrapper = document.querySelector('.post-wrapper')
+  const main = document.querySelector('main')
+  const header_link = document.querySelector('.header-link')
 
   // styles
-  post_wrapper.style.cssText = `
+  main.style.cssText = `
+    opacity: 1;
+    animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
+  `
+
+  header_link.style.cssText = `
     opacity: 1;
     animation: Out calc(var(--animbase) * 1.5) var(--inout) forwards;
   `
