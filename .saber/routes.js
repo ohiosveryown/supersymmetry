@@ -1,42 +1,6 @@
 
     export default [
       {
-              path: "/posts/the-oculus.html",
-              meta: {
-                __relative: '_posts/the-oculus.md',
-                __pageId: '2f35a2e7'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--_posts-the-oculus-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/the-oculus.md?saberPage=2f35a2e7")
-                
-              }
-            },
-{
-              path: "/colophon.html",
-              meta: {
-                __relative: 'colophon.md',
-                __pageId: 'fb76bbc6'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--colophon-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.md?saberPage=fb76bbc6")
-                
-              }
-            },
-{
-              path: "/",
-              meta: {
-                __relative: 'index.vue',
-                __pageId: '01ccd670'
-              },
-              component: function() {
-                
-                return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
-                
-              }
-            },
-{
               path: "/posts/daxing-airport.html",
               meta: {
                 __relative: '_posts/daxing-airport.md',
@@ -69,6 +33,42 @@
               component: function() {
                 
                 return import(/* webpackChunkName: "page--_posts-riverside-high-school-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/riverside-high-school.md?saberPage=35985449")
+                
+              }
+            },
+{
+              path: "/posts/the-oculus.html",
+              meta: {
+                __relative: '_posts/the-oculus.md',
+                __pageId: '2f35a2e7'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--_posts-the-oculus-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/_posts/the-oculus.md?saberPage=2f35a2e7")
+                
+              }
+            },
+{
+              path: "/colophon.html",
+              meta: {
+                __relative: 'colophon.md',
+                __pageId: 'fb76bbc6'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--colophon-md" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/colophon.md?saberPage=fb76bbc6")
+                
+              }
+            },
+{
+              path: "/",
+              meta: {
+                __relative: 'index.vue',
+                __pageId: '01ccd670'
+              },
+              component: function() {
+                
+                return import(/* webpackChunkName: "page--index-vue" */ "/Users/pence/Desktop/projects/supersymmetry/supersymmetry-2020/pages/index.vue?saberPage=01ccd670")
                 
               }
             },
