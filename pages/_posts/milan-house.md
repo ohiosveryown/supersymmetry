@@ -2,7 +2,7 @@
 title: Milan House
 first_line: Milan
 second_line: House
-date: July 2019
+date: November 2019
 layout: post-layout-one
 architect: Marcos Acayaba – 1972
 byline: Wallpaper
