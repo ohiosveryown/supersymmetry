@@ -94,9 +94,6 @@
     background: var(--stone);
     will-change: transform;
   }
-
-  // @media (pointer: fine) { .enter { display: inherit; }}
-  // @media (pointer: coarse) { .enter { display: none; }}
 </style>
 
 

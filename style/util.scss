@@ -93,10 +93,18 @@
   animation: Out var(--animbase) var(--inout) calc(var(--animbase) * 1) forwards;
 }
 
-.scale-md {
-  // transform: scale(1.1);
-  // will-change: transform;
-  // animation: ScaleMd 1500ms ease forwards;
+// .scale-md {
+//   transform: scale(1.1);
+//   will-change: transform;
+//   animation: ScaleMd 1500ms ease forwards;
+// }
+// on non-touch only
+@media (pointer: fine) {
+  .scale-md {
+    transform: scale(1.1);
+    will-change: transform;
+    animation: ScaleMd 1500ms ease forwards;
+  }
 }
 
 .scale-left {
