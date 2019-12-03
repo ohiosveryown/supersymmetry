@@ -81,6 +81,7 @@
   }
 
   .second-paragraph {
+    margin-top: 2rem;
     @include breakpoint(md) { margin-bottom: 5.6rem; }
 
     @include breakpoint(mdl) {
