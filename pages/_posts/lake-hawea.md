@@ -9,9 +9,9 @@ byline: GA – Studio 1
 link: http://www.g-a.co.nz/projects/lake-hawea-courtyard-house/
 
 assets:
-  first_img: ./img/2019-08/01.jpg
-  second_img: ./img/2019-08/02.jpg
-  third_img: ./img/2019-08/03.jpg
+  first_img: ./img/2019-12/01.jpg
+  second_img: ./img/2019-12/02.jpg
+  third_img: ./img/2019-12/03.jpg
 
 first_paragraph: |
   The Courtyard House is grounded in rural land at the foot of Mount Maude in the Otago region. The house is an enquiry into where a site begins and ends – how to define the edges of the project and the way that landscape may be inhabited. Firmly dug into the earth, its low form and simple square plan recalls the modest language of early settler buildings in the region that utilize low slung, stone construction to deal with the extreme environment.
