@@ -2,7 +2,7 @@
 title: Lake Hawea Court Yard
 first_line: Lake
 second_line: Hawea
-date: August 2013
+date: December 2019
 layout: post-layout-two
 architect: Glamuzina Architects – 2013
 byline: GA – Studio 1
