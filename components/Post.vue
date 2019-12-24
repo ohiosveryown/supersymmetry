@@ -12,7 +12,7 @@
     </div>
 
     <img class="scale-md" :src='img'/>
-    <div class="cover"/>
+    <!-- <div class="cover"/> -->
     <div class="enter from-top"/>
   </article>
 
@@ -33,7 +33,7 @@
     height: 100%;
     color: var(--cloud);
     overflow: hidden;
-    &:hover { button {@include breakpoint(mdl) { opacity: 1; }}}
+    &:hover { button { @include breakpoint(mdl) { opacity: 1; }}}
   }
 
   .article-content {
