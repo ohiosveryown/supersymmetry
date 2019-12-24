@@ -12,7 +12,7 @@
     </div>
 
     <img class="scale-md" :src='img'/>
-    <!-- <div class="cover"/> -->
+    <div class="cover"/>
     <div class="enter from-top"/>
   </article>
 
