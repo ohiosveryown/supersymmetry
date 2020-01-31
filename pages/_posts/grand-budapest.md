@@ -10,7 +10,7 @@ link: https://blog.nationalgeographic.org/2014/03/27/spoiler-alert-you-cant-real
 
 assets:
   first_img: ./img/2020-02/01.jpg
-  second_img: ./img/2020-02/02.jpg
+  second_img: ./img/2020-02/02.png
   third_img: ./img/2020-02/03.jpg
 
 first_paragraph: |
