@@ -7,7 +7,7 @@
     "embla-carousel": "^2.4.6",
     "saber": "^0.7.0",
     "saber-plugin-query-posts": "^0.4.0",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",
