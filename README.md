@@ -6,4 +6,4 @@
 Feel free to dig around and check out the inner workings of the site. All images are credited to their respective owners.
 
 ### UI 📐
-![Supersymmetry Interface](http://ohiosveryown.co/img/gh@2x.jpg)
+![Supersymmetry Interface](https://res.cloudinary.com/da32ufmnf/image/upload/v1614271507/supersymmetry/__shot_ar9gmy.jpg)
